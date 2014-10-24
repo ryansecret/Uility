@@ -1,0 +1,182 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/d:Example/d:动态加载dll/f:DynamicLoadCdll.cs" caret="0" fromTop="0" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/d:Example/d:共享内存/f:Api.cs" caret="16921" fromTop="558" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/d:Example/f:BasicCodeDomApp.cs" caret="295" fromTop="11" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/d:Example/d:动态方法/f:DyMothedBag.cs" caret="711" fromTop="0" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/d:Example/d:动态方法/f:DynamicXMLNode .cs" caret="468" fromTop="12" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/d:Example/d:动态方法/f:Class1.cs" caret="7765" fromTop="174" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/f:ProcessOper.cs" caret="709" fromTop="19" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/d:WPF/d:DelegateCommand/f:CommandReference.cs" caret="0" fromTop="0" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/f:DynamicCompile.cs" caret="0" fromTop="0" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/d:Example/d:动态方法/f:ExpandoObject.cs" caret="255" fromTop="11" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/d:WPF/d:控件/f:SLDialogBox.cs" caret="656" fromTop="20" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/d:Example/d:动态加载dll/f:SeperateAppDomainAssemblyLoader.cs" caret="6034" fromTop="7" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/f:DynamicObject.cs" caret="0" fromTop="0" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/d:WPF/d:DelegateCommand/f:DelegateCommand.cs" caret="8749" fromTop="19" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/d:Example/d:动态加载dll/f:AnotherDynamicLoad.cs" caret="711" fromTop="12" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/d:WPF/d:绑定代理/f:PasswordBoxBindingHelper.cs" caret="621" fromTop="6" />
+      <File id="20EC2D3B-4F53-4470-A5F9-0AFF9BD2F4E8/d:Validate/f:DependencyPropertyHelper.cs" caret="805" fromTop="0" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/d:WPF/d:Validate/f:RowValidate.cs" caret="1469" fromTop="16" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/d:WPF/d:绑定代理/f:DataContextProxy.cs" caret="2695" fromTop="22" />
+      <File id="20EC2D3B-4F53-4470-A5F9-0AFF9BD2F4E8/d:Validate/f:Validation.cs" caret="1701" fromTop="21" />
+      <File id="d:杂项文件/f:MainPage.xaml.cs/l:D!?Prism?PrismLibrary?Silverlight?mef ImageProcess?Image?MainPage.xaml.cs" caret="619" fromTop="0" />
+      <File id="5CEC860C-CD14-43E0-A05E-58CB0AB39221/f:MothedExport.cs" caret="0" fromTop="0" />
+      <File id="5CEC860C-CD14-43E0-A05E-58CB0AB39221/f:ImportMany.cs" caret="0" fromTop="0" />
+      <File id="5CEC860C-CD14-43E0-A05E-58CB0AB39221/f:InheritedImprot.cs" caret="316" fromTop="16" />
+      <File id="5CEC860C-CD14-43E0-A05E-58CB0AB39221/f:Meta.cs" caret="6430" fromTop="0" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/f:用户体验.txt" caret="106" fromTop="2" />
+      <File id="20EC2D3B-4F53-4470-A5F9-0AFF9BD2F4E8/d:Validate/f:OnValidationError.cs" caret="1332" fromTop="0" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/d:WPF/f:Note.txt" caret="673" fromTop="17" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/f:Note.txt" caret="5290" fromTop="27" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="5CEC860C-CD14-43E0-A05E-58CB0AB39221/f:Meta.cs" caret="7573" fromTop="16" />
+      <File id="5CEC860C-CD14-43E0-A05E-58CB0AB39221/f:Meta.cs" caret="7573" fromTop="11" />
+      <File id="5CEC860C-CD14-43E0-A05E-58CB0AB39221/f:Meta.cs" caret="7573" fromTop="18" />
+      <File id="5CEC860C-CD14-43E0-A05E-58CB0AB39221/f:Meta.cs" caret="7573" fromTop="23" />
+      <File id="5CEC860C-CD14-43E0-A05E-58CB0AB39221/f:Meta.cs" caret="7573" fromTop="17" />
+      <File id="5CEC860C-CD14-43E0-A05E-58CB0AB39221/f:Meta.cs" caret="7573" fromTop="17" />
+      <File id="5CEC860C-CD14-43E0-A05E-58CB0AB39221/f:Meta.cs" caret="7573" fromTop="22" />
+      <File id="5CEC860C-CD14-43E0-A05E-58CB0AB39221/f:Meta.cs" caret="7573" fromTop="38" />
+      <File id="5CEC860C-CD14-43E0-A05E-58CB0AB39221/f:Meta.cs" caret="7573" fromTop="27" />
+      <File id="5CEC860C-CD14-43E0-A05E-58CB0AB39221/f:Meta.cs" caret="7572" fromTop="19" />
+      <File id="5CEC860C-CD14-43E0-A05E-58CB0AB39221/f:Meta.cs" caret="7515" fromTop="31" />
+      <File id="5CEC860C-CD14-43E0-A05E-58CB0AB39221/f:Meta.cs" caret="7332" fromTop="25" />
+      <File id="20EC2D3B-4F53-4470-A5F9-0AFF9BD2F4E8/d:Validate/f:OnValidationError.cs" caret="13893" fromTop="19" />
+      <File id="20EC2D3B-4F53-4470-A5F9-0AFF9BD2F4E8/d:Validate/f:OnValidationError.cs" caret="13893" fromTop="24" />
+      <File id="20EC2D3B-4F53-4470-A5F9-0AFF9BD2F4E8/d:Validate/f:Validation.cs" caret="2417" fromTop="45" />
+      <File id="20EC2D3B-4F53-4470-A5F9-0AFF9BD2F4E8/d:Validate/f:OnValidationError.cs" caret="13893" fromTop="316" />
+      <File id="20EC2D3B-4F53-4470-A5F9-0AFF9BD2F4E8/d:Validate/f:DependencyPropertyHelper.cs" caret="2247" fromTop="16" />
+      <File id="20EC2D3B-4F53-4470-A5F9-0AFF9BD2F4E8/d:Validate/f:DependencyPropertyHelper.cs" caret="2315" fromTop="45" />
+      <File id="20EC2D3B-4F53-4470-A5F9-0AFF9BD2F4E8/d:Validate/f:OnValidationError.cs" caret="8893" fromTop="19" />
+      <File id="20EC2D3B-4F53-4470-A5F9-0AFF9BD2F4E8/d:Validate/f:OnValidationError.cs" caret="10148" fromTop="19" />
+      <File id="20EC2D3B-4F53-4470-A5F9-0AFF9BD2F4E8/d:Validate/f:OnValidationError.cs" caret="10674" fromTop="32" />
+      <File id="20EC2D3B-4F53-4470-A5F9-0AFF9BD2F4E8/d:Validate/f:OnValidationError.cs" caret="12077" fromTop="16" />
+      <File id="20EC2D3B-4F53-4470-A5F9-0AFF9BD2F4E8/d:Validate/f:OnValidationError.cs" caret="13267" fromTop="19" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/f:Note.txt" caret="4702" fromTop="27" />
+      <File id="5CEC860C-CD14-43E0-A05E-58CB0AB39221/f:Meta.cs" caret="1224" fromTop="0" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/f:Note.txt" caret="5167" fromTop="13" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/f:Note.txt" caret="5533" fromTop="26" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/f:Note.txt" caret="5796" fromTop="21" />
+      <File id="9E55E61B-E1F3-403D-ABA8-309144997030/f:用户体验.txt" caret="105" fromTop="2" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="44" />
+      <Item value="Encoding`0" priority="0" />
+      <Item value="static" priority="0" />
+      <Item value="Predicate" priority="0" />
+      <Item value="Tuple" priority="0" />
+      <Item value="int" priority="0" />
+      <Item value="string" priority="12" />
+      <Item value="RectConverter`0" priority="1" />
+      <Item value="propg" priority="0" />
+      <Item value="prop" priority="0" />
+      <Item value="OperatingSystem`0" priority="0" />
+      <Item value="ApplicationCommands`0" priority="0" />
+      <Item value="Validate" priority="0" />
+      <Item value="char" priority="0" />
+      <Item value="ConsoleTraceListener`0" priority="0" />
+      <Item value="return" priority="3" />
+      <Item value="words" priority="0" />
+      <Item value="new" priority="8" />
+      <Item value="dd" priority="0" />
+      <Item value="sentence" priority="0" />
+      <Item value="current" priority="1" />
+      <Item value="word" priority="0" />
+      <Item value="next" priority="1" />
+      <Item value="IEnumerable" priority="0" />
+      <Item value="enumerable" priority="1" />
+      <Item value="System" priority="0" />
+      <Item value="Configuration" priority="0" />
+      <Item value="ConfigurationSettings`0" priority="0" />
+      <Item value="dynamic" priority="0" />
+      <Item value="DynamicObject`0" priority="0" />
+      <Item value="dynamicObject" priority="2" />
+      <Item value="DynamicObject" priority="0" />
+      <Item value="Stopwatch" priority="0" />
+      <Item value="void" priority="18" />
+      <Item value="partial" priority="4" />
+      <Item value="class" priority="4" />
+      <Item value="Action`0" priority="0" />
+      <Item value="double" priority="0" />
+      <Item value="Person`0" priority="4" />
+      <Item value="List&lt;Person&gt;" priority="0" />
+      <Item value="list" priority="3" />
+      <Item value="Person" priority="1" />
+      <Item value="name" priority="1" />
+      <Item value="Sex" priority="1" />
+      <Item value="AggregateException" priority="0" />
+      <Item value="Exception`0" priority="0" />
+      <Item value="ctor" priority="0" />
+      <Item value="base" priority="0" />
+      <Item value="message" priority="0" />
+      <Item value="sc" priority="0" />
+      <Item value="SemaphoreSlim`0" priority="0" />
+      <Item value="set" priority="0" />
+      <Item value="SortedSet&lt;Person&gt;" priority="0" />
+      <Item value="Comparer" priority="0" />
+      <Item value="IComparable" priority="0" />
+      <Item value="this" priority="0" />
+      <Item value="other" priority="0" />
+      <Item value="des" priority="1" />
+      <Item value="unsafe" priority="0" />
+      <Item value="MessageTransport`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Input.ApplicationCommands">
+      <Item value="Print" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.DependencyProperty">
+      <Item value="RegisterAttached`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Configuration.ConfigurationManager">
+      <Item value="ConnectionStrings" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Uility.Person">
+      <Item value="Sex" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="SpinWait`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.File">
+      <Item value="ReadLines`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="CompareTo`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Enum">
+      <Item value="Format`0" priority="0" />
+      <Item value="Parse`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Uility.WPF.Validate.OnValidationError+MonitorBindingValidationErrorsBehavior">
+      <Item value="target" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

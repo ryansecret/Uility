@@ -1,0 +1,5 @@
+C:\Users\dell\Desktop\Uility\Test\bin\Debug\Test.exe
+C:\Users\dell\Desktop\Uility\Test\bin\Debug\Test.pdb
+C:\Users\dell\Desktop\Uility\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\dell\Desktop\Uility\Test\obj\Debug\Test.exe
+C:\Users\dell\Desktop\Uility\Test\obj\Debug\Test.pdb

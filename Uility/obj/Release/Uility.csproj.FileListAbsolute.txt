@@ -1,0 +1,11 @@
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\Uility\Uility\bin\Release\Uility.dll
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\Uility\Uility\bin\Release\Uility.pdb
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\Uility\Uility\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\Uility\Uility\obj\Release\Interop.MSScriptControl.dll
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\Uility\Uility\obj\Release\Uility.csproj.ResolveComReference.cache
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\Uility\Uility\obj\Release\UserControl1.baml
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\Uility\Uility\obj\Release\UserControl1.g.cs
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\Uility\Uility\obj\Release\Uility_MarkupCompile.cache
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\Uility\Uility\obj\Release\Uility.g.resources
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\Uility\Uility\obj\Release\Uility.dll
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\Uility\Uility\obj\Release\Uility.pdb

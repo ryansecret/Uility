@@ -1,0 +1,81 @@
+﻿记得写引号
+提示：如果值为若干单词，则要给值加引号：
+
+p {font-family: "sans serif";}
+
+
+和 id 一样，class 也可被用作派生选择器：
+
+.fancy td {
+	color: #f60;
+	background: #666;
+	}
+在上面这个例子中，类名为 fancy 的更大的元素内部的表格单元都会以灰色背景显示橙色文字。（名为 fancy 的更大的元素可能是一个表格或者一个 div）
+
+属性选择器
+下面的例子为带有 title 属性的所有元素设置样式：
+
+[title]
+{
+color:red;
+}
+[title=W3School]
+{
+border:5px solid blue;
+}
+
+
+下面的例子为包含指定值的 title 属性的所有元素设置样式。适用于由空格分隔的属性值：
+
+[title~=hello] { color:red; }亲自试一试
+
+下面的例子为带有包含指定值的 lang 属性的所有元素设置样式。适用于由连字符分隔的属性值：
+
+[lang|=en] { color:red; }   
+选择器 描述 
+[attribute] 用于选取带有指定属性的元素。 
+[attribute=value] 用于选取带有指定属性和值的元素。 
+[attribute~=value] 用于选取属性值中包含指定词汇的元素。 
+[attribute|=value] 用于选取带有以指定值开头的属性值的元素，该值必须是整个单词。 
+[attribute^=value] 匹配属性值以指定值开头的每个元素。 
+[attribute$=value] 匹配属性值以指定值结尾的每个元素。 
+[attribute*=value] 匹配属性值中包含指定值的每个元素。 
+那么，为什么还要有 "~=" 属性选择器呢？因为它能用于任何属性，而不只是 class。
+
+body
+  { 
+  background-image: url(/i/eg_bg_03.gif);
+  background-repeat: repeat-y;
+  }
+
+  body 
+  {
+  background-image:url(/i/eg_bg_02.gif);
+  background-repeat:no-repeat;
+  background-attachment:fixed
+  }
+
+
+  这个属性最常见的用途是将段落的首行缩进，下面的规则会使所有段落的首行缩进 5 em：
+
+p {text-indent: 5em;}
+
+a:link {color:#FF0000;}		/* 未被访问的链接 */
+a:visited {color:#00FF00;}	/* 已被访问的链接 */
+a:hover {color:#FF00FF;}	/* 鼠标指针移动到链接上 */
+a:active {color:#0000FF;}	/* 正在被点击的链接 */
+
+
+在一个无序列表中，列表项的标志 (marker) 是出现在各列表项旁边的圆点。在有序列表中，标志可能是字母、数字或另外某种计数体系中的一个符号。
+
+要修改用于列表项的标志类型，可以使用属性 list-style-type：
+
+ul {list-style-type : square}上面的声明把无序列表中的列表项标志设置为方块。
+
+如果要增加紧接在 h1 元素后出现的段落的上边距，可以这样写：
+
+h1 + p {margin-top:50px;}这个选择器读作：“选择紧接在 h1 元素后出现的段落，h1 和 p 元素拥有共同的父元素”。
+
+
+Thus, bind()is suited for pages with static controls while 
+live()is suited for pages with dynamic controls.

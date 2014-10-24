@@ -1,0 +1,532 @@
+﻿DECLARE @AddressLine1 nvarchar(60)
+SET @AddressLine1 = 'Heiderplatz'
+SELECT AddressID, AddressLine1
+FROM Person.Address
+WHERE AddressLine1 LIKE '%' + @AddressLine1 + '%'
+
+%：匹配零个及多个任意字符； _：与任意单字符匹配； []：匹配一个范围； [^]：排除一个范围 
+
+Symbol Meaning 
+like '5[%]' 5% 
+like '[_]n' _n 
+like '[a-cdf]' a, b, c, d, or f 
+like '[-acdf]' -, a, c, d, or f 
+like '[[]' [ 
+like ']' ] 
+like 'abc[_]d%' abc_d and abc_de 
+like 'abc[def]' abcd, abce, and abcf 
+like '[^1-9]' 0 
+like '[^1-9b-z]' 0, a 
+
+
+select 1 where ']ABCDE' like '!]ABCDE' escape '!'
+escape 后面紧跟着的字符来做转义字符。
+
+WHERE Color IN ('Silver', 'Black', 'Red')
+
+SELECT select_list
+FROM table_list
+[WHERE search_conditions]
+[GROUP BY group_by_list]
+[HAVING search_conditions]
+[ORDER BY order_list [ASC | DESC] 
+
+DECLARE @Percentage float
+SET @Percentage = 1
+SELECT TOP (@Percentage) PERCENT
+Name
+FROM Production.Product
+ORDER BY Name
+
+SELECT select_list
+[INTO new_table_name]
+FROM table_list
+
+SELECT s.BusinessEntityID,
+SUM(s2004.SalesQuota) Total_2004_SQ,
+SUM(s2003.SalesQuota) Total_2003_SQ
+FROM Sales.SalesPerson s
+LEFT OUTER JOIN Sales.SalesPersonQuotaHistory s2004 ON
+s.BusinessEntityID = s2004.BusinessEntityID AND
+YEAR(s2004.QuotaDate)= 2004
+LEFT OUTER JOIN Sales.SalesPersonQuotaHistory s2003 ON
+s.BusinessEntityID = s2003.BusinessEntityID AND
+YEAR(s2003.QuotaDate)= 2003
+GROUP BY s.BusinessEntityID
+
+PIVOT  把聚集计算后的行抽离成列
+After the aggregation section, the FOR statement determined which row values would be con-verted into columns. Unlike regular INclauses, single quotes aren’t used around each string
+character, instead using square brackets. DepartmentNamewas the data column where values are
+converted into pivoted columns:
+PIVOT
+(COUNT(BusinessEntityID) FOR DepartmentName IN ([Production], [Engineering], [Marketing]))
+
+except会去重复, not in 不会(除非你在select中显式指定)，except 不会排除null
+
+ INTERSECT was used to show rows that overlap between the two tables.同样会取消重复
+Like , INTERSECT is placed between the two queries:
+SELECT   ProductID,
+Name
+FROM   dbo.TableA
+INTERSECT
+SELECT   ProductID,
+Name
+FROM   dbo.TableB  
+
+cast(avg(voteNum) as decimal(20,2))
+
+GROUP BY all 对于不符合条件的分组分配为null
+having出现的原因是where无法和聚合函数一起使用。
+
+
+GROUP BY CUBE (i.Shelf,i.LocationID)  分组计算的所有情况
+GROUP BY roolup (i.Shelf,i.LocationID) 只返回i.Shelf的分组情况
+
+GROUPING函数联合使用，这个函数是反映目标列是否聚合，如何聚合则返回1,否则返回0
+
+WITH VendorSearch (RowNumber, VendorName, AccountNumber)
+AS
+(
+SELECT ROW_NUMBER() OVER (ORDER BY Name) RowNum,
+Name,
+AccountNumber
+FROM Purchasing.Vendor
+)
+INSERT dbo.ExampleTable
+DEFAULT VALUES
+
+
+SELECT FirstName,LastName
+FROM Person.Person
+TABLESAMPLE SYSTEM (2 PERCENT)
+
+
+PIVOT
+(
+COUNT(BusinessEntityID)
+FOR DepartmentName IN ([Production], [Engineering], [Marketing])
+) AS b  请注意值用【】
+
+SET IDENTITY_INSERT [ database_name . [ schema_name ] . ] table { ON | OFF }
+
+  A  uniqueidentifier data type stores a 16-byte globally unique identifier (GUID) GUID NEWID()
+
+  INSERT dbo.Shift_Archive
+(ShiftID,  Name,  StartTime,  EndTime,  ModifiedDate)
+SELECT ShiftID,  Name,  StartTime,  EndTime,  ModifiedDate
+FROM HumanResources.Shift
+ORDER BY ShiftID
+
+
+CREATE PROCEDURE dbo.usp_SEL_Production_TransactionHistory
+@ModifiedEndDT datetime
+@ModifiedStartDT datetime,
+AS
+SELECT TransactionID, ProductID, ReferenceOrderID, ReferenceOrderLineID,
+TransactionDate, TransactionType, Quantity, ActualCost, ModifiedDate
+WHERE ModifiedDate BETWEEN @ModifiedStartDT AND @ModifiedEndDT AND
+FROM Production.TransactionHistory
+TransactionID NOT IN
+(SELECT TransactionID
+FROM Production.TransactionHistoryArchive)
+GO
+
+
+SELECT DegreeNM, DegreeCD, ModifiedDT
+FROM
+(VALUES
+('Bachelor of Arts', 'B.A.', GETDATE()),
+('Bachelor of Science', 'B.S.', GETDATE()),
+('Master of Arts', 'M.A.', GETDATE()),
+('Master of Science', 'M.S.', GETDATE()),
+('Associate''s Degree', 'A.A.', GETDATE()))
+Degree (DegreeNM, DegreeCD, ModifiedDT)  相当于创建一个临时表
+
+
+UPDATE dbo.StockBmps
+SET bmp =
+(SELECT BulkColumn
+FROM OPENROWSET(BULK 'C:\Apress\StockPhotoTwo.bmp', SINGLE_BLOB) AS x)
+WHERE StockBmpID =1
+
+
+WHILE (SELECT COUNT(*)FROM Production.Example_BillOfMaterials)>  0
+BEGIN
+DELETE TOP(500)
+FROM Production.Example_BillOfMaterials
+END
+
+In this recipe, I demonstrated how to apply  INSERT/UPDATE/DELETEmodifications using a  MERGE state-ment.
+MERGE 目标表
+
+USING 源表
+
+ON 匹配条件
+
+WHEN MATCHED THEN
+
+   语句
+
+WHEN NOT MATCHED THEN
+
+   语句;
+
+DECLARE @ProductChanges TABLE
+(DeletedName nvarchar(50),
+InsertedName nvarchar(50))
+UPDATE Production.Product
+SET Name = 'HL Spindle/Axle XYZ'
+OUTPUT DELETED.Name,
+INSERTED.Name
+INTO @ProductChanges
+WHERE ProductID = 524
+
+DECLARE @SalesTaxRate TABLE(
+[SalesTaxRateID]  [int]  NOT NULL,
+[StateProvinceID]  [int]  NOT NULL,
+[TaxType]  [tinyint]  NOT NULL,
+[TaxRate]  [smallmoney]  NOT NULL,
+[Name]  [dbo]. [Name]  NOT NULL,
+[rowguid]  [uniqueidentifier]  ,
+[ModifiedDate]  [datetime]  NOT NULL )
+DELETE Sales.Example_SalesTaxRate
+OUTPUT DELETED.*
+INTO @SalesTaxRate
+SELECT  SalesTaxRateID,
+Name
+FROM @SalesTaxRate
+
+
+存储过程
+DECLARE @Error int
+BEGIN TRANSACTION
+INSERT HumanResources.Department
+(Name, GroupName)
+VALUES ('Accounts Payable', 'Accounting')
+SET @Error = @@ERROR
+IF (@Error<> 0) GOTO Error_Handler
+INSERT HumanResources.Department
+(Name, GroupName)
+VALUES ('Engineering', 'Research and Development')
+SET @Error = @@ERROR
+IF (@Error <> 0) GOTO Error_Handler
+COMMIT TRAN
+Error_Handler:
+IF @Error <> 0
+BEGIN
+ROLLBACK TRANSACTION
+END
+
+ VAR 返回一个总体或总体样本的方差的估计值，此估计值用包含在指定查询字段中的一组值来表示。
+
+ SELECT AddressID,
+AddressLine1
+FROM Person.Address
+WHERE PATINDEX('[3][5]%olive%', AddressLine1) > 0
+PATINDEX ( '%pattern%' , expression ) 
+
+返回pattern字符串在表达式expression里第一次出现的位置，起始值从1开始算。
+
+
+
+The STUFF function deletes a specified length of characters and inser ts a designated str ing at the
+specified star ting point. 
+SELECT STUFF ( 'My cat''s name is X. Have you met him?',
+18,
+1,
+'Edgar' )
+
+SELECT REPLICATE ('Z', 30)
+
+SELECT 'Give me some' + SPACE(6) + 'space.'
+
+ISNULL ( check_expression , replacement_value )  在 check_expression 为 NULL时将返回的表达式。replacement_value 必须与 check_expresssion 具有相同的类型。
+
+DECLARE @ProductID int
+DECLARE @MinStandardCost money
+DECLARE @MaxStandardCost money
+SET @MinStandardCost = 3.3963
+SET @MaxStandardCost = 10.0000
+SELECT ProductID, StartDate, StandardCost
+FROM Production.ProductCostHistory
+WHERE ProductID = ISNULL(@ProductID, ProductID) AND
+StandardCost BETWEEN ISNULL(@MinStandardCost, StandardCost) AND
+ISNULL(@MaxStandardCost, StandardCost)
+ORDER BY StandardCost
+
+NULLIF retur ns a NULL value when the two provided expressions have the same value; other wise, the
+first expression is returned.
+
+FormatNumber(
+  expression [,NumDigitsAfterDecimal] [,IncludeLeadingDigit [,UseParensForNegativeNumbers] [,GroupDigits]]
+
+NumDigitsAfterDecimal:小数点后面的数字保留几位。
+IncludeLeadingDigit  :如果小于1是否保留小数点前面的0。-1就是保留；0部保留；
+UseParensForNegativeNumbers: 用括号还是符号(-)来表示负数。
+GroupDigits:是否用逗号来分隔千位数字。如：123,123.00
+
+SELECT Shelf,
+ProductID,
+ROW_NUMBER() OVER
+(PARTITION BY Shelf ORDER BY ProductID) RowNumber
+FROM Production.ProductInventory
+
+RANK ( ) OVER ( [ < partition_by_clause > ] < order_by_clause > )
+RANK increments its values based on the ordered column, only unlike ROWNUMBER, which increments
+on each row, RANK will return the same value for matching ordered values.
+
+In this recipe, I’ll demonstrate DENSE_RANK, which is almost identical to RANK, only DENSE_RANK doesn’t
+retur n gaps in the rank values:
+NTILE 用来分片
+分页脚本：
+DECLARE @PageSize INT,@PageIndex INT
+set @PageIndex = 0,@PageSize = 2 
+SELECT * FROM (SELECT *,ROW_NUMBER()OVER(ORDER BY VAL) AS NUM  FROM T) AS T WHERE NUM BETWEEN @PageIndex * @PageSize AND (@PageIndex + 1) * @PageSize
+
+SELECT @@LANGID LanguageID,
+@@LANGUAGE Language
+
+SELECT @@ROWCOUNT Int_RowCount, ROWCOUNT_BIG() BigInt_RowCount  返回影响的行数
+SELECT DB_ID() DatabaseID, DB_NAME() DatabaseNM
+
+SELECT IDENT_CURRENT('Production.Product') LastIdentityValue      Retur ning the Last Identity Value
+
+
+SELECT IDENT_INCR('Production.Product') IdentIncr,
+IDENT_SEED('Production.Product') IdentSeed  种子和增量
+
+SELECT DepartmentID,Name,GroupName,
+CASE GroupName
+WHEN 'Research and Development' THEN 'Room A'
+WHEN 'Sales and Marketing' THEN 'Room B'
+WHEN 'Manufacturing' THEN 'Room C'
+ELSE 'Room D'
+END ConferenceRoom
+FROM HumanResources.Department
+
+he optional ELSE clause is used as a catch-all, assigning a default result expression if none of
+the WHEN expressions evaluated to TRUE:
+
+WHEN GROUPING(i.Shelf) = 1 AND
+GROUPING(i.LocationID) = 0 THEN 'Location Total'
+WHEN GROUPING(i.Shelf) = 1 AND
+GROUPING(i.LocationID) = 1 THEN 'Grand Total'
+ELSE 'Regular Row'
+
+
+
+SELECT TABLE_SCHEMA + '.' + TABLE_NAME
+FROM INFORMATION_SCHEMA.tables
+WHERE TABLE_TYPE = 'BASE TABLE'
+ORDER BY TABLE_SCHEMA + '.' + TABLE_NAME
+
+WAITFOR TIME '19:01:00'
+BEGIN
+SELECT COUNT(*)
+FROM Production.TransactionHistory
+END   到某个时刻执行这个操作
+
+The  GO keyword  was  used  to  mark  the  end  of  the  stored  procedure.
+
+存储过程
+CREATE PROCEDURE dbo.usp_UPD_ShoppingCartItem
+(@ShoppingCartID nvarchar(50),
+@Quantity int = 1, -- defaulted to quantity of 1
+@ProductID int)
+AS
+-- If the same ShoppingCartID and ProductID is sent
+-- in the parameters, update the new quantity
+IF EXISTS(SELECT *
+FROM Sales.ShoppingCartItem
+WHERE ShoppingCartID = @ShoppingCartID AND
+ProductID = @ProductID )
+BEGIN
+UPDATE Sales.ShoppingCartItem
+SET Quantity = @Quantity
+WHERE ShoppingCartID = @ShoppingCartID AND
+ProductID = @ProductID
+PRINT 'UPDATE performed. '
+END
+ELSE
+BEGIN
+-- Otherwise insert a new row
+INSERT Sales.ShoppingCartItem
+(ShoppingCartID, ProductID, Quantity)
+VALUES (@ShoppingCartID, @ProductID, @Quantity)
+PRINT 'INSERT performed. '
+END
+GO
+
+
+输出函数
+
+CREATE PROCEDURE dbo.usp_SEL_Department
+@GroupName nvarchar(50),
+@DeptCount int OUTPUT
+AS
+SELECT Name
+FROM HumanResources.Department
+WHERE GroupName = @GroupName
+ORDER BY Name
+SELECT @DeptCount = @@ROWCOUNT
+GO
+
+ALTER PROCEDURE dbo.usp_SEL_Department
+@GroupName nvarchar(50)
+AS
+
+查询所有的存储过程
+SELECT definition,
+execute_as_principal_id,
+is_recompiled,
+uses_ansi_nulls,
+uses_quoted_identifier
+FROM sys.sql_modules m
+INNER JOIN sys.objects o ON
+m.object_id = o.object_id
+WHERE o.type = 'P'
+
+USE master
+GO
+CREATE LOGIN BrianG WITH PASSWORD = '1301C636F9D'
+
+创建函数 
+CREATE FUNCTION dbo.udf_ReturnAddress
+( @BusinessEntityID int)
+RETURNS TABLE
+AS
+RETURN (
+SELECT t.Name AddressTypeNM,
+a.AddressLine1,
+a.City,
+a.StateProvinceID,
+a.PostalCode
+FROM Person.Address a
+INNER JOIN Person.BusinessEntityAddress e ON
+a.AddressID = e.AddressID
+INNER JOIN Person.AddressType t ON
+e.AddressTypeID = t.AddressTypeID
+WHERE e.BusinessEntityID = @BusinessEntityID )
+GO
+
+
+RETURNS @StringArrayTable TABLE (RowNum int IDENTITY(1,1), Val varchar(50))
+
+
+DROP FUNCTION dbo.udf_ParseArray, dbo.udf_ReturnEmployeeAddress,dbo.udf_CheckForSQLInjection
+
+SELECT dbo.udf_GET_AssignedEquipment(JobTitle, HireDate, SalariedFlag) PC_Build,COUNT(*) Employee_CountFROM HumanResources.Employee GROUP BY dbo.udf_GET_AssignedEquipment(JobTitle, HireDate, SalariedFlag) ORDER BY dbo.udf_GET_AssignedEquipment(JobTitle, HireDate, SalariedFlag)
+
+IF EXISTS (SELECT DimProductSalespersonID
+FROM dbo.DimProductSalesperson
+WHERE @ProductCD = @ProductCD AND
+@CompanyNBR = @CompanyNBR AND
+@SalespersonNBR = @SalespersonNBR)
+BEGIN
+SET @Exists = 1
+END
+ELSE
+BEGIN
+SET @Exists = 0
+END
+
+Constraints usually r un faster than a DML tr igger, so if your business requirements can be
+fulfilled by a constraint, use constraints instead. AFTER tr iggers r un after the data modifica-tion has already occurred, so they cannot be used to prevent a constraint violation.
+
+SET NOCOUNT ON 不返回计数 
+
+IF EXISTS
+(SELECT Quantity
+FROM deleted
+WHERE Quantity > 0)
+BEGIN
+PRINT 'You cannot remove positive quantity rows!'
+ROLLBACK
+END
+
+no matter how many levels deep they may be nested 
+
+具体到某个字段的触发
+USE AdventureWorks
+GO
+CREATE TRIGGER HumanResources.trg_U_Department
+ON HumanResources.Department
+AFTER UPDATE
+AS
+IF UPDATE(GroupName)
+BEGIN
+PRINT 'Updates to GroupName require DBA involvement.'
+ROLLBACK
+END
+GO
+If  it  is  a  clustered  index,  the  leaf  level  is  the  actual data  pages  itself.  If  a  nonclustered  index,  the  leaf  level  contains  pointers  to  the  heap  or  clustered
+index  data  pages
+ Frequently  updated  columns  and  non-unique  columns  are  usu-ally  not  a  good  choice  for  a  clustered  index  key,  because  the  clustered  index  key  is  contained  in  the
+leaf  level  of  all  dependent  nonclustered  indexes,  causing  excessive  reorder ing  and  modifications.
+For  this  same  reason,  you  should  also  avoid  creating  a  clustered  index  with  too  many  or  ver y  wide
+(many  bytes)  index  keys.
+
+聚集索引确定表中数据的物理顺序。聚集索引类似于电话簿，后者按姓氏排列数据。由于聚集索引规定数据在表中的物理存储顺序，因此一个表只能包含一个聚集索引。但该索引可以包含多个列（组合索引），就像电话簿按姓氏和名字进行组织一样。 
+对于数据类型大小，它通常是smallint、int、bigint或datetime。当datetime值用作集簇索引时，它们是唯一的字段并且通常是不断增加的日期值，这些值通常是作为范围数据查询的。通常，你应该避免组合（多字段）集簇索引
+
+聚集索引不适用于具有下列属性的列：
+
+频繁更改的列
+
+这将导致整行移动，因为数据库引擎必须按物理顺序保留行中的数据值。这一点要特别注意，因为在大容量事务处理系统中数据通常是可变的。 
+宽键
+
+宽键是若干列或若干大型列的组合。所有非聚集索引将聚集索引中的键值用作查找键。为同一表定义的任何非聚集索引都将增大许多，这是因为非聚集索引项包含聚集键，同时也包含为此非聚集索引定义的键列
+
+插入xml类型
+DECLARE @Book XML
+SET @Book =
+CAST('<Book name="SQL Server 2000 Fast Answers">
+<Chapters>
+<Chapter id="1"> Installation, Upgrades... </Chapter>
+<Chapter id="2"> Configuring SQL Server </Chapter>
+<Chapter id="3"> Creating and Configuring Databases </Chapter>
+<Chapter id="4"> SQL Server Agent and SQL Logs </Chapter>
+</Chapters>
+</Book>' as XML)
+
+the following error will be raised 
+
+a full XML document (DOCUMENT) or XML fragments (CONTENT) instead.
+
+If you wanted to reverse the str ing back into the actual hierarchyid node value, you could use
+the Parse method. For example:
+SELECT hierarchyid::Parse ('/1/1/')
+得到根目录
+SELECT PageURL
+FROM dbo.WebpageLayout
+WHERE WebpageLayoutID = hierarchyid::GetRoot()
+
+
+DECLARE @WebpageLayoutID hierarchyid
+SELECT @WebpageLayoutID = CONVERT(hierarchyid, '/1/')
+SELECT @WebpageLayoutID.IsDescendantOf('/')
+SELECT @WebpageLayoutID.IsDescendantOf('/1/1/')
+
+The GetReparentedValue method retur ns the node value of the new path given two input parame-ters, the old root and the new root, as the following quer y demonstrates:DECLARE @WebpageLayoutID hierarchyid
+DECLARE @New_WebpageLayoutID hierarchyid
+SELECT @WebpageLayoutID = CONVERT(hierarchyid, '/1/1/')
+SELECT @New_WebpageLayoutID = @WebpageLayoutID.GetReparentedValue('/1/', '/2/')
+SELECT @New_WebpageLayoutID.ToString()
+
+not human readable
+
+create temporary table   CREATE TABLE #SecretInfo
+(Secret varbinary(8000) NOT NULL)
+GO
+
+
+CREATE FUNCTION [dbo].[ProductsUnderThisUnitPrice]
+(@price Money
+)
+RETURNS TABLE
+AS
+RETURN
+    SELECT *
+    FROM Products as P
+    Where p.UnitPrice < @price

@@ -1,0 +1,30 @@
+﻿如果只有一个get属性，并且不在数据表中生成该对应字段。
+如果导航属性可以包含多个实体，那么它必须是ICollection类型。
+不带任何参数的DataBaseGenerated作用于CourseId上表示主键内容由用户而非数据库自动生成：
+
+[DatabaseGenerated(DatabaseGeneratedOption.None)][Display(Name = "Number")]public int CourseID { get; set; }
+
+先前说过可以使用Column改变列字段的名称，此处你使用Column来改变Department实体；Column属性也可以被使用来改变列的类型——如下例子中使用SQL Server的money类型：
+
+[Column(TypeName="money")]
+public decimal? Budget { get; set; }
+
+[DisplayFormat(DataFormatString="{0:#.#}",ApplyFormatInEditMode=true,NullDisplayText="No grade")]
+public decimal? Grade { get; set; }
+
+饥饿模式：当实体被读取时，相关属性数据同时被加载；这会产生一个对数据库的请求以便加载相关全部需要的数据，你可以通过Include的方法指定此模式：
+
+Collection方法用于加载一系列实体，而对于只包含单一实体的导航属性，我们只用Reference； 
+
+在entity在修改的时候要改变状态，同时实体框架式修改了实例。
+ db.Entry(album).State = EntityState.Modified;
+                db.SaveChanges();
+ActionName通过属性改变action的名称。
+	  [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {            
+            Album album = db.Albums.Find(id);
+            db.Albums.Remove(album);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }

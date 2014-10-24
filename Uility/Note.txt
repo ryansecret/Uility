@@ -1,0 +1,421 @@
+﻿可以考虑面向整个研发团队承诺一定比例的原始股权，而不是未来的股票期权，因为股票期权贴现时间长，而原始股份在获得投资后就可以退出（出售）。告诉大家实现并获得投资的概率和基本时间表，而不是漫长的期待。 
+ 另一方面是共享公司发展的物质成果，实施员工持股计划。通过这种价值共享机制，使得大家的“敬业”有了动力基础。
+
+ 在人力资源管理界，特别流行一个说法，即"骑马，牵牛，赶猪，打狗"理论：人品很好，能力又很强的，是千里马，我们要骑着他；人品很好但能力普通的，是老黄牛，我们要牵着他；人品、能力皆普通的，就是"猪"，我们要赶走他；人品很差能力很强的，那是"狗"，我们要打击他。
+ 一、赡养父母。二、结婚生子。三、升职加薪。四、工作压力。五、生活质量。
+
+ 传统国企受到跨国公司和民营企业两方面的人才争夺。这两类企业开出的高薪常常使国企成批量走人，让传统国企成为人才的培训基地。
+ 毕业几年，是否经常会怯场或者是感到没有底气？居安思危绝对不是危言耸听！此刻打盹，你将做梦；此刻学习，你将圆梦。在竞争激烈的人生战场上，打盹的都是输家！
+
+
+ 在文化方面，企业管理一言堂，论资排辈、裙带关系严重;或者老总家长作风严重，说一不二，开口闭口批评，甚至辱骂员工，都会让人才逆反心理。管理差、企业文化差的企业，常常会频繁的批量走人。建立有效的激励机制，通过严格的考核评价，形成奖优惩劣的企业文化，让懒散的人在企业无法立足，让努力付出的人能得到优厚回报。同时，消除家长作风，尊重每一个人的尊严，加强内部的沟通，形成人性化的管理氛围，这样人员在企业才会干的热火朝天。
+ 尤其是骨干薪酬的竞争力，要保持在行业中等偏上水平，这样既能让人员安身立命础，又体现出了人才的价值和市场水平。
+ 后备人才梯队建设：企业在平时要加强人才储备，对于技能要求较高或替代性较弱的岗位，要进行重点的培养。同时要把管理者培养下属职责作为一个必要的考核指标，下属不成长，主管就提拔不起来。这样，有了充足的后备人才梯队资源，人员流失了也不怕。
+。而这种从底层环境锻炼造就的内驱力非常重要。因此上帝非常公正，他给了挣扎于底层的人一种自发向上求生拼搏的意志，同时也给了那些背景优越的人太多的退路，让他们在退路中糜烂了自己的潜力。
+
+既然作为 MBA我们学了管理，我们首先就应在对人的研究上下工夫。如果我们从现在开始，每天都争取多认识一个人(不管他看起来与我们多么不同)，琢磨他，努力与他交朋友，并不期望从他身上有任何回报而只出于对人的兴趣，那么到我们四十岁时，我们的大脑里就会存储一千个活生生的人的模板库，他们的性格、嗜好、遗传特点、背景、职业、观点、心理特征、优弱点都栩栩如生，而你也能大致了解与各类人相处的基本规则，学会了做人，那么你做任何一个行业的管理都能胜任。
+
+
+再穷，也要对做出贡献以及产品、技术上有突破的工程师给予及时的奖励。 
+再穷，产品发布等重要的时间段，还是安排必要的“腐败活动”。在年度调薪时，要让工程师提出自己的期望，你要信任他们的理性。 
+如果你的资金缺乏，提供不靠谱的薪水，要求所有人勒紧裤腰带过日子，没有尊严地过日子，甚至要求工程师在办公室睡觉和生活，建议你还是不要创业。
+提供两个未来的职业发展方向，一个是项目经理、技术经理等技术管理路线，另一个是专业技能路线，比如高级工程师、资深专家、架构师等纯技术领域的发展。
+为优秀人才提供适当股权激励是比较合适的手段，另外可以让他们负责重要的产品或业务，许多人很重视这样独当一面的机会。
+感情维系。大公司靠文化、中型公司靠制度、小公司靠感情。创业团队必须要靠感情来维系，所以我们经常组织团队活动和拓展来加强成员之间的沟通和了解。
+：经过频繁且适当的指导，一名对公司文化有着深刻理解、具备领导潜质且曾对公司发展目标有过贡献的内部人选很有可能顺利成为公司的一名管理者。这样的内部人选远强过一个实际能力、文化倾向和动机都存疑的外部人选。
+避免这种情况的方法就是在早期培养足够的领导后备人选，并且最终成功地将他们提拔到领导岗位上来，从而建立一个晋升渠道，晋升渠道中的人选主要是那些早期加入而且“为了创造一家伟大的公司”的人。
+
+另一方面是NoSQL产品缺乏专用的备份工具，系统出现单点故障后，恢复的代价太高，给运维造成了很大的压力。
+采用NoSQL技术还是需要经过充分评估的，尤其是与物理架构设计师和运维部门充分沟通，平衡开发和运维的整体工作压力。另外使用之前尽量充分阅读源代码，具备自我技术支持能力后再投入使用。
+。作为一个管理者韦尔奇可以用“国士无双”来形容。
+大意是哪怕一个才华平平的人，如果赶上浪潮的顺风顺水，也能取得不俗的成绩。这说明人是一种社会性存在，世界宏观大势的流向与个人事业的命运存在紧密的辩证关系。而中国的软件工程师，特点是习惯于就某个技术领域精耕细作，鲜有“抬头看天”的意识，
+
+文化建设是根本。我们推行平等参与的“村落文化”，基本做到“我的地盘我做主”。公司的重大决策，特别是涉及员工重大利益的事宜，员工均会参与乃至主导决策。
+
+干部队伍是关键。员工是否敬业，一线管理人员营造的微观管理氛围很重要。我们有专门实施干部管理的部门，每年进行一次干部上岗评审，下属评价占40%的比重。员工是否敬业，一线管理人员营造的微观管理氛围很重要。我们有专门实施干部管理的部门，每年进行一次干部上岗评审，下属评价占40%的比重。这对干部的管理能力提出了很高的要求，要让员工跟着你感到有奔头。如果得不到员工信任，很快就会“被转岗”。
+产品经理应该具备双语技能。这并非指中文和英文，而是指产品经理既能与程序员讨论技术，又能与管理层和营销人员讨论成本结构、边际效应、市场份额、产品定位和品牌。
+
+技术快速更替，员工的求知欲和学习能力比他现在的技能更为重要。宁愿招聘一个学习能力很强的员工，也不要一个靠吃老本、不愿学习的员工。
+
+在技术能力方面，重点考查初级程序员的编程能力、中级程序员编程能力并兼顾系统分析的能力、高级程序员的系统分析与设计能力。在非技术能力方面，重点考查初级程序员的沟通与协作能力、中级程序员的写作能力（主要指编写技术文档，如需求分析文档、用户手册、部署手册等）、高级程序员的组织与管理能力（如指导、协助中级程序员进行问题分析和开发）。
+
+代码中有随处可见的“贴膏药”式的特殊情况处理，有时更是“补丁摞补丁”。
+市场是残酷的，谁吃肉谁喝西北风，可不能随便“如果”。少说一些“如果”，多做一些调研吧！
+怎样才能使这段代码更容易维护和扩展？这段代码达到的功能和性能对涉众意味着什么。请注重一个公司内的核心业务和非核心业务。跳槽应该在职业规划的指导下进行。
+典型的发展方向有两个：技术路线和管理路线。前者是从工程师到科学家，是在专业上发展，后者是从工程师到CTO，是在管理上发展。不管喜欢不喜欢，都应该积极地去拓展自己的人际能力。
+
+帮助下属成长是每一个上司应尽的责任，如果一个上司，因为你说出自己的迷茫，而对你“另眼相看”，那这样的上司是不合格的，你可以考虑申请内部轮岗，或者直接跳槽。
+
+性能高效，速度快： MongoDB使用c++/boost编写，在多数场合，其查询速度对比MySQL要快的多，对于CPU占用非常小。部署也很简单，对大多数系统，只需下载后二进制包解压就可以直接运行，几乎是零配置。
+
+Master-Slave是最常见的。通过Master-Slave可以实现数据的备份。在我们的实践中，我们使用的是Master-Slave模式，Slave只用于后备，实际的读写都是从Master节点执行。
+
+Replica Pairs/Replica Sets允许2个MongoDB相互监听，实现双机互备的容错。
+
+MongoDB只能支持有限的双主模式（Master-Master），实际可用性不强，可忽略。
+如果员工的“问题”被确定为“顽症”时，那就应该当机立断地终止劳动合同
+历史总是惊人的相似，让我们拭目以待吧！
+
+企业架构师可能很少去写代码，但是要关注系统为了实现业务需求需要用什么样的技术，比如实现什么样的容错能力，采用什么样的容错方法，什么样的弹性机制等等。比如针对可扩展性，提出什么样的架构模式，在哪些业务情形下可以重用，具体要怎么样实现，数据应该怎么存储，系统之间的交互应该是通过什么样的方式，什么样的渠道，应该在哪些地方建立各级的缓存等等这些方案，都需要我们去归纳、设计。
+，“问题”会集中表现在员工的工作态度、时间观念、沟通方式、待人接物等常见的工作习惯方面。
+
+在软件项目的整个生命周期中，风险伴随始终。项目经理就像一名船长，在危险的海面上指挥着航船，可能会面临波涛汹涌，可能会跌入急流旋涡，还可能会遇到很多未知危险的困扰，项目经理的职责就是不论遇到什么危险，都要坚守岗位，带领这艘航船（项目）顺利平安地到达目的地，这对项目经理是一个不小的挑战。
+项目经理在遇到困难时要有乐观精神以鼓舞团队士气，但是在面对项目所处的复杂莫测的大环境时，要习惯于采用悲观的思考方式。有些风险是可以识别和控制的，还有些风险是较难预测的，项目经理就像在悬崖边上，要多给自己准备几根救命的绳子，在系统上线前要考虑紧急情况下的处理措施，必要时制定完备、有效和切实可行的应急方案。
+从一个架构师的日常工作来看，他面对的基本上有七大问题：商业问题、系统问题、子系统问题、构件问题、技术问题、流程问题、项目管理问题。其中，前五项是一个架构师主要负责解决的。
+
+。业界有这样一句话：“框架或中间件是用来帮助你的，而不是代替你去思考和工作的。”所以我们必须根据现实的系统要求，自己动脑筋去构建适合现状的软件架构！ 
+
+简而言之，架构师需要具备的能力=熟知最佳实践+动脑灵活使用+技术及创新预判。
+
+如果身边有大师，自然是从程序员成长为架构师的捷径了。我身边没有大师，便选择这样的道路：认真反思自己这些年来的学习和实践，并将其上升为智慧。毕竟，智慧既是指导我继续工作的原始动力，也将指导自己未来的创新工作。因此，我选择了阅读、学习和思考。
+ 您认为在中国的软件企业中，大家在普遍认识中对架构师这一职业有哪些误区？
+
+李伟：误区一，架构师与项目经理没有区别。大家经常在谈论架构师时，混淆了项目经理的职责和架构师的职能。项目经理要对人、流程、钱等内容负责。但是架构师主要是对技术负责。所以我个人不是很喜欢在谈论系统架构时，过多的谈论流程或管理。虽然我也是流程方面和管理方面的专家。
+
+误区二，技术好的人就能成为架构师。其实，职业架构师与职业编程人员有着同样重要的分量，只不过各自负责的工作内容及需要具备的能力各不相同。例如：架构师熟知如何将系统架构构建得适应系统后续国际化/本地化的工作；但是并不一定必须知道界面热键在.NET下调用什么来实现。
+
+误区三，架构师必须懂得业务领域的知识。从本质上来看，软件架构本身就是在模仿人类大脑的问题思考和解决习惯。自然，专业架构师所掌握的知识就是解决那些反复出现的相似问题的最佳手段。所以，业界都知道这样一个著名的故事：一个非航天专业的软件架构人员，可以被美国国家航天局请去做航天系统的架构评审。这一点儿都不奇怪，因为他知道解决系统并发问题时，当今最经典的那么几种手段，你能说航天系统的并发问题与企业应用并发问题本质上不一样吗？由于当前国内软件研发的各种局限，很多软件从业人员的认知还停留在“懂业务+技术好”就是架构师这样的层面上。其实，懂得经典的解决方法，并能从实践中抽象出理论或最佳实践的人，才是架构人员的专业水平。
+
+聚集索引和非聚集索引的根本区别是表记录的排列顺序和与索引的排列顺序是否一致，聚集索引表记录的排列顺序与索引的排列顺序一致，优点是查询速度快，因为一旦具有第一个索引值的纪录被找到，具有连续索引值的记录也一定物理的紧跟其后。聚集索引的缺点是对表进行修改速度较慢，这是为了保持表中的记录的物理顺序与索引的顺序一致，而把记录插入到数据页的相应位置，必须在数据页中进行数据重排，降低了执行速度。每个托管进程都有一个托管堆。进程中的所有线程都在同一堆上分配对象。
+
+SQL Server的数据库分区是将不同的数据存于不同的文件组下，而不同的文件组存于不同的磁盘分区下，这样将数据分散开，减小磁盘I/O，减小了系统负荷，而且还可以将日志，索引等放于不同的分区下。目前的计算机很多都是32位的，那么编写的程序对内存的需要便受限制，而很多的海量数据处理是必须大量消耗内存的，这便要求更好性能的机子，其中对位数的限制也十分重要。
+
+若要启用卸载功能，请在创建动态程序集时使用 AssemblyBuilderAccess .RunAndCollect 标记。
+
+反射发出是唯一支持的用于加载可回收程序集的机制。 不能卸载由任何其他形式的程序集加载的程序集。
+
+ 内存的泄露：事件的注册
+ This leak is triggered because the child window (Window2) has a reference (it registered to an event) to a Static event. Since object is static, Windows2 object will never get released. 
+ 静态事件的注册，窗体关闭时注意释放
+
+ 务必要知道，var 关键字不过是一个指令，它让编译器根据变量的初始化表达式推断类型；var 不是类型。 
+
+DLR 有两个主要目的。 首先，它实现动态语言和 .NET Framework 之间的互操作。 其次，它将动态行为引入 C# 和 Visual Basic 之中。 
+
+C# 中的动态对象不支持 IntelliSense，这对总体工作效率可能会有些影响。 
+SynchronizationContext 的另一方面是每个线程都有“当前”上下文。 线程上下文不一定唯一；其上下文实例可以与多个其他线程共享。 线程可以更改其当前上下文，但这样的情况非常少见。 
+
+WindowsFormsSynchronizationContext  WindowsFormsSynchronizationContext 的上下文是一个单独的 UI 线程。 
+
+UI 应用程序通常有两个同步上下文：包含 UI 线程的 UI SynchronizationContext 和包含 ThreadPool 线程的默认 SynchronizationContext。 
+每个线程（至少）具有一个调度上下文。 在某个线程上运行时，您可以请求该线程运行时所在的调度上下文；当您获得某个调度上下文时，您可以调度在其中运行的项目。 
+
+
+默认 TaskScheduler 的作用类似于默认 SynchronizationContext，将任务在 ThreadPool 中列队。 TPL 队列还提供了另一个 TaskScheduler，将任务在 SynchronizationContext 中列队。
+
+await 表达式负责进行设置，使得处于等待状态的任务在完成时按下“播放”按钮。 但是，在了解这一切之前，我们首先来分析一下状态机本身，看看“暂停”和“播放”按钮到底是什么。 
+
+async Task<int> GetAreaAsync()
+{ return await GetXAsync() * await GetYAsync();}这段代码两次返回到调度上下文（在每个 await 之后），只是为了在“适当的”线程上执行乘法操作。 但谁会在意您在哪个线程上做乘法呢？ 这可能会造成浪费（如果经常使用），
+
+
+DI是实现IOC的方式，IOC的思想是解除对象与对象之间的依赖，由IOC来进行控制，而DI则是IOC思想的具体实现
+
+Unity拥有拦截能力，其允许开发者通过创建并执行handlers（在方法或属性被调用到达之前）来为已存在的组件增加一个函数，并再次为返回调用结果
+
+PolicyInjection模块是在企业库3.0才正式引入的模块，简称PIAB（Policy Injection Application Block），这个模块的主要功能是方便我们在项目开发中进行AOP（面向切面编程），以简化开发内容。他们研究出了一种新的编程思想，借助这一思想或许可以通过减少代码重复模块从而帮助开发人员提高工作效率。随着研究的逐渐深入，AOP也逐渐发展成一套完整的程序设计思想，各种应用AOP的技术也应运而生。
+
+静态横切允许您不用创建很深的层次结构，以一种本质上更优雅、更逼真于现实结构的方式，插入跨越整个系统的公共行为。尤其是当开发应用系统时，如果需要在不修改原有代码的前提下，引入第三方产品和API库，则静态横切技术将发挥巨大的作用。
+
+InterfaceInterceptor 可以拦截目标对象上的一个接口的公共实例方法。 该拦截程序可以应用到新的和现有的实例。 
+
+TransparentProxyInterceptor 可以拦截多个接口和按引用封送的对象上的公共实例方法。 这是最慢的拦截方式，但可以拦截的方法最多。 该拦截程序可以应用到新的和现有的实例。 
+
+VirtualMethodInterceptor 可以拦截公共和受保护的虚拟方法。 该拦截程序只能应用到新的实例。
+
+File.ReadLines()  延迟返回
+
+对内存映射文件的支持是 .NET Framework 4 中的另一项新增功能。内存映射文件可用于编辑大文件或为进程间通信 (IPC) 创建共享内存。
+
+... System.IO.file 上 
+public static IEnumerable<string>ReadLines(string path) 
+public static void WriteAllLines(string path, IEnumerable<string> contents) 
+public static void AppendAllLines(string path, IEnumerable<string> contents) 
+... System.IO.directory 上 
+public static Enumerable<string>EnumerateDirectories(string path) 
+public static IEnumerable<string>EnumerateFiles(string path) 
+public staticIEnumerable<string>EnumerateFileSystemEntries(string path) 
+... System.IO.DirectoryInfo 上 
+publicIEnumerable<DirectoryInfo>EnumerateDirectories() 
+publicIEnumerable<FileInfo>EnumerateFiles() 
+publicIEnumerable<FileSystemInfo>EnumerateFileSystemInfos() 
+
+
+要使用内存映射文件，必须首先使用 System.IO.MemoryMappedFiles.MemoryMappedFile 类的以下某个静态工厂方法创建 MemoryMappedFile 实例： 
+CreateFromFile 
+CreateNew 
+CreateOrOpen 
+OpenExisting 
+
+如果文件的大小大于进程可用于映射的逻辑内存空间（在 32 位计算机中为 2GB），就需要使用多个视图。 通过调用 MemoryMappedFile 对象的 CreateViewStream 或 CreateViewAccessor 方法，可以创建视图。 CreateViewStream 返回 MemoryMappedFileViewStream 实例，该实例继承自 System.IO.UnmanagedMemoryStream。 它可以像 Framework 中的任何其他 Stream 一样使用。 另一方面，CreateViewAccessor 返回 MemoryMappedFileViewAccessor 实例，该实例继承自新增的 System.IO.UnmanagedMemoryAccessorclass。 UnmanagedMemoryAccessor 支持随机访问，而 UnmanagedMemoryStream 支持顺序访问。 
+
+将不必再对文件执行I/O操作，这意味着在对文件进行处理时将不必再为文件申请并分配缓存，所有的文件缓存操作均由系统直接管理，由于取消了将文件数据加载到内存、数据从内存到文件的回写以及释放内存块等步骤，使得内存映射文件在处理大数据量的文件时能起到相当重要的作用。
+
+与 .NET 3.5 中新增的 HashSet<T> 一样，SortedSet<T> 也是由唯一元素组成的集合，但与 HashSet<T> 不同，SortedSet<T> 的元素按排序顺序排列。GetViewBetween 方法返回原始集的视图。 这意味着对视图所做的任何更改都将反映在原始视图中 
+
+The Policy Injection Application Block provides a simplified API for performing interception. It uses Unity's interception and policy injection support for its implementation. Beside its simplicity, one of the advantage is 能够通过配置工具进行配置。
+
+异常处理：
+1.       希望能过滤程序中某些异常,即在发生这些异常的时候不会被抛出.要求是配置简单,只用修改一处地方就能控制所有相应的异常.
+
+2.       发生某种异常的时候被自动替换成另外一个异常
+
+3.       发生某种异常的时候被自动包装到另外一个异常中
+
+4.       发生某种异常的时候被自动记录在指定的日志记录策略中,可以是记录到数据库或者文件中.
+
+
+等效的呀：var t = new Tuple<string, int>("Hello", 4);   var t = Tuple.Create("Hello", 4);
+
+缓存模块不能够跨程序域调用，不能对内存中的缓存加密，因此要避免存放一些敏感信息。
+
+Keep in mind that sensitive data should be cleared in memory as soon as possible.内存中的信息太危险 You should note that data in memory may also end up on the hard disk, because the operating system can write data to a swap file. Also, if the computer crashes, the operating system can dump the contents of memory to disk
+
+明白oneway hash的意义
+
+container.Resolve<StocksTickerPresenter>( new ParameterOverride( ))
+
+获取是否在设计模式
+private static bool IsInDesignMode(DependencyObject element)
+        {
+            // Due to a known issue in Cider, GetIsInDesignMode attached property value is not enough to know if it's in design mode.
+            return DesignerProperties.GetIsInDesignMode(element) || Application.Current == null
+                   || Application.Current.GetType() == typeof(Application);
+        }
+    }
+
+
+mef 使用Lazy<T>只是在第一次使用时初始化，而ExportFactory<T>在每一次调用的时候都初始化。
+[Export]
+public class OrderController {
+
+  [Import] 
+  public ExportFactory<OrderViewModel> OrderVMFactory {get;set;}
+
+  public OrderViewModel CreateOrder() {
+    return OrderVMFactory.CreateExport().Value;
+  }
+}
+
+ C# lock 语句使用 Monitor.Enter 获取锁，使用 Monitor.Exit 释放锁。 使用语言语句的优点在于 lock 或 SyncLock 块中的所有内容都包含在 Try 语句中。 Try 语句有一个 Finally 块，用以保证锁得以释放。
+
+
+CompositionInitializer.SatisfyImports(this) 与Export是互斥的。可以重写，CompositionHost.Initialize can only be called a single time within the app. 
+var aggregateCatalog = new AggregateCatalog();
+    var assemblyCatalog = new AssemblyCatalog(typeof(App).Assembly);
+    CompositionHost.Initialize(assemblyCatalog, aggregateCatalog);
+    CompositionInitializer.SatisfyImports(this);  //imports are satisfied
+
+
+	如果一个类里面有很多事件，注意实现IDisposable接口
+
+	AssemblyPart 
+
+	The Caching Application Block provides an in-memory cache that your application can manipulate through a simple API to store and retrieve items
+	You can manually edit the XML data, but the Enterprise Library configuration tools greatly simplify this task. 
+
+
+	Bug with workaround 可变通缺陷
+
+	声明式的语言更多的是显示what而不是how.现在的大多数语言都是命令式的。
+	DSL（Domain Specific Language，领域特定语言）。DSL不是什么新鲜的玩意儿，我们平时经常接触的SQL、CSS、正则表达式等都属于DSL。
+
+	The BuildUp method is useful when you do not have control of the construction of an instance, but you still want property or method call injection performed. 
+	The API for the Unity container contains both generic and non-generic overloads of these methods so that you can use them with languages that do not support the generics syntax. 
+
+	The application block should embody Microsoft patterns & practices guidance. 
+	附加的子任务和嵌套的子任务。Result 属性将阻止调用线程，直至任务完成为止。
+
+    ListDictionary 使用单链接列表实现 IDictionary。 建议用于通常包含 10 个或 10 个以下项的集合。如果元素数量是 10 或小于 10，它比 Hashtable 小，且更快。 如果用于大量元素时性能很重要，就不应使用这种实现方法。
+    HybridDictionary 在集合较小时，使用 System.Collections.Specialized.ListDictionary 来实现 IDictionary，然后当集合变大时，切换到 System.Collections.Hashtable。
+	多线程程序中推荐使用 Hashtable, 默认的 Hashtable 允许单线程写入, 多线程读取, 对 Hashtable 进一步调用 Synchronized() 方法可以获得完全线程安全的类型. 而Dictionary 非线程安全, 必须人为使用 lock 语句进行保护, 效率大减.
+
+	  System.Collections.Hashtable htSyn = System.Collections.Hashtable.Synchronized(new System.Collections.Hashtable());
+
+	  该 HashSet<T> 类提供高性能的集运算。集合是一组不重复出现且无特定顺序的元素。
+
+	使用Trace.CorrelationManager可以在跟踪测试中加入逻辑操作名称，逻辑操作名称是可以嵌套的，存储方式是以栈的形式。当然只有如下两个条件成立，逻辑操作名称才会被写入到监视跟踪或调试的侦听器（TraceListener）中：1是TraceListener的TraceOptions属性设置成LogicalOperationStack，即在侦听器输出时要加入逻辑操作栈的信息。2是在必须调用Trace.TraceXXX方法或者TraceSource类的响应方法。
+
+表达式树是 lambda 表达式在内存中的数据表示形式。它使 lambda 表达式的结构变得更加透明而明确。在与表达式树中的数据进行交互时，其方式就像与任何其他数据结构交互时一样。
+
+lambda expression可以是Expression Tree的一个节点，可以用来创建一个委托。
+对于一个表达式目录树来说，它有几个比较重要的属性： 
+Body：指表达式的主体部分； 
+Parameters：指表达式的参数； 
+NodeType：指表达式的节点类型，如在上面的例子中，它的节点类型是Lambda； 
+Type：指表达式的静态类型，在上面的例子中，Type为Fun<int,int,int>。 
+
+在LINQ to Objects中查询表达式或者Lambda表达式并不翻译为表达式目录树，因为LINQ to Objects查询的都是实现了IEnmerable<T>接口的数据，所以查询表达式或者Lambda表达式都可以直接转换为.NET代码来执行，无需再经过转换为表达式目录这一步
+
+IQueryable是通过表达式树机制查询的。有两个很重要的属性Expression和Provider，分别表示获取与IQueryable 的实例关联的表达式目录树和获取与此数据源关联的查询提供程序，我们所有定义在查询表达式中方法调用或者Lambda表达式都将由该Expression属性表示，而最终会由Provider表示的提供程序翻译为它所对应的数据源的查询语言，这个数据源可能是数据库，XML文件或者是WebService等。
+
+IL是一种为.NET平台设计的汇编语言，拥有大量.NET平台中特有的高级特性。而x86汇编等则是与机器码一一对应的文字形式代码。
+ 
+DispatcherTimer 集成到 Dispatcher 队列，因此它在 UI 线程上运行。
+
+DataMember还有以下参数，它们的含义分别如下。
+
+（1）IsRequired：值为true时，要求序列化引擎检查对象是否存在该值；若无，则会有异常抛出。
+
+（2）Order：bool类型值，值为true时，序列化和反序列化过程将会按成员定义的顺序进行，这对依赖于成员位置的反序列化过程无比重要。
+
+（3）EmitDefaultvalue：为成员属性设置一个默认值。
+能够带领团队实现项目需求分析、计划制定、开发进度管理跟踪等，善于激发团队的工作激情
+
+
+要启动Silverlight中的GPU硬件加速首先必须进行参数设置：
+
+1)在Silverlight页面对象中加入参数<param name="EnableGPUAcceleration" value="true" />
+
+2)为需要使用GPU加速的Uelement对象设置CacheMode值，比如：
+
+  Xaml：
+
+        <MediaElement>            <MediaElement.CacheMode>                <BitmapCache RenderAtScale="0.8"/>            </ MediaElement.CacheMode>        </MediaElement>
+
+		 
+   NET中的默认使用的序列化机制不是最优的，因为它要使用反射机制，而反射机制是是非常耗CPU的，特别是当我们缓存了比较复杂的数据对象的时候。我们要自己选择一个比较好的序列化方法来尽可能的减少对CPU的使用。常用的方法就是让对象自己来实现ISerializable接口。
+    在.NET中，所谓的大对象，就是指的其占用的内存大于了85K的对象，大对象是分配在大对象托管堆上面的（我们简称为“大堆”，当然，还有一个对应的小堆），而这个大堆上面的对象的分配机制和小堆不一样：大堆在分配的时候，总是去需找合适的内存空间，结果就是导致出现内存碎片，导致内存不足！我们用一个图来描述一下，如图5所示：垃圾回收机制不会在回收对象之后压缩大堆（小堆是压缩的）。分配对象的时候，需要去遍历大堆，去需找合适的空间，遍历是要花成本的。如果某些空间小于85K，那么就不能分配了，只能白白浪费，也导致内存碎片。
+ 
+
+当某些代码触发了创建ContingentProperties的操作，Task对象就会膨胀。最经常出现的原因包括：
+创建的任务带有CancellationToken 
+任务是从非默认的ExecutionContext创建的 
+Task作为父Task参与到“结构化并行机制（structured parallelism）”中 
+Task以Faulted状态结束 
+Task通过((IAsyncResult)Task).AsyncWaitHandle.Wait()处于等待状态 
+ 
+lambda expressions are really just anonymous methods in a concise form. 
+简单来讲，闭包允许你将一些行为封装，将它像一个对象一样传来递去，而且它依然能够访问到原来第一次声明时的上下文。这样可以使控制结构、逻辑操作等从调用细节中分离出来。
+
+ Gracious behavior is the notion of doing one’s work both gra-ciously and professionally.
+ Review the source code that you or your team is  writing. Does the code need to be reworked or improved? What new and different practices should your team adopt to write better code? 
+
+ A retrospective meeting is a discussion held at the end of an Agile sprint or project iteration
+
+ The road to gracious behavior begins with the following steps:
+ Choosing relationships over correctness
+ Learning to delegate
+ Realizing that life is reflexive
+ Acting as though words are seeds
+
+
+ Dealing with others with integrity and honesty without bluntness
+ Confronting issues in a timely manner
+ Providing a professional service
+ Forgiving and forgetting past offenses
+In all too many  cases,  our  own  view  of  the  world  simply  blinds  us  to  the  potential faults in our proposed solutions.
+
+ AssemblyName assemblyName = AssemblyName.GetAssemblyName(assemblyUri.LocalPath);
+
+
+ sliverlight:AssemblyPart
+  Stream assemblyStream = Application.GetResourceStream(
+                new StreamResourceInfo(sourceStream, null),
+                new Uri(assemblyPart.Source, UriKind.Relative)).Stream;
+
+            assemblyPart.Load(assemblyStream);
+
+AppDomain.CurrentDomain.AssemblyResolve += this.CurrentDomain_AssemblyResolve;
+
+利用函数的重载简化复杂的类。
+
+Subscriptions.Cast<EventSubscription<TPayload>>()  cast的用法
+父类方法可声明为virtual
+
+可以这样定义接口： public interface IRegionBehaviorCollection : IEnumerable<KeyValuePair<string, IRegionBehavior>>
+
+Comparison<T> 委托   表示比较同一类型的两个对象的方法。
+ this.Container.ComposeExportedValue<ILoggerFacade>(this.Logger);
+ 在创建大量对象的时候不要用container,because of the container's use of reflection for creating each entity
+
+ Region里面设置行为集合，添加beheavior时进行关联。里面包含导航服务。通过设置ItemMetadata的isactive激发事件MetadataChanged，             
+此事件在ViewsCollection中被publish触发NotifyCollectionChangedEventHandler。在每种RegionAdapter中Adapt方法中将此事件关联到此region的内容改变的代理上。
+
+DataContract支持序列只读属性，但是属性上要加DataMember. 
+XmlSerializer支持乱序读的代价是，你不能控制你自己的生成的Xml的节点的顺序。也就是说ElementName Attribute中不能指定Order。 
+BinaryFormatter要求被序列化的类必须“满城尽带Serializable”。所以如果你改不了源代码，序列化不了就是序列化不了。而XmlSerializable，你尽可以通过继承的方式，把Internal和Protected的Property序列化出来。 
+XmlSerializer不序列化Null值，DataContractSerializer默认会序列化Null值。
+
+
+SynchronizationContext    Send 方法启动一个同步请求以发送消息。Post 方法启动一个异步请求以发送消息。 
+
+[ThreadStatic] 
+指示静态字段的值对于每个线程都是唯一的。
+
+    FrameworkElement.DefaultStyleKeyProperty.OverrideMetadata(
+                typeof(DesignerItem), new FrameworkPropertyMetadata(typeof(DesignerItem)));
+Monitor.Wait方法
+ 当线程调用 Wait 时，它释放对象的锁并进入对象的等待队列，对象的就绪队列中的下一个线程（如果有）获取锁并拥有对对象的独占使用。
+
+ Monitor.Pulse方法
+ 当前线程调用此方法以便向队列中的下一个线程发出锁的信号。接收到脉冲后，等待线程就被移动到就绪队列中。在调用 Pulse 的线程释放锁后，就绪队列中的下一个线程（不一定是接收到脉冲的线程）将获得该锁。
+
+ 接口除了可以包含方法之外，还可以包含属性、索引器、事件，而且这些成员都被定义为公有的.抽象类不能被密封.
+ 好的接口定义应该是具有专一功能性的，而不是多功能的，否则造成接口污染。如果一个类只是实现了这个接口的中一个功能，而不得不去实现接口中的其他方法，就叫接口污染。   
+
+ 在组件的所有实现间提供通用的已实现功能，则使用抽象类。   抽象类主要用于关系密切的对象；而接口适合为不相关的类提供通用功能。
+
+ 采用PerCall策略时因为服务类型使用了较为昂贵的资源，例如数据库联接，网络文件，如果不采用，则将会长期占用这些资源.
+
+ 引用类型分配在托管堆(Managed Heap)上，声明一个变量在栈上保存，当使用new创建对象时，会把对象的地址存储在这个变量里。值类型保存在栈上，会显式的释放资源。
+
+ 组合和聚合的关系。
+ 【依赖关系】：是一种使用的关系，即一个类的实现需要另一个类的协助，所以要尽量不使用双向的互相依赖.
+ 双向的关联可以有两个箭头或者没有箭头，单向的关联有一个箭头。
+
+ UML类图关系中依赖是指一个类A可能要用到另一个类B的一些方法，即，要完成A类里面的所有功能，一定有类B中的方法协助才可以。依赖是一种弱关联，只要一个类用到另一个类，但是和另一个类的关系不是太明显的时候（可以说是“uses”了那个类），就可以把这种关系看成是依赖，依赖也可说是一种偶然的关系，而不是必然的关系，就是“我在某个方法中偶然用到了它，但在现实中我和它并没多大关系”。例如我和锤子，我和锤子本来是没关系的，但在有一次要钉钉子的时候，我用到了它，这就是一种依赖，依赖锤子完成钉钉子这件事情。
+
+ ConcurrentBag表示线程安全的无序集合。
+
+ 确定在任何给定方案中是否使用负载平衡的最佳方式是：体验并度量操作在有代表性的负载和计算机配置下要花多长时间完成。例如，静态分区在只有少量核心的多核计算机上的速度可能会明显加快，但在具有相对较多核心的计算机上则可能会导致速度下降。
+
+ Hashcode是一个用于在相等测试过程中标识对象的数值。它还可以作为一个集合中的对象的索引。 GetHashCode方法适用于哈希算法和诸如哈希表之类的数据结构。 GetHashCode 方法的默认实现不保证针对不同的对象返回唯一值。而且，.NET Framework 不保证 GetHashCode 方法的默认实现以及它所返回的值在不同版本的 .NET Framework 中是相同的。因此，在进行哈希运算时，该方法的默认实现不得用作唯一对象标识符。”
+ 一个好的hash函数通常意味着尽量做到“为不相等的对象产生不相等的hashcode",但是不要忘记”相同的对象必须有相同的hashcode"。
+ 但是在一些数据结构里面，判断两个对象是否相同，却采用的是hashcode。比如说Dictionnary，这时候如果没有重写GetHashcode方法，就会产生问题。
+
+ 元素的存储位置与它的关键字间建立一个确定的对应关系，即设关键字key与存储位置间的对应关系为H(key)，若用一维数组来存放数据元素，则H(key)就表示该数组的下标。这样我们就可以称函数H为哈希（Hash）函数，H(key)为哈希地址，该一维数组就是哈希表。
+
+
+   Don't fall in love 不要等完美之后才发布  
+
+   世上千般好，处世万般难。上帝赐予每人一颗心，却让它隐藏在最深处。人的思想要用语言来表达，人的尊严要靠面子来维护，人的交流要靠感情来维系。所以，人心难测，人言可畏；人情难却，人缘难结。新处世观说到底就是要正确处理心、嘴、面子和感情之间的关系，那么天下人的心计尽在你的预示之中了，如能灵活运用，那么处世将不再难。社会是一个旋转的大舞台，处世是一道难解的方程，解题的诀窍在于以不变应万变。
+
+    与人打交道，面子问题很重要。中国人自古好面子，读书人更好面子，一事当前，面皮薄，该开口的不开口，该要求的不要求，该批评的不批评，该拒绝的不拒绝，结果失去了大好时机，牺牲了自己的利益。所以有一种说法叫“面子杀人”，意思是说，有时候为了面子，可能伤害了自己，甚至牺牲了自己。
+
+	心理学家是这样解释他的行为的：作为新提升的局长，他从心理上给自己塑造了一个新人形象，并希望人人接受这一形象，一旦这一形象不被人们接受，他便会产生恼怒和嫉恨心理，这也是一种情商病。犯这种病的人一旦地位变动就要发作，“面子”随着“位子”的变化而变化是这种情商病的主要特征。
+
+	在人力资源管理界，特别流行一个说法，即"骑马，牵牛，赶猪，打狗"理论：人品很好，能力又很强的，是千里马，我们要骑着他；人品很好但能力普通的，是老黄牛，我们要牵着他；人品、能力皆普通的，就是"猪"，我们要赶走他；人品很差能力很强的，那是"狗"，我们要打击他
+
+	纠正自己的行为，认清自己，从零开始，你将重新走上职场坦途。"　
+
+
+	 1.做事要有目的性。能清楚认识自己行动的正确性和重要性，才会使人更加信赖你。
+
+    2.做事要当机立断，不可前怕狼、后怕虎，顾虑重重。一个优柔寡断的人很难赢得别人的信赖。
+
+    3.做事不要草率、冒失。人们不愿意与冒冒失失的人共事，对这样的人总不放心。
+
+    4.要有自制能力，善于克制自己的冲动。关键时刻控制不住自己必然会惹出意想不到的麻烦。人们最怕与缺乏自制力的人打交道。
+
+    5.做人要能吃苦，切忌骄气十足。过分娇惯自己会养成自私自利和懒惰的坏毛病，不会得到他人的好感。
+
+    6.不做见利忘义之人。如果你始终怀着利碌之心与人交往，将永远得不到一个真正的朋友。
+
+    7.确立自己的人生观，并以此指导你的言行。有了一定的生活原则和目的，你才能摆脱空虚，扎扎实实地投入生活，也才能与人愉快地交往。
+
+    8.富有创造性，有独到的发现问题和解决问题的能力，这样的人往往成为人际交往中的领袖人物。
+
+    9.要对自己所处的环境有深刻的认识和体验，这样才能更好地把握自己在社会生活中的位置。
+
+    10.不必觉得自己理亏。既然你讨厌他，就不怕得罪他。
+
+    11.直截了当地说。说你正在赶做一件事，抽不出时间陪他。
+
+    12.装着没看见。当你发现他正向你走来，就装着没看见而走开，以免目光相接，让他觉得你欢迎他。
+
+    13.先发制人。如果你知道了他要来找你，你就先去拜访他，这样你就占了主动地位，可以适时地结束谈话。
+
+    14.不要停下手上的事。对方会认为你很忙，就会识趣地不做打扰了。
+
+    15.声东击西之计。你不妨说：“你来的正好，我带你看一样东西。”然后带他去看庭院新种的花草，看完后对他说声“再见”，掉头就走。

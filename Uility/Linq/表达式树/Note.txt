@@ -1,0 +1,24 @@
+﻿对于一个表达式目录树来说，它有几个比较重要的属性： 
+
+Body：指表达式的主体部分； 
+
+Parameters：指表达式的参数； 
+
+NodeType：指表达式的节点类型，如在上面的例子中，它的节点类型是Lambda； 
+
+Type：指表达式的静态类型，在上面的例子中，Type为Fun<int,int,int>。 
+
+
+表达式目录树不是表示Lambda表达式，需要调用Lambda方法创建一个新的表达式:
+BinaryExpression body = Expression.Add(
+        Expression.Constant(2),
+        Expression.Constant(3));
+    Expression<Func<int>> expression = 
+        Expression.Lambda<Func<int>>(body, null);
+    Func<int> lambda = expression.Compile();
+
+
+	Provider表示的提供程序翻译为它所对应的数据源的查询语言，这个数据源可能是数据库，XML文件或者是WebService等
+
+
+	

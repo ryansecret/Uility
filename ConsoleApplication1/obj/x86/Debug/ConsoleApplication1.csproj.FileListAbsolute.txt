@@ -1,0 +1,10 @@
+E:\备份\Uility\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+E:\备份\Uility\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+E:\备份\Uility\ConsoleApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\备份\Uility\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+E:\备份\Uility\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb
+D:\我的酷盘\Uility\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+D:\我的酷盘\Uility\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb
+D:\我的酷盘\Uility\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\我的酷盘\Uility\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\我的酷盘\Uility\ConsoleApplication1\obj\x86\Debug\ResolveAssemblyReference.cache

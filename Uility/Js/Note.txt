@@ -1,0 +1,7 @@
+﻿please watch out ,this is special form selector 
+
+Cancel the default action (navigation) of the click.
+
+preventDefault()
+
+  $(this).find("td:eq(" + count + ")").remove();

@@ -1,0 +1,112 @@
+﻿
+CREATE PROCEDURE dbo.AXzhz
+/*
+  @parameter1 用户名
+  @parameter2 新密码
+*/
+@password nvarchar(20),
+@userName nvarchar(20)
+AS
+declare @err0 int
+update WL_user set password=@password where UserName=@userName
+set @err0=@@error 
+select  @err0 as err0
+
+ALTER PROCEDURE procClientRateOutput 
+         @pstrClientID VARCHAR(6) = 'CABLE',
+         @pstrCategoryID VARCHAR(6) = '<All>',
+         @pstrEmpID VARCHAR(6)='AC',
+         @pdteDate datetime = '1996/1/1',
+         @curRate MONEY OUTPUT
+
+AS
+
+-- Description: Get the $Rate for this client and this employee 
+--         and this category from Table ClientRate
+
+SET @curRate = (
+                SELECT TOP 1 Rate 
+                FROM ClientRate 
+                WHERE ClientID=@pstrClientID 
+                AND EmpID=@pstrEmpID 
+                AND CategoryID=@pstrCategoryID
+                AND DateEnd > @pdteDate
+                ORDER BY DateEnd
+               )
+
+IF @curRate IS NULL
+
+         SET @curRate =
+(
+                SELECT TOP 1 Rate 
+                FROM ClientRate 
+                WHERE ClientID=@pstrClientID
+                AND EmpID=@pstrEmpID 
+                AND CategoryID='<ALL>' 
+                AND DateEnd > @pdteDate 
+                ORDER BY DateEnd
+               )
+
+RETURN
+
+存储过程是由流控制和SQL语句书写的过程，这个过程经编译和优化后存储在数据库服务器中，应用程序使用时只要调用即可。
+
+CREATE PROC[EDURE] procedure_name [;number] 
+[ 
+{@parameter data_type} ][VARYING] [= default] [OUTPUT] 
+] 
+[,...n] 
+[WITH　
+{ 
+RECOMPILE　
+| ENCRYPTION　
+| RECOMPILE, ENCRYPTION 
+} 
+] 
+[FOR REPLICATION] 
+AS 
+sql_statement [...n]
+
+
+ALTER PROCEDURE [dbo].[Basic_Pagination2005]
+@tblName      nvarchar(200),     --表名
+@fidlelist    nvarchar(1000),   --要查询字段
+@fldName      nvarchar(100),    --排序字段
+@PageSize     int,              --页尺寸
+@PageIndex    int,              --页码
+@IsReCount    bit ,             -- 返回记录总数, 非 0 值则返回
+@OrderType    bit,              -- 设置排序类型, 非 0 值则降序
+@strWhere nvarchar(1000)        --查询条件
+AS
+declare @sqlstr nvarchar(4000),
+@tmpwhere nvarchar(4000),@tmporder nvarchar(100)
+BEGIN
+if @OrderType != 0
+begin
+set @tmporder = @fldName +' desc '
+end
+else
+begin
+        set @tmporder = @fldName +' asc '
+end
+set @tmpwhere='';
+if(@strWhere!='')
+begin
+set @tmpwhere=' where '+@strWhere;
+end
+set @sqlstr=N'select * from
+(select  '+@fidlelist+', ROW_NUMBER() OVER(order
+
+by '+@tmporder+') as row from '+@tblName+@tmpwhere+') 
+tmp where row between '+cast
+
+(((@PageIndex-1)*@PageSize+1) as nvarchar)+' and '+cast
+
+(@PageIndex*@PageSize as nvarchar);  
+exec sp_executesql @sqlstr
+if @IsReCount != 0
+begin
+set @sqlstr=N'select count(*) as Total from '+ @tblName+@tmpwhere
+exec sp_executesql @sqlstr    
+end
+END

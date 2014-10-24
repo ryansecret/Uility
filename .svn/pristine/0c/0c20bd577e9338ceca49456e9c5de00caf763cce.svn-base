@@ -1,0 +1,190 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+
+namespace Uility
+{
+    public static class StringExtension
+    {
+        public static string AsciiToUnicode(this int asciiCode)
+        {
+            Encoding encoding = Encoding.UTF32;
+            byte[] bytes = encoding.GetBytes(((char) asciiCode).ToString());
+            return encoding.GetString(bytes);
+        }
+        /// <summary>
+        /// 从开头截取maxChars长度字符
+        /// </summary>
+        /// <param name="txt"></param>
+        /// <param name="maxChars"></param>
+        /// <returns></returns>
+        public static string Truncate(string txt, int maxChars)
+        {
+            if (string.IsNullOrEmpty(txt))
+                return txt;
+            
+            if (txt.Length <= maxChars)
+                return txt;
+
+            return txt.Substring(0, maxChars);
+        }
+
+        public static string Substitute(string input, Func<string, string> substitutor, string pattern = @"(?<name>\$\{.+?\})")
+        {
+            if (string.IsNullOrEmpty(input)) return input;
+
+            var buffer = new StringBuilder();
+            var matches = Regex.Matches(input, pattern);
+
+            // No replacements?
+            if (matches.Count == 0) return input;
+
+            int lastIndex = 0;
+
+            Match match = null;
+            for (int ndx = 0; ndx < matches.Count; ndx++)
+            {
+                match = matches[ndx];
+                var name = match.Value.Substring(2, match.Value.Length - 3);
+                var replacement = substitutor(name);
+
+                // Append to buffer remaining text not including the variable.
+                if (match.Index != 0)
+                {
+                    var length = match.Index - lastIndex;
+                    var outside = input.Substring(lastIndex, length);
+                    buffer.Append(outside);
+                }
+                lastIndex = match.Index + match.Length;
+                buffer.Append(replacement);
+            }
+            if (match.Index + match.Length < input.Length)
+            {
+                var lastcontent = input.Substring(match.Index + match.Length);
+                buffer.Append(lastcontent);
+            }
+            return buffer.ToString();
+        }
+
+        public static string Chop(this string sourceString, int removeFromEnd)
+        {
+            string str = sourceString;
+            if ((removeFromEnd > 0) && (sourceString.Length > (removeFromEnd - 1)))
+            {
+                str = str.Remove(sourceString.Length - removeFromEnd, removeFromEnd);
+            }
+            return str;
+        }
+
+        public static List<string> FindMatches(this string source, string find)
+        {
+            Regex regex = new Regex(find, RegexOptions.Singleline | RegexOptions.Multiline | RegexOptions.IgnoreCase);
+            List<string> list = new List<string>();
+            foreach (Match match in regex.Matches(source))
+            {
+                list.Add(match.Value);
+            }
+            return list;
+        }
+
+        public static bool Matches(this string source, string compare)
+        {
+            return string.Equals(source, compare, StringComparison.OrdinalIgnoreCase);
+        }
+
+        public static bool MatchesRegex(this string inputString, string matchPattern)
+        {
+            return Regex.IsMatch(inputString, matchPattern, RegexOptions.IgnorePatternWhitespace | RegexOptions.IgnoreCase);
+        }
+
+        public static bool MatchesTrimmed(this string source, string compare)
+        {
+            return string.Equals(source.Trim(), compare.Trim(), StringComparison.OrdinalIgnoreCase);
+        }
+        public static bool IsAlpha(this string evalString)
+        {
+            return !Regex.IsMatch(evalString, "[^a-zA-Z]");
+        }
+
+        public static bool IsAlphaNumeric(this string evalString)
+        {
+            return !Regex.IsMatch(evalString, "[^a-zA-Z0-9]");
+        }
+
+        public static bool IsAlphaNumeric(this string evalString, bool allowSpaces)
+        {
+            if (allowSpaces)
+            {
+                return !Regex.IsMatch(evalString, @"[^a-zA-Z0-9\s]");
+            }
+            return evalString.IsAlphaNumeric();
+        }
+
+        public static bool IsEmail(this string emailAddressString)
+        {
+            return Regex.IsMatch(emailAddressString, "^([0-9a-zA-Z]+[-._+&])*[0-9a-zA-Z]+@([-0-9a-zA-Z]+[.])+[a-zA-Z]{2,6}$");
+        }
+
+        public static bool IsGuid(this string guid)
+        {
+            return Regex.IsMatch(guid, "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}");
+        }
+
+        public static bool IsIPAddress(this string ipAddress)
+        {
+            return Regex.IsMatch(ipAddress, @"^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$");
+        }
+
+        public static bool IsLowerCase(this string inputString)
+        {
+            return Regex.IsMatch(inputString, "^[a-z]+$");
+        }
+
+        public static bool IsNumeric(this string evalString)
+        {
+            return !Regex.IsMatch(evalString, "[^0-9]");
+        }
+
+
+        public static bool IsDbc(this string inpustString)
+        {
+            if (inpustString.Length == Encoding.Default.GetByteCount(inpustString))
+                return true;
+            else
+            {
+                return false;
+            }
+        }
+        /// <summary>
+        /// 全角
+        /// </summary>
+        /// <param name="inpustString"></param>
+        /// <returns></returns>
+          public static bool IsSbc(this string inpustString)
+        {
+            if (2*inpustString.Length == Encoding.Default.GetByteCount(inpustString))
+                return true;
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool IsCn(this string inputString)
+        {
+            string checkKey= @"^[\u4e00-\u9fa5]{0,}$";
+            int length = inputString.Length;
+            for (int i = 0; i < length; i++)
+            {
+                if (!Regex.IsMatch(inputString[i].ToString(),checkKey))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+}

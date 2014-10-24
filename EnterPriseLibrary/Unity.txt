@@ -1,0 +1,26 @@
+﻿ContainerControlledLifetimeManager，容器控制生命周期管理，这个生命周期管理器是RegisterInstance默认使用的生命周期管理器，也就是单件实例
+
+分层生命周期管理器，这个管理器类似于ContainerControlledLifetimeManager，也是由UnityContainer来管理，也就是单件实例。不过与ContainerControlledLifetimeManager不同的是，这个生命周期管理器是分层的，
+但是如果根节点处父容器释放后，所有的子容器都将被释放。
+
+PerResolveLifetimeManager，这个生命周期是为了解决循环引用而重复引用的生命周期
+
+ExternallyControlledLifetimeManager，外部控制生命周期管理器 弱引用
+
+container.RegisterType<IClass, YourClass>( 
+        new InjectionConstructor("a", new MyClass())); 
+
+ container.Resolve<IClass>(new ParameterOverrides() 
+    { 
+        {"test","test"}, 
+        {"my",new MyClass()} 
+    }
+
+	container.RegisterType<IClass, MyClass>( 
+        new InjectionProperty("Name", "A班"), 
+        new InjectionProperty("Description", "A班的描述")); 
+var myClass = container.Resolve<IClass>(new PropertyOverrides() 
+    { 
+        {"Name","重载后的A班"}, 
+        {"Description","重载后的A班的描述"} 
+    }.OnType<MyClass>()); 

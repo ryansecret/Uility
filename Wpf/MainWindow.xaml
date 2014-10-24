@@ -1,0 +1,54 @@
+﻿<Window x:Class="Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Wpf="clr-namespace:Wpf" Title="MainWindow" Height="350" Width="525" WindowStyle="None">
+    <Grid>
+        <ListBox VirtualizingStackPanel.VirtualizationMode="Recycling" VirtualizingStackPanel.IsVirtualizing="True" >
+            <ListBox.GroupStyle >
+                <GroupStyle>
+                    <GroupStyle.Panel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="2" />
+                        </ItemsPanelTemplate>
+                    </GroupStyle.Panel>
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <Expander Header="{Binding Name}" />
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+
+            </ListBox.GroupStyle>
+        </ListBox>
+        <TabControl Height="287" HorizontalAlignment="Left" Margin="12,12,0,0"  Name="tabControl1" VerticalAlignment="Top" Width="136">
+             
+                <TabItem Header="tabItem1" Name="tabItem1" >
+                <ControlTemplate>
+                    <ControlTemplate.Triggers>
+                        <DataTrigger Binding="">
+                         
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+                <TabItem.ContentTemplateSelector >
+                    <Wpf:PropertyDataTemplateSelector BooleanDataTemplate="{StaticResource  }" DefaultnDataTemplate="" EnumDataTemplate=""></Wpf:PropertyDataTemplateSelector>
+                </TabItem.ContentTemplateSelector>
+                <Grid />
+            </TabItem>
+            <TabItem Header="tabItem2" >
+                <Grid />
+            </TabItem>
+            <TabItem Header="tabItem3">
+                
+            </TabItem>
+            <TabItem Header="tabItem4">
+                <Grid />
+            </TabItem>
+            <TabItem Header="tabItem5">
+               
+            </TabItem>
+        </TabControl>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="270,23,0,0" Name="textBox1"  VerticalAlignment="Top" Width="120">
+        </TextBox>
+        <ComboBox Height="23"   HorizontalAlignment="Left" Margin="274,91,0,0" Name="comboBox1" VerticalAlignment="Top" Width="120" />
+    </Grid>
+</Window>

@@ -1,0 +1,9 @@
+﻿Expression.Lambda这个方法还有一个泛型版重载，它可以创建如同C#自己生成一样的强类型LambdaExpression
+ParameterExpression pi = Expression.Parameter(typeof(int), "i");
+var fexp =
+    Expression.Lambda<Func<int, int>>(
+        Expression.Add(pi, Expression.Constant(1))
+        , pi);
+
+var f = fexp.Compile();
+

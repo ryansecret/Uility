@@ -1,0 +1,12 @@
+D:\我的酷盘\我的酷盘\Uility\Console\bin\Debug\Console.exe
+D:\我的酷盘\我的酷盘\Uility\Console\bin\Debug\Console.pdb
+D:\我的酷盘\我的酷盘\Uility\Console\obj\x86\Debug\Console.exe
+D:\我的酷盘\我的酷盘\Uility\Console\obj\x86\Debug\Console.pdb
+D:\我的酷盘\我的酷盘\Uility\Console\bin\Debug\Console.exe.config
+D:\我的酷盘\我的酷盘\Uility\Console\obj\x86\Debug\Console.csprojResolveAssemblyReference.cache
+C:\Users\dell\Desktop\Uility\Console\bin\Debug\Console.exe.config
+C:\Users\dell\Desktop\Uility\Console\bin\Debug\Console.exe
+C:\Users\dell\Desktop\Uility\Console\bin\Debug\Console.pdb
+C:\Users\dell\Desktop\Uility\Console\obj\x86\Debug\Console.csprojResolveAssemblyReference.cache
+C:\Users\dell\Desktop\Uility\Console\obj\x86\Debug\Console.exe
+C:\Users\dell\Desktop\Uility\Console\obj\x86\Debug\Console.pdb

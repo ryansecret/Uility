@@ -1,0 +1,108 @@
+﻿可以通过下面的标记把 jQuery 添加到网页中：
+
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+</head>
+
+
+$(this).hide() 
+演示 jQuery 的 hide() 函数，隐藏当前的 HTML 元素。 
+$("p").hide() 
+演示 jQuery 的 hide() 函数，隐藏所有 <p> 元素。 
+$(".test").hide() 
+演示 jQuery 的 hide() 函数，隐藏所有 class="test" 的元素。 
+$("#test").hide() 
+演示 jQuery 的 hide() 函数，隐藏 id="test" 的元素。 
+
+基础语法是：$(selector).action()
+
+美元符号定义 jQuery 
+选择符（selector）“查询”和“查找” HTML 元素 
+jQuery 的 action() 执行对元素的操作 
+
+文档就绪函数
+您也许已经注意到在我们的实例中的所有 jQuery 函数位于一个 document ready 函数中：这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码。
+
+jQuery 元素选择器
+jQuery 使用 CSS 选择器来选取 HTML 元素。
+
+$("p") 选取 <p> 元素。
+$("p.intro") 选取所有 class="intro" 的 <p> 元素。
+$("p#demo") 选取 id="demo" 的第一个 <p> 元素。
+
+
+jQuery 属性选择器
+jQuery 使用 XPath 表达式来选择带有给定属性的元素。
+
+$("[href]") 选取所有带有 href 属性的元素。
+$("[href='#']") 选取所有带有 href 值等于 "#" 的元素。
+$("[href!='#']") 选取所有带有 href 值不等于 "#" 的元素。
+$("[href$='.jpg']") 选取所有 href 值以 ".jpg" 结尾的元素。
+
+
+下面是 jQuery 中事件方法的一些例子：
+
+Event 函数 绑定函数至 
+$(document).ready(function) 将函数绑定到文档的就绪事件（当文档完成加载时） 
+$(selector).click(function) 触发或将函数绑定到被选元素的点击事件 
+$(selector).dblclick(function) 触发或将函数绑定到被选元素的双击事件 
+$(selector).focus(function) 触发或将函数绑定到被选元素的获得焦点事件 
+$(selector).mouseover(function) 触发或将函数绑定到被选元素的鼠标悬停事件 
+
+jQuery toggle() 函数使用 show() 或 hide() 函数来切换 HTML 元素的可见状态。
+
+jQuery 拥有以下滑动函数：
+
+$(selector).slideDown(speed,callback)
+
+$(selector).slideUp(speed,callback)
+
+$(selector).slideToggle(speed,callback)
+
+
+jQuery 函数创建自定义动画的语法：
+
+$(selector).animate({params},[duration],[easing],[callback])关键的参数是 params。它定义产生动画的 CSS 属性。可以同时设置多个此类属性：
+
+animate({width:"70%",opacity:0.4,marginLeft:"0.6in",fontSize:"3em"});第二个参数是 duration。它定义用来应用到动画的时间。它设置的值是："slow", "fast", "normal" 或毫秒。
+
+jQuery 拥有以下 fade 函数：
+$(selector).fadeIn(speed,callback)
+$(selector).fadeOut(speed,callback)
+$(selector).fadeTo(speed,opacity,callback)
+speed 参数可以设置这些值："slow", "fast", "normal" 或 毫秒。
+fadeTo() 函数中的 opacity 参数规定减弱到给定的不透明度。
+
+改变 HTML 内容
+语法
+$(selector).html(content)   html() 函数改变所匹配的 HTML 元素的内容（innerHTML）。
+
+添加 HTML 内容
+语法
+$(selector).append(content)
+
+
+jQuery 拥有三种用于 CSS 操作的重要函数：
+
+$(selector).css(name,value) 
+$(selector).css({properties}) 
+$(selector).css(name) 
+
+CSS 操作实例
+函数 css(name,value) 为所有匹配元素的给定 CSS 属性设置值：
+实例
+$(selector).css(name,value)
+$("p").css("background-color","red");
+
+函数 css({properties}) 同时为所有匹配元素的一系列 CSS 属性设置值：
+
+jQuery Size 操作
+jQuery 拥有两种用于尺寸操作的重要函数：
+
+$(selector).height(value) 
+$(selector).width(value) 
+
+$('input:submit').hide(); 
+The selector for this statement selects all of the input elements, and the  :submit modifier then filters 
+the selection for those whose type attribute is  submit. 
+

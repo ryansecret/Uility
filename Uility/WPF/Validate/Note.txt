@@ -1,0 +1,21 @@
+﻿DataErrorValidationRule：检查由源对象的 IDataErrorInfo 实现所引发的错误，要求数据源对象实现System.ComponentModel命名空间的IDataErrorInfo接口。 
+ExceptionValidationRule：即当绑定目标的属性值向绑定源的属性值赋值时引发异常所产生的验证。此种方式若实现自定义的逻辑验证，通常设置数据源的属性的Set访问器，在Set访问器中，根据输入的值结合逻辑，使用throw抛出相应的异常。 
+
+如果 Binding 的 NotifyOnValidationError 属性设置为 true，则绑定引擎将对对象引发 Validation.Error 附加事件。
+
+
+ private void StackPanel_BindingValidationError(object sender,
+    ValidationErrorEventArgs e)
+        {
+            if (e.Action == ValidationErrorEventAction.Added)
+            {
+                MyTextBox.Background = new SolidColorBrush(Colors.Red);
+
+            }
+            else if (e.Action == ValidationErrorEventAction.Removed)
+            {
+                MyTextBox.Background = new SolidColorBrush(Colors.White);
+            }
+        }
+
+		

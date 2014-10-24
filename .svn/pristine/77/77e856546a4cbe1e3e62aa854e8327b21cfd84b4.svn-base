@@ -1,0 +1,64 @@
+﻿<ControlTemplate.Triggers>
+                            <Trigger Property="Validation.HasError" Value="true">
+                                <Setter Property="ToolTip" Value="{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors), Converter={StaticResource errorConverter}}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+
+
+						IDataErrorInfo - 对数据实体类提供自定义验证支持。.NET Framework 也有此接口，可以方便移植  
+INotifyDataErrorInfo - 对数据实体类提供自定义验证支持，比 IDataErrorInfo 功能更强大。INotifyDataErrorInfo 支持异步验证，这就意味着其可以通过验证方法调用 Web 服务和用回调方法更新错误集合来添加服务器端验证 
+
+ 
+ ValidatesOnExceptions - 指定绑定引擎是否报告验证过程中的异常信息
+                ValidatesOnDataErrors - 指定绑定引擎是否报告绑定数据实体上的 IDataErrorInfo 所实现的验证错误信息（通过 IDataErrorInfo 的 this[string columnName] 获取验证错误信息）
+                NotifyOnValidationError - 当出现验证错误时是否触发 BindingValidationError 事件
+
+
+				 ValidatesOnExceptions - 指定绑定引擎是否报告验证过程中的异常信息
+                NotifyOnValidationError - 当出现验证错误时是否触发 BindingValidationError 事件
+
+
+
+ <sdk:ValidationSummary Grid.ColumnSpan="2" Grid.Row="2">
+            <i:Interaction.Behaviors>
+                <Behaviors:ValidateObject SourceObject="{Binding Question}" PropertyName="Response" />
+            </i:Interaction.Behaviors>
+        </sdk:ValidationSummary>
+
+		在behavior中想ValidationSummary的error中添加。
+		 ObservableCollection<ValidationError> errors =  Validation.GetErrors(this.Target);基于异常的验证。
+
+
+		 Anodation 自定义的
+		 public class CustomizeValidation : ValidationAttribute
+2     {
+3         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+4         {
+5             String checkName = value.ToString();
+6 
+7             return checkName == "jv9" ? ValidationResult.Success : new ValidationResult("请使用指定用户名");
+8         }
+9     }
+
+
+<ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <prism:DataTemplateSelector Content="{Binding}" HorizontalContentAlignment="Stretch" IsTabStop="False">
+                                <prism:DataTemplateSelector.Resources>
+                                    <DataTemplate x:Key="OpenQuestionViewModel">
+                                        <Views:OpenQuestionView DataContext="{Binding}"/>
+                                    </DataTemplate>
+
+                                    <DataTemplate x:Key="MultipleSelectionQuestionViewModel">
+                                        <Views:MultipleSelectionView DataContext="{Binding}"/>
+                                    </DataTemplate>
+
+                                    <DataTemplate x:Key="NumericQuestionViewModel">
+                                        <Views:NumericQuestionView DataContext="{Binding}"/>
+                                    </DataTemplate>
+                                </prism:DataTemplateSelector.Resources>
+                            </prism:DataTemplateSelector>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+
+

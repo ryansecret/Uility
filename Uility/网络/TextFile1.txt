@@ -1,0 +1,66 @@
+﻿ 
+ 
+  var request = HttpWebRequest.Create("http://localhost:1481/NorthwindDataService/NorthwindDataService.svc/Suppliers") as HttpWebRequest;
+            request.Accept = "application/json";
+            var resp = request.BeginGetResponse(new AsyncCallback(GotJSON), request);
+ 
+  Socket sock = e.UserToken as Socket; 
+                sock.Shutdown(SocketShutdown.Send); 
+                sock.Close(); 
+
+				
+            SocketAsyncEventArgs socketEventArg = new SocketAsyncEventArgs();
+
+            DnsEndPoint hostEntry = new DnsEndPoint(_serverName, _port);
+            
+            // Create a socket and connect to the server 
+
+            Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            socketEventArg.Completed += new EventHandler<SocketAsyncEventArgs>(SocketEventArg_Completed);
+            socketEventArg.RemoteEndPoint = hostEntry;
+
+            socketEventArg.UserToken = sock;
+
+            try
+            {
+                sock.ConnectAsync(socketEventArg);
+            }
+            catch (SocketException ex)
+            {
+                throw new SocketException((int)ex.ErrorCode);
+            }
+ 
+ 1. 在ASP.NET中专用属性：
+　　获取服务器电脑名：Page.Server.ManchineName
+　　获取用户信息：Page.User
+　　获取客户端电脑名：Page.Request.UserHostName
+　　获取客户端电脑IP：Page.Request.UserHostAddress
+
+　　2. 在网络编程中的通用方法：
+　　获取当前电脑名：static System.Net.Dns.GetHostName()
+　　根据电脑名取出全部IP地址：static System.Net.Dns.Resolve(电脑名).AddressList
+　　也可根据IP地址取出电脑名：static System.Net.Dns.Resolve(IP地址).HostName
+
+　　3. 系统环境类的通用属性：
+　　当前电脑名：static System.Environment.MachineName
+　　当前电脑所属网域：static System.Environment.UserDomainName
+　　当前电脑用户：static System.Environment.UserName
+
+
+（1）首先根据IP地址和端口号实例化一个Socket，注意端口要要大于1024并且不要使用特殊端口号，要大于1024的原因是1024以下的端口号已经被指派了，而1433、3306这样的端口号已经被用作SQL Server和MySQL的默认端口号了，若指定为这些端口号容易发生冲突。
+（3）接着调用Bind()方法进行绑定，然后再调用Listen()方法用于监听，Listen()方法的参数用于指定监听的队列大小，也就是最多可容纳的等待接受的传入连接数。
+（4）再调用Accept()方法，调用这个方法之后会是程序处于阻塞状态，直至有客户端连接为止。当有客户端连接，这个方法将会返回一个新的Socket，使用这个Socket与客户端进行通讯。
+（5）使用Accept()方法返回的新Socket的Send()方法就可以向客户端发送数据了，还可以使用这个新Socket的Receive()接收客户端的数据。
+（6）最后终止与客户端会话时，注意使用ShutDown()方法关闭Socket连接，并且使用Close()方法释放所占用的资源。
+
+使用Socket类编写客户端的Socket程序步骤如下：
+（1）首先指定远程主机和端口号实例化Socket类，注意连接的端口号一定要与服务器监听的端口号一致。
+（2）接着调用Connect()方法连接远程主机。
+（3）连接到远程主机之后就可以调用Send()方法向服务器发送请求了，然后可以调用Receive()方法接收服务器响应数据，注意如果是发送的类似于中文这样的双字节字符串的话，还需要按照服务器响应的字符串编码将字节数组转换成字符串。
+
+
+public Socket(AddressFamily addressFamily,SocketType socketType,ProtocolType protocolType);
+
+其中，addressFamily 参数指定Socket使用的寻址方案，比如AddressFamily.InterNetwork表明为IP版本4的地址；socketType参数指定 Socket的类型，比如SocketType.Stream表明连接是基于流套接字的，而SocketType.Dgram表示连接是基于数据报套接字的。protocolType参数指定Socket使用的协议，比如ProtocolType.Tcp表明连接协议是运用TCP协议的，而 Protocol.Udp则表明连接协议是运用UDP协议的。
+
+ )如果当前使用的是无连接协议（如 UDP），则根本不需要侦听连接。调用 ReceiveFrom 方法可接受任何传入的数据报。使用 SendTo 方法可将数据报发送到远程主机。

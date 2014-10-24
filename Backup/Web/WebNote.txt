@@ -1,0 +1,164 @@
+﻿< sessionState mode="Off|InProc|StateServer|SQLServer"
+
+               cookieless="true|false"
+
+               timeout="number of minutes"
+
+               stateConnectionString="tcpip=server:port"
+
+               sqlConnectionString="sql connection string"
+
+               stateNetworkTimeout="number of seconds"
+
+/>
+
+必须有的属性是
+
+属性 选项 描述
+
+mode   设置将Session信息存储到哪里
+
+Off 设置为不使用Session功能
+
+InProc 设置为将Session存储在进程内，就是ASP中的存储方式，这是默认值。
+
+StateServer 设置为将Session存储在独立的状态服务中。
+
+SQLServer 设置将Session存储在SQL Server中。
+
+可选的属性是：
+
+属性 选项 描述
+
+cookieless   设置客户端的Session信息存储到哪里
+
+ture 使用Cookieless模式
+
+false 使用Cookie模式，这是默认值。
+
+timeout   设置经过多少分钟后服务器自动放弃Session信息。默认为20分钟
+
+stateConnectionString   设置将Session信息存储在状态服务中时使用的服务器名称和端口号，例如："tcpip=127.0.0.1:42424”。当mode的值是 StateServer是，这个属性是必需的。
+
+sqlConnectionString   设置与SQL Server连接时的连接字符串。例如"data source=localhost;Integrated Security= SSPI;Initial Catalog=northwind"。当mode的值是SQLServer时，这个属性是必需的。
+
+stateNetworkTimeout   设置当使用StateServer模式存储Session状态时，经过多少秒空闲后，断开Web服务器与存储状态信息的服务器的TCP/IP连接的。默认 值是10秒钟。
+
+
+、＜compilation＞节
+
+ 
+　　作用：配置 ASP.NET 使用的所有编译设置。默认的debug属性为“true”.在程序编译完成交付使用之后应将其设为false（Web.config文件中有详细说明，此处省略示例）
+
+＜customErrors＞
+
+ 
+　　作用：为 ASP.NET 应用程序提供有关自定义错误信息的信息。它不适用于 XML Web services 中发生的错误。
+
+ 
+　　示例：当发生错误时，将网页跳转到自定义的错误页面。
+
+ 
+　　＜customErrors defaultRedirect="ErrorPage.aspx" mode="RemoteOnly"＞
+
+ 
+　　＜/customErrors＞
+
+ 
+　　其中元素defaultRedirect表示自定义的错误网页的名称。mode元素表示：对不在本地 Web 服务器上运行的用户显示自定义(友好的)信息。
+
+
+＜httpRuntime＞节
+
+ 
+　　作用：配置 ASP.NET HTTP 运行库设置。该节可以在计算机、站点、应用程序和子目录级别声明。
+
+ 
+　　示例：控制用户上传文件最大为4M，最长时间为60秒，最多请求数为100
+
+ 
+　　＜httpRuntime maxRequestLength="4096" executionTimeout="60" appRequestQueueLimit="100"/＞
+＜trace＞
+
+ 
+　　作用：配置 ASP.NET 跟踪服务，主要用来程序测试判断哪里出错。
+
+ 
+　　示例：以下为Web.config中的默认配置：
+
+ 
+　　＜trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true" /＞
+
+ 
+　　注：
+
+ 
+　　enabled="false"表示不启用跟踪；requestLimit="10"表示指定在服务器上存储的跟踪请求的数目
+
+ 
+　　pageOutput="false"表示只能通过跟踪实用工具访问跟踪输出；
+
+ 
+　　traceMode="SortByTime"表示以处理跟踪的顺序来显示跟踪信息
+
+ 
+　　localOnly="true" 表示跟踪查看器 (trace.axd) 只用于宿主 Web 服务器
+
+<!--默认错误页设置,mode:具有On,Off,RemoteOnly 3种状态。On表示始终显示自定义的信息; Off表示始终显示详细的asp.net错误信息; RemoteOnly表示只对不在本地Web服务器上运行的用户显示自定义信息.defaultRedirect:用于出现错误时重定向的URL地址-->
+
+    <customErrors defaultRedirect="Err.html" mode="RemoteOnly">
+
+      <!--特殊代码编号的错误从定向文件-->
+
+      <error statusCode="403" redirect="NoAccess.htm" />
+
+      <error statusCode="404" redirect="FileNotFound.htm" />
+
+    </customErrors>
+
+ <!--配置调试和跟踪:下面配置的意思是启动调试(默认),捕获跟踪信息,要缓存的跟踪请求个数(15),跟踪结果的排列顺序-->
+
+    <trace enabled="true" localOnly="false" pageOutput="true" requestLimit="15" traceMode="SortByCategory"/>
+
+   <!--通过 <authentication> 节可以配置 ASP.NET 使用的 安全身份验证模式，以标识传入的用户。Windows: 使用IIS验证方式,Forms: 使用基于窗体的验证方式,Passport: 采用Passport cookie验证模式,None: 不采用任何验证方式-->
+
+    <authentication mode="Forms">
+
+      <!--Name: 指定完成身份验证的Http cookie的名称.LoginUrl: 如果未通过验证或超时后重定向的页面URL，一般为登录页面，让用户重新登录。Protection: 指定 cookie数据的保护方式. 
+
+      可设置为:All表示加密数据，并进行有效性验证两种方式，None表示不保护Cookie，Encryption表示对Cookie内容进行加密，validation表示对Cookie内容进行有效性验证，TimeOut: 指定Cookie的失效时间. 超时后要重新登录。-->
+
+      <forms name=".ASPXUSERDEMO" loginUrl="Login.aspx" protection="All" timeout="30"/>
+
+    </authentication>
+
+    <!--控制对 URL 资源的客户端访问（如允许匿名用户访问）。此元素可以在任何级别（计算机、站点、应用程序、子目录或页）上声明。必需与<authentication> 节配合使用。此处的意思是对匿名用户不进行身份验证。拒绝用户weipeng-->
+
+    <authorization>
+
+      <allow users="*"/>
+
+      <deny users="weipeng"/>
+
+      <allow users="aa" roles="aa" />
+
+    </authorization>
+
+
+	<!--会话状态设置。mode: 分为off,Inproc,StateServer,SqlServer几种状态 mode = InProc 存储在进程中特点：具有最佳的性能，速度最快,但不能跨多台服务器存储共享.mode = "StateServer" 存储在状态服务器中特点:当需要跨服务器维护用户会话信息时，使用此方法。但是信息存储在状态服务器上，一旦状态服务器出现故障，信息将丢失. mode="SqlServer" 存储在sql server中特点:工作负载会变大，但信息不会丢失
+
+    stateConnectionString :指定asp.net应用程序存储远程会话状态的服务器名，默认为本机。sqlConnectionString:当用会话状态数据库时，在这里设置连接字符串。Cookieless:设置为flase时，表示使用cookie会话状态来标识客户.timeout表示会话超时时间。-->
+
+    <sessionState mode="InProc" stateConnectionString="tcpip=127.0.0.1:42424" sqlConnectionString="data source=127.0.0.1;Trusted_Connection=yes" cookieless="false" timeout="20"></sessionState>
+
+<!--配置asp.net http运行库的设置。可以在计算机，站点，应用程序和子目录级别声明
+
+    允许最多的请求个数100，最长允许执行请求时间为80秒，控制用户上传文件的大小,默认是4M。useFullyQualifiedRedirectUrl客户端重定向不需要被自动转换为完全限定格式。-->
+
+    <httpRuntime appRequestQueueLimit="100" executionTimeout="80" maxRequestLength="40960" useFullyQualifiedRedirectUrl="false"/>
+
+	<!--为 Web 应用程序使用的 Cookie 配置属性。domain:设置 Cookie 域名。httpOnlyCookies:在 Internet Explorer 6 SP1 中启用 HttpOnlyCookies Cookie 的输出。默认值为 false。requireSSL:获取一个指示是否需要安全套接字层 (SSL) 通信的值.-->
+
+    <httpCookies httpOnlyCookies="false" requireSSL="false"/> 
+
+

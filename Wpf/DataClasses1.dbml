@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="C:\TRAININGDATA\TRAININGDATA.MDF" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=2011-20120515WV\RYAN;Initial Catalog=C:\TRAININGDATA\TRAININGDATA.MDF;Integrated Security=True" SettingsObjectName="Wpf.Properties.Settings" SettingsPropertyName="C__TRAININGDATA_TRAININGDATA_MDFConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Athletes" Member="Athletes">
+    <Type Name="Athletes">
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

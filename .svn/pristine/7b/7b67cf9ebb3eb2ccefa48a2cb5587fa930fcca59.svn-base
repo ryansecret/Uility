@@ -1,0 +1,37 @@
+﻿页面加载时有事件，分辨OrientationChanged 
+aplicationbar   Windows Phone Application Life Cycle
+
+Windows Phone enables a seamless navigation experience for the user by limiting the phone to running one application in the foreground at any given time. To do this, Windows Phone activates and deactivates applications dynamically, exposing events for developers to respond to when the application state changes.
+The procedure in which the operating system terminates an application’s process when the user navigates away from the application is called tombstone or tombstoning.
+ If the user navigates back to the application, the operating system restarts the application process and passes the state data back to the application. The enhancement to this model under Windows Phone Mango is known as fast application switching,state DAta在内存不足时可能被抛弃。
+
+ Application state is not associated with a specific page. Application state is managed in the events exposed by the PhoneApplicationService class. 
+Page state is a visual state of an application page. This includes such things as the scroll position of a ScrollViewer control and the contents of TextBox controls. Page state management should be handled in the OnNavigatedTo and OnNavigatedFrom event handlers. 
+
+
+Below is the list of native experiences that, when invoked, do not trigger an automatic tombstone in the calling application:
+
+PhotoChooserTask 
+CameraCaptureTask 
+MediaPlayerLauncher 
+EmailAddressChooserTask 
+PhoneNumberChooserTask 
+Multiplayer Game Invite [games] 
+Gamer You Card [games] 
+
+
+ All of the life cycle-related events mentioned in this section (Launching, Running, Closing, Deactivating, and Activating) are members of the PhoneApplicationService class in the Microsoft.Phone.Shell namespace
+
+ closing发生的情况之一就是点击了回退建，并回退到了第一页之外。
+ deactive 发生在点击了start建，或者是timeout导致锁屏。
+
+  Unlike an application that is terminated, a deactivated application might become tombstoned. 
+  Because there is no guarantee that a deactivated application will ever be reactivated, an application should always save any persistent data to isolated storage during this event. 
+
+All of the actions taken in the deactivated event handler must be completed within ten seconds, or the operating system will terminate the application without tombstoning it. For this reason, applications with large quantities of persistent data may want to save incrementally as the application is running.10秒不短呀
+
+CameraCaptureTask 用来启动照相
+
+Microsoft.Phone.Info.DeviceStatus
+
+集合类型的同步线程包装 Synchronized，然后lock其同步对象 SyncRoot

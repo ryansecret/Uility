@@ -1,0 +1,5 @@
+D:\我的酷盘\我的酷盘\Uility\WinPhone7\bin\Debug\WinPhone7.dll
+D:\我的酷盘\我的酷盘\Uility\WinPhone7\bin\Debug\WinPhone7.pdb
+D:\我的酷盘\我的酷盘\Uility\WinPhone7\obj\Debug\WinPhone7.dll
+D:\我的酷盘\我的酷盘\Uility\WinPhone7\obj\Debug\WinPhone7.pdb
+C:\Users\dell\Desktop\Uility\WinPhone7\obj\Debug\WinPhone7.dll

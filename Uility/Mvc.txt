@@ -1,0 +1,12 @@
+﻿
+
+(1) server.execute和server.Transfer的区别就是 
+server.execute执行那个页面后返回原来的页面继续执行
+server.Transfer执行那个页面后不返回原来的页面
+(2)Response.Redirect和Server.Transfer的区别  
+ 1、浏览器ASP文件请求->服务器执行->遇到response.redirect语句->服务器发送response.redirect后面的地
+址给客户机端的浏览器->浏览器请求执行新的地址 
+2、浏览器ASP文件请求->服务器执行->遇到Server.Transfer语句->服务器转向新的文件 
+
+
+客户端应用程序不直接创建 WebResponse 对象；而是通过对 WebRequest 实例调用 GetResponse 方法来进行创建。

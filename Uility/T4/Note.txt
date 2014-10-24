@@ -1,0 +1,24 @@
+﻿访问 Visual Studio API
+通过设置 <#@template#> 指令的 hostspecific 特性，可以允许模板获取对 Visual Studio API 的访问。 模板可以使用此功能获取项目文件的位置，以避免在模板代码中使用绝对文件路径。
+<#@ template debug="false" hostspecific="true" language="C#" #>
+...
+<#@ assembly name="EnvDTE" #>
+...
+EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)
+                       .GetService(typeof(EnvDTE.DTE));
+// Open the prototype document.
+XmlDocument doc = new XmlDocument();
+doc.Load(System.IO.Path.Combine(dte.ActiveDocument.Path, "exampleXml.xml"));
+
+
+表达式控制块计算表达式并将其转换为字符串。 该字符串将插入到输出文件中。
+表达式控制块以 <#= ... #> 符号分隔。
+
+This is hello number <#= i+1 #>: Hello!
+
+
+计算机及相关专业本科以上学历，有5年以上软件开发经验，至少熟悉两门主流开发语言；
+2． 精通C#语言，精通.Net Framework及相关WCF，WPF开发技术，至少3年以上.Net项目开发经验，负责过大中型系统（百万级代码量）的系统分析和架构设计；
+3．  深入了解C/S和B/S系统开发架构，在软件系统架构设计、开发和实现方面具有非常丰富的经验；
+4．  精通SQL Server、Oracle等主流数据库系统，精通ADO.Net，Entity Framework等数据库相关技术；
+5．  思路敏捷，表达清晰，具有良好的文档编写能力和团队合作精神。

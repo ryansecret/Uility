@@ -1,0 +1,30 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\Uility\EnterPriseLibrary\bin\Debug\EnterPriseLibrary.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\Uility\EnterPriseLibrary\bin\Debug\EnterPriseLibrary.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\Uility\EnterPriseLibrary\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\Uility\EnterPriseLibrary\obj\x86\Debug\EnterPriseLibrary.Properties.Resources.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\Uility\EnterPriseLibrary\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\Uility\EnterPriseLibrary\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\Uility\EnterPriseLibrary\obj\x86\Debug\EnterPriseLibrary.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\Uility\EnterPriseLibrary\obj\x86\Debug\EnterPriseLibrary.pdb
+E:\备份\Uility\EnterPriseLibrary\bin\Debug\EnterPriseLibrary.dll
+E:\备份\Uility\EnterPriseLibrary\bin\Debug\EnterPriseLibrary.pdb
+E:\备份\Uility\EnterPriseLibrary\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\备份\Uility\EnterPriseLibrary\obj\x86\Debug\EnterPriseLibrary.Properties.Resources.resources
+E:\备份\Uility\EnterPriseLibrary\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\备份\Uility\EnterPriseLibrary\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\备份\Uility\EnterPriseLibrary\obj\x86\Debug\EnterPriseLibrary.dll
+E:\备份\Uility\EnterPriseLibrary\obj\x86\Debug\EnterPriseLibrary.pdb
+D:\我的酷盘\我的酷盘\Uility\EnterPriseLibrary\bin\Debug\EnterPriseLibrary.dll
+D:\我的酷盘\我的酷盘\Uility\EnterPriseLibrary\bin\Debug\EnterPriseLibrary.pdb
+D:\我的酷盘\我的酷盘\Uility\EnterPriseLibrary\obj\x86\Debug\EnterPriseLibrary.g.resources
+D:\我的酷盘\我的酷盘\Uility\EnterPriseLibrary\obj\x86\Debug\EnterPriseLibrary.Properties.Resources.resources
+D:\我的酷盘\我的酷盘\Uility\EnterPriseLibrary\obj\x86\Debug\EnterPriseLibrary.csproj.GenerateResource.Cache
+D:\我的酷盘\我的酷盘\Uility\EnterPriseLibrary\obj\x86\Debug\EnterPriseLibrary.dll
+D:\我的酷盘\我的酷盘\Uility\EnterPriseLibrary\obj\x86\Debug\EnterPriseLibrary.pdb
+C:\Users\dell\Desktop\Uility\EnterPriseLibrary\bin\Debug\EnterPriseLibrary.dll
+C:\Users\dell\Desktop\Uility\EnterPriseLibrary\bin\Debug\EnterPriseLibrary.pdb
+C:\Users\dell\Desktop\Uility\EnterPriseLibrary\obj\x86\Debug\EnterPriseLibrary.g.resources
+C:\Users\dell\Desktop\Uility\EnterPriseLibrary\obj\x86\Debug\EnterPriseLibrary.Properties.Resources.resources
+C:\Users\dell\Desktop\Uility\EnterPriseLibrary\obj\x86\Debug\EnterPriseLibrary.csproj.GenerateResource.Cache
+C:\Users\dell\Desktop\Uility\EnterPriseLibrary\obj\x86\Debug\EnterPriseLibrary.dll
+C:\Users\dell\Desktop\Uility\EnterPriseLibrary\obj\x86\Debug\EnterPriseLibrary.pdb

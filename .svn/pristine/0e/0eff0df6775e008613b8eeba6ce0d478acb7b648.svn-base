@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            A a = new B();
+            a.MethodA();
+            a.Method();
+            B b = new B();
+            b.Method();
+            b.MethodA();
+            Console.Read();
+        }
+    }
+
+    public class A
+    {
+        public virtual void Method()
+        {
+            Console.WriteLine("This Method in Class A!");
+        }
+
+        public virtual void MethodA()
+        {
+            Console.WriteLine("This Method in Class A!");
+        }
+    }
+
+    public class B : A
+    {
+        public new void Method()
+        {
+            Console.WriteLine("This Method in Class B!");
+        }
+
+        public override void MethodA()
+        {
+            Console.WriteLine("This Method in Class B!");
+        }
+    }
+
+
+}

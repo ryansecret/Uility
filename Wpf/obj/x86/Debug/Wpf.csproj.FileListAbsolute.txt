@@ -1,0 +1,16 @@
+D:\我的酷盘\我的酷盘\Uility\Wpf\bin\Debug\Wpf.exe
+D:\我的酷盘\我的酷盘\Uility\Wpf\bin\Debug\Wpf.pdb
+D:\我的酷盘\我的酷盘\Uility\Wpf\obj\x86\Debug\MainWindow.baml
+D:\我的酷盘\我的酷盘\Uility\Wpf\obj\x86\Debug\MainWindow.g.cs
+D:\我的酷盘\我的酷盘\Uility\Wpf\obj\x86\Debug\App.g.cs
+D:\我的酷盘\我的酷盘\Uility\Wpf\obj\x86\Debug\Wpf_MarkupCompile.cache
+D:\我的酷盘\我的酷盘\Uility\Wpf\obj\x86\Debug\Wpf.g.resources
+D:\我的酷盘\我的酷盘\Uility\Wpf\obj\x86\Debug\Wpf.Properties.Resources.resources
+D:\我的酷盘\我的酷盘\Uility\Wpf\obj\x86\Debug\Wpf.csproj.GenerateResource.Cache
+D:\我的酷盘\我的酷盘\Uility\Wpf\obj\x86\Debug\Wpf.exe
+D:\我的酷盘\我的酷盘\Uility\Wpf\obj\x86\Debug\Wpf.pdb
+D:\我的酷盘\我的酷盘\Uility\Wpf\bin\Debug\Wpf.exe.config
+D:\我的酷盘\我的酷盘\Uility\Wpf\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+D:\我的酷盘\我的酷盘\Uility\Wpf\obj\x86\Debug\Wpf_MarkupCompile.lref
+C:\Users\dell\Desktop\Uility\Wpf\obj\x86\Debug\App.g.cs
+C:\Users\dell\Desktop\Uility\Wpf\obj\x86\Debug\Wpf_MarkupCompile.cache

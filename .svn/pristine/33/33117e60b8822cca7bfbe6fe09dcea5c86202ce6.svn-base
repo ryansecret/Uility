@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+ 
+namespace Console
+{
+    class Program
+    {
+         static void Main(string[] args)
+         {
+
+          
+           string dd=   Substitute("${month}_${year}_${day}", (name) => "@" + name);
+          
+         }
+         public static string Substitute(string input, Func<string, string> substitutor, string pattern = @"(\$\{.+?\})")
+         {
+             if (string.IsNullOrEmpty(input)) return input;
+
+             var buffer = new StringBuilder();
+             var matches = Regex.Matches(input, pattern);
+
+             // No replacements?
+             if (matches.Count == 0) return input;
+
+             int lastIndex = 0;
+
+             Match match = null;
+             for (int ndx = 0; ndx < matches.Count; ndx++)
+             {
+                 match = matches[ndx];
+                 var name = match.Value.Substring(2, match.Value.Length - 3);
+                 var replacement = substitutor(name);
+
+                 // Append to buffer remaining text not including the variable.
+                 if (match.Index != 0)
+                 {
+                     var length = match.Index - lastIndex;
+                     var outside = input.Substring(lastIndex, length);
+                     buffer.Append(outside);
+                 }
+                 lastIndex = match.Index + match.Length;
+                 buffer.Append(replacement);
+             }
+             if (match.Index + match.Length < input.Length)
+             {
+                 var lastcontent = input.Substring(match.Index + match.Length);
+                 buffer.Append(lastcontent);
+             }
+             return buffer.ToString();
+         }
+    }
+}

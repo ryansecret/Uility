@@ -1,0 +1,184 @@
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Dispose.cs" company="">
+//   
+// </copyright>
+// <summary>
+//   The dispose example.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.ComponentModel;
+
+// The following example demonstrates how to create
+// a resource class that implements the IDisposable interface
+// and the IDisposable.Dispose method.
+
+namespace Uility.Example.资源清理
+{
+    /// <summary>
+    /// The dispose example.
+    /// </summary>
+    public class DisposeExample
+    {
+          
+        // A base class that implements IDisposable.
+        // By implementing IDisposable, you are announcing that
+        // instances of this type allocate scarce resources.
+        #region Public Methods
+
+        /// <summary>
+        /// The main.
+        /// </summary>
+        public static void Main()
+        {
+            // Insert code here to create
+            // and use the MyResource object.
+        }
+
+        #endregion
+
+        /// <summary>
+        /// The my resource.
+        /// </summary>
+        public class MyResource : IDisposable
+        {
+            // Pointer to an external unmanaged resource.
+
+            // Other managed resource this class uses.
+            #region Constants and Fields
+
+            /// <summary>
+            /// The component.
+            /// </summary>
+            private Component component = new Component();
+
+            // Track whether Dispose has been called.
+            /// <summary>
+            /// The disposed.
+            /// </summary>
+            private bool disposed = false;
+
+            /// <summary>
+            /// The handle.
+            /// </summary>
+            private IntPtr handle;
+
+            #endregion
+
+            // The class constructor.
+            #region Constructors and Destructors
+
+            /// <summary>
+            /// Initializes a new instance of the <see cref="MyResource"/> class.
+            /// </summary>
+            /// <param name="handle">
+            /// The handle.
+            /// </param>
+            public MyResource(IntPtr handle)
+            {
+                this.handle = handle;
+            }
+
+            /// <summary>
+            /// Finalizes an instance of the <see cref="MyResource"/> class. 
+            /// </summary>
+            ~MyResource()
+            {
+                // Do not re-create Dispose clean-up code here.
+                // Calling Dispose(false) is optimal in terms of
+                // readability and maintainability.
+                this.Dispose(false);
+            }
+
+            #endregion
+
+            // Implement IDisposable.
+            // Do not make this method virtual.
+            // A derived class should not be able to override this method.
+            #region Public Methods
+
+            /// <summary>
+            /// The dispose.
+            /// </summary>
+            public void Dispose()
+            {
+                this.Dispose(true);
+               
+                // This object will be cleaned up by the Dispose method.
+                // Therefore, you should call GC.SupressFinalize to
+                // take this object off the finalization queue
+                // and prevent finalization code for this object
+                // from executing a second time.
+                GC.SuppressFinalize(this);
+            }
+
+            #endregion
+
+            // Dispose(bool disposing) executes in two distinct scenarios.
+            // If disposing equals true, the method has been called directly
+            // or indirectly by a user's code. Managed and unmanaged resources
+            // can be disposed.
+            // If disposing equals false, the method has been called by the
+            // runtime from inside the finalizer and you should not reference
+            // other objects. Only unmanaged resources can be disposed.
+
+            // Use interop to call the method necessary
+            // to clean up the unmanaged resource.
+            #region Methods
+
+            /// <summary>
+            /// The close handle.
+            /// </summary>
+            /// <param name="handle">
+            /// The handle.
+            /// </param>
+            /// <returns>
+            /// The close handle.
+            /// </returns>
+            [System.Runtime.InteropServices.DllImport("Kernel32")]
+            private static extern bool CloseHandle(IntPtr handle);
+
+            /// <summary>
+            /// The dispose.
+            /// </summary>
+            /// <param name="disposing">
+            /// The disposing.
+            /// </param>
+            private void Dispose(bool disposing)
+            {
+                // Check to see if Dispose has already been called.
+                if (!this.disposed)
+                {
+                    // If disposing equals true, dispose all managed
+                    // and unmanaged resources.
+                    if (disposing)
+                    {
+                        // Dispose managed resources.
+                        this.component.Dispose();
+                    }
+
+                    // Call the appropriate methods to clean up
+                    // unmanaged resources here.
+                    // If disposing is false,
+                    // only the following code is executed.
+
+                    //note:最常见的一类非托管资源就是包装操作系统资源的对象，例如文件、窗口或网络连接。对于这些类型的对象，.NET Framework 提供 Object.Finalize 方法，它允许对象在垃圾回收器回收该对象使用的内存时适当清理其非托管资源。 实现 Finalize 方法或析构函数对性能可能会有负面影响，因此应避免不必要地使用它们。您应该只实现 Finalize 方法来清理非托管资源。
+                    CloseHandle(this.handle);
+                    this.handle = IntPtr.Zero;
+                 
+                    // Note disposing has been done.
+                    this.disposed = true;
+                }
+            }
+         
+            #endregion
+
+            // Use C# destructor syntax for finalization code.
+            // This destructor will run only if the Dispose method
+            // does not get called.
+            // It gives your base class the opportunity to finalize.
+            // Do not provide destructors in types derived from this class.
+        }
+    }
+}

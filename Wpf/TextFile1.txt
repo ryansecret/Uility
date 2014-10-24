@@ -1,0 +1,331 @@
+﻿
+<ListBox Name="lstProducts" HorizontalContentAlignment="Stretch">
+<ListBox.ItemContainerStyle>
+<Style>
+<Setter Property="Control.Padding" Value="0"></Setter>
+<Style.Triggers>
+<Trigger Property="ListBoxItem.IsSelected" Value="True">
+<Setter Property="ListBoxItem.Background" Value="DarkRed" />
+</Trigger>
+</Style.Triggers>
+</Style>
+</ListBox.ItemContainerStyle>
+</ListBox>
+
+
+Background="{Binding Path=Background, RelativeSource={
+RelativeSource
+Mode=FindAncestor,
+AncestorType={x:Type ListBoxItem}
+}}"
+
+
+<StackPanel>
+<StackPanel.Style>
+<Style>
+<Style.Triggers>
+<DataTrigger
+Binding="{Binding Path=IsSelected, RelativeSource={
+RelativeSource
+Mode=FindAncestor,
+AncestorType={x:Type ListBoxItem}
+}}"
+Value="False">
+<Setter Property="StackPanel.Visibility" Value="Collapsed" />
+</DataTrigger>
+</Style.Triggers>
+</Style>
+</StackPanel.Style>
+
+• If your data source implements IBindingList, a BindingListCollectionView is created.
+This happens when you bind an ADO.NET DataTable.
+
+• If your data source doesn’t implement IBindingList but it implements IList, a 
+ListCollectionView is created. This happens when you bind an ObservableCollection,
+like the list of products.
+
+the CollectionView offers poor performance for large items and
+operations that modify the data source (such as insertions and deletions)
+
+ListCollectionView view = (ListCollectionView)
+CollectionViewSource.GetDefaultView(lstProducts.ItemsSource);
+view.Filter = delegate(object item)
+{
+Product product = (Product)item;
+return (product.UnitCost > 100);
+}
+
+
+对于datatable不支持filter，只能设置CustomFilter
+decimal minimumPrice;
+if (Decimal.TryParse(txtMinPrice.Text, out minimumPrice))
+{
+BindingListCollectionView view =
+CollectionViewSource.GetDefaultView(lstProducts.ItemsSource)
+as BindingListCollectionView;
+if (view != null)
+{
+view.CustomFilter = "UnitCost > " + minimumPrice.ToString();
+}
+}
+
+
+ICollectionView view = CollectionViewSource.GetDefaultView(lstProducts.ItemsSource);
+view.GroupDescriptions.Add(new PropertyGroupDescription("CategoryName"));
+
+<ListBox Name="lstProducts" DisplayMemberPath="ModelName">
+<ListBox.GroupStyle>
+<GroupStyle>
+<GroupStyle.HeaderTemplate>
+<DataTemplate>
+<TextBlock Text="{Binding Path=Name}" FontWeight="Bold"
+Foreground="White" Background="LightGreen"
+Margin="0,5,0,0" Padding="3"/>
+</DataTemplate>
+</GroupStyle.HeaderTemplate>
+</GroupStyle>
+</ListBox.GroupStyle>
+</ListBox>
+
+
+<local:PriceRangeProductGrouper x:Key="Price50Grouper" GroupInterval="50"/>
+<CollectionViewSource x:Key="GroupByRangeView">
+<CollectionViewSource.SortDescriptions>
+<component:SortDescription PropertyName="UnitCost" Direction="Ascending"/>
+</CollectionViewSource.SortDescriptions>
+<CollectionViewSource.GroupDescriptions>
+<PropertyGroupDescription PropertyName="UnitCost"
+Converter="{StaticResource Price50Grouper}"/>
+</CollectionViewSource.GroupDescriptions>
+</CollectionViewSource>
+
+ICollection<Product> products = App.StoreDB.GetProducts();
+CollectionViewSource viewSource = (CollectionViewSource)
+this.FindResource("GroupByRangeView");
+viewSource.Source = products;
+
+ ItemsControl.IsSynchronizedWithCurrentItem to true.
+
+ <Window.Resources>
+<ObjectDataProvider x:Key="productsProvider" ObjectType="{x:Type local:StoreDB}"
+MethodName="GetProducts"></ObjectDataProvider>
+</Window.Resources>
+
+<ObjectDataProvider IsAsynchronous="True" ... >
+
+<XmlDataProvider x:Key="productsProvider" Source="store.xml"></XmlDataProvider>
+
+<XmlDataProvider x:Key="productsProvider" Source="store.xml"
+xPath="/Products"></XmlDataProvider>
+
+<ListBox Name="lstProducts" Margin="5" DisplayMemberPath="ModelName"
+ItemsSource="{Binding Source={StaticResource products}, XPath=Product}" >
+</ListBox>
+
+<Style TargetType="{x:Type TextBox}">
+<Setter Property="Validation.ErrorTemplate">
+<Setter.Value>
+<ControlTemplate>
+<DockPanel LastChildFill="True">
+<TextBlock DockPanel.Dock="Right" Foreground="Red"
+FontSize="14" FontWeight="Bold"  ToolTip="{Binding ElementName=adornerPlaceholder,
+Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">*</TextBlock>
+<Border BorderBrush="Green" BorderThickness="1">
+<AdornedElementPlaceholder></AdornedElementPlaceholder>
+</Border>
+</DockPanel>
+</ControlTemplate>
+</Setter.Value>
+</Setter>
+</Style>
+
+
+<Style TargetType="{x:Type TextBox}">
+
+<Style.Triggers>
+
+<Trigger Property="Validation.HasError" Value="True">
+<Setter Property="ToolTip"
+Value="{Binding RelativeSource={RelativeSource Self},
+Path=(Validation.Errors)[0].ErrorContent}" />
+</Trigger>
+</Style.Triggers>
+</Style>
+
+
+ PriorityBinding 绑定引擎从列表中的第一个绑定开始，并验证该绑定是否成功返回值，如果是，则使用该绑定的值。如果第一个绑定未成功返回值，则绑定引擎检查第二个绑定，以确定该绑定是否成功返回值，如果是，则第二个绑定的值成为活动值。此验证过程将持续到绑定列表的末尾。如果所有绑定都未能成功返回值，则绑定使用 FallbackValue。
+
+ <TextBlock Name="textBox2" DataContext="{StaticResource NameListData}">
+  <TextBlock.Text>
+    <MultiBinding Converter="{StaticResource myNameConverter}"
+                  ConverterParameter="FormatLastFirst">
+      <Binding Path="FirstName"/>
+      <Binding Path="LastName"/>
+    </MultiBinding>
+  </TextBlock.Text>
+</TextBlock>
+
+ 
+将控件模板中的属性值链接到在模板控件上公开的某个其他属性的值using a template binding, your template can pull out a value from the control to which you’re applying the template.
+
+<Binding>
+  <Binding.RelativeSource>
+    <RelativeSource
+      Mode="FindAncestor"
+      AncestorType="typeName"
+      AncestorLevel="levelInt"
+    />
+  </Binding.RelativeSource>
+</Binding>
+
+<ControlTemplate.Triggers>
+<Trigger Property="IsMouseOver" Value="True">
+<Setter TargetName="Border" Property="Background" Value="DarkRed" />
+</Trigger>                
+<Trigger Property="IsPressed" Value="True">
+<Setter TargetName="Border" Property="Background" Value="IndianRed" />
+<Setter TargetName="Border" Property="BorderBrush" Value="DarkKhaki" />
+</Trigger>        
+</ControlTemplate.Triggers>
+
+ResourceDictionary newDictionary = new ResourceDictionary();
+newDictionary.Source = new Uri(
+"ControlTemplateLibrary;component/GradientButtonVariant.xaml",
+UriKind.Relative);
+this.Resources.MergedDictionaries[0] = newDictionary
+
+ It represents a 2-D drawing—in other words, it
+contains all the information you need to display a piece of vector or bitmap art
+
+<GeometryDrawing Brush="Yellow">
+<GeometryDrawing.Pen>
+<Pen Brush="Blue" Thickness="3"></Pen>
+</GeometryDrawing.Pen>
+<GeometryDrawing.Geometry>
+<GeometryDrawing Brush="Yellow">
+<GeometryDrawing.Pen>
+<Pen Brush="Blue" Thickness="3"></Pen>
+</GeometryDrawing.Pen>
+<GeometryDrawing.Geometry>
+
+DrawingVisual visual = new DrawingVisual();
+DrawingContext dc = visual.RenderOpen();
+// (Perform drawing here.)
+dc.Close();
+
+DrawingVisual visual = new DrawingVisual();
+using (DrawingContext dc = visual.RenderOpen())
+{
+Pen drawingPen = new Pen(Brushes.Black, 3);
+dc.DrawLine(drawingPen, new Point(0, 50), new Point(50, 0));
+dc.DrawLine(drawingPen, new Point(50, 0), new Point(100, 50));
+dc.DrawLine(drawingPen, new Point(0, 50), new Point(100, 50));
+}
+
+
+<Button Padding="10" Name="cmdGrow" Height="40" Width="160"
+HorizontalAlignment="Center" VerticalAlignment="Center">
+<Button.Triggers>
+<EventTrigger RoutedEvent="Button.Click">
+<EventTrigger.Actions>
+<BeginStoryboard>
+<Storyboard>
+<DoubleAnimation Storyboard.TargetProperty="Width"
+To="300" Duration="0:0:5"></DoubleAnimation>
+</Storyboard>
+</BeginStoryboard>
+</EventTrigger.Actions>
+</EventTrigger>
+</Button.Triggers>
+<Button.Content>
+Click and Make Me Grow
+</Button.Content>
+</Button>
+
+
+ from c in custOrd.Element("Customers").Elements("Customer")
+                    join o in custOrd.Element("Orders").Elements("Order")
+                               on (string)c.Attribute("CustomerID") equals
+                                  (string)o.Element("CustomerID")
+  group by e.department into d
+ 
+
+ var result=ep.groupby(e=>e.department).select(d=>new {department=d.key,employees=d.asenumberable())
+
+ 需要整个序列的情况：where\ordery\max\min\average
+
+ Asqueryable()将查看序列的运行时类型，若序列为IqueryAble,那么返回
+
+
+ GetClassNameCore: it returns the name of the class the AutomationPeer is built for.
+GetAutomationControlTypeCore: returns an enum telling which behavior implements the automated control. For example, it can a be Button, Tab, Window, etc.
+GetPattern: tells which kind of functional behavior is fulfilled by the control: IRangeValueprovider, ITextProvider, IValueProvider, etc.
+GetChildrenCore: this method returns a list of AutomationPeers which are related to the children of your control. If you add a new visual part to a standard control, this is where you must add the new child.
+IsControlElementCore and IsContentElementCore: tell the UI Automation client which type of automated control it is: for reading or for interactive purpose. These can improve the performance when being used as a filter.
+
+
+The framework helps us by giving access to these UI elements and their properties. The main features supported by this framework are:
+
+Search support, that lets you find the required user interface component.
+Filtering the tree structure of elements; for example when querying the hierarchy of elements, we can get only the enabled controls.
+Lets you interact with UI elements; for example, you may programmatically click a button(which is contained in a different application), from your application.
+Subscribing to events; this helps us to monitor UI elements and handle external events.
+
+
+For example Button, Hyperlink and MenuItem controls support InvokePattern and can therefore indicate to the automation clients that control is capable of invoking a command. Similarly an expander control supports ExpandCollapsePattern to indicate that control is capable of expanding or collapsing content within it.
+
+For example, if we want to specify automation id on a text box, we could specify it as follows in XAML:
+
+ 
+<TextBox Text=”{Binding Telephone}” AutomationProperties.Id=”ID_TXT_TELEPHONE”/> 
+
+
+protected virtual System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer()
+    System.Windows.UIElement 的成员 创建相关联的peer
+
+	 1. 不是每个控件都有Adorner Layer，其实只有AdornerDecorator和ScrollContentPresenter附带有Adorner Layer。
+
+    2. 对某个element取到的Adorner Layer，一般是其Ancestor的。
+
+
+	，Adorner的派生类型需要考虑通过重写OnRender()或AddVisualChild()函数来指定Adorner如何绘制其外观：
+
+
+	其中Measure方法传入的参数是availableSize，这个availableSize是一个Size类型，表示的是父元素可以提供的大小。
+
+	WPF has supported UI virtualization for a long time. The ListBox and ListView controls use VirtualizingStackPanel as their default panel
+
+	If you’re using another ItemsControl (such as ComboBox) that doesn’t use VirtualizingStackPanel by default, you can change the panel used by the control in a very simple way:
+
+    <ComboBox ItemsSource="{Binding}">
+        <ComboBox.ItemsPanel>
+            <ItemsPanelTemplate>
+                <VirtualizingStackPanel />
+            </ItemsPanelTemplate>
+        </ComboBox.ItemsPanel>
+    </ComboBox>
+
+
+	“Deferred scrolling” is a feature that allows the user to drag the scroll bar thumb around without changing the displayed items until the scroll bar thumb is released.
+	  <ListBox ScrollViewer.IsDeferredScrollingEnabled="True" … />
+
+	  <TreeView VirtualizingStackPanel.IsVirtualizing="True" … />
+
+
+This property is useful not just for TreeView, but for any control that uses VirtualizingStackPanel and that doesn’t set IsVirtualizing to true (ItemsControl, for example). ListBox already sets IsVirtualizing to True by default, so there is no need to set it explicitly. 
+
+
+ScrollViewer currently allows two scrolling modes: smooth pixel-by-pixel scrolling (CanContentScroll = false) or discrete item-by-item scrolling (CanContentScroll = true). 
+
+
+
+
+ string xaml;
+            using (System.IO.StreamReader reader = new System.IO.StreamReader(xamlStream))
+            {
+                xaml = reader.ReadToEnd();
+            }
+            return XamlReader.Load(xaml) as ModuleCatalog;
+
+
+

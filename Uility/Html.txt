@@ -1,0 +1,148 @@
+﻿外部样式表
+当样式需要被应用到很多页面的时候，外部样式表将是理想的选择。使用外部样式表，你就可以通过更改一个文件来改变整个站点的外观。
+
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+
+内联样式
+当特殊的样式需要应用到个别元素时，就可以使用内联样式。使用内联样式的方法是在相关的标签中使用样式属性。样式属性可以包含任何 CSS 属性。以下实例显示出如何改变段落的颜色和左外边距。
+
+<p style="color: red; margin-left: 20px">
+This is a paragraph
+</p>
+
+
+字符实体有三部分：一个和号 (&)，一个实体名称，或者 # 和一个实体编号，以及一个分号 (;)。
+
+要在 HTML 文档中显示小于号，我们需要这样写：&lt; 或者 &#60;
+
+使用实体名称而不是实体编号的好处在于，名称相对来说更容易记忆。而这么做的坏处是，并不是所有的浏览器都支持最新的实体名称，然而几乎所有的浏览器对实体编号的支持都很好。
+
+通常情况下，HTML 会裁掉文档中的空格。假如你在文档中连续输入 10 个空格，那么 HTML 会去掉其中的9个。如果使用 &nbsp;，就可以在文档中增加空格。
+显示结果 描述 实体名称 实体编号 
+  空格 &nbsp; &#160; 
+< 小于号 &lt; &#60; 
+> 大于号 &gt; &#62; 
+& 和号 &amp; &#38; 
+" 引号 &quot; &#34; 
+' 撇号  &apos; (IE不支持) &#39; 
+
+头元素内的元素不会被浏览器显示出来。
+根据 HTML 标准，仅有几个标签在 HTML 的头部分是合法的。它们是：<base>, <link>, <meta>, <title>, <style> 和 <script>。
+这是一个不合法的结构：
+<head>
+  <p>This is some text</p>
+</head>
+
+
+Head 标签
+标签 描述 
+<head> 定义关于文档的信息。 
+<title> 定义文档标题。 
+<base> 定义页面中所有链接的基准 URL。 
+<link> 定义资源引用。 
+<meta> 定义元信息。 
+标签 描述 
+<!DOCTYPE> 定义文档类型。此标签须位于 html 标签之前。 
+
+
+HTML 同样包含位于 head 元素内部的 meta 元素。Meta 元素的作用是提供文档的元信息。
+大多数情况下，meta 元素用来提供与浏览器或者搜索引擎相关的信息，比方说描述文档的内容等等。
+
+某些万维网搜索引擎使用 meta 标签的 name 和 content 属性来索引页面。
+这个 Meta 元素定义了对页面的描述:
+<meta name="description" 
+content="Free Web tutorials on HTML, CSS, XML, and XHTML" />
+
+html5:
+canvas 元素本身是没有绘图能力的。所有的绘制工作必须在 JavaScript 内部完成：
+
+<script type="text/javascript">
+var c=document.getElementById("myCanvas");
+var cxt=c.getContext("2d");
+cxt.fillStyle="#FF0000";
+cxt.fillRect(0,0,150,75);
+</script>
+JavaScript 使用 id 来寻找 canvas 元素：
+var c=document.getElementById("myCanvas");然后，创建 context 对象：
+var cxt=c.getContext("2d"); getContext("2d") 对象是内建的 HTML5 对象，拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。
+下面的两行代码绘制一个红色的矩形：
+cxt.fillStyle="#FF0000";
+cxt.fillRect(0,0,150,75); 
+
+<hr /> 标签在 HTML 页面中创建水平线。
+<br> 为换行标识。
+。<ul>表示无序排列，<ol>表示有序排列。
+HTML5 提供了两种在客户端存储数据的新方法：
+
+localStorage - 没有时间限制的数据存储 
+sessionStorage - 针对一个 session 的数据存储 
+如何创建和访问 localStorage：
+
+实例
+<script type="text/javascript">
+localStorage.lastname="Smith";
+document.write(localStorage.lastname);
+</script>
+<script type="text/javascript">
+if (localStorage.pagecount)
+  {
+  localStorage.pagecount=Number(localStorage.pagecount) +1;
+  }
+else
+  {
+  localStorage.pagecount=1;
+  }
+document.write("Visits "+ localStorage.pagecount + " time(s).");
+</script>
+
+
+sessionStorage 方法针对一个 session 进行数据存储。当用户关闭浏览器窗口后，数据会被删除。
+
+如何创建并访问一个 sessionStorage：
+
+实例
+<script type="text/javascript">
+sessionStorage.lastname="Smith";
+document.write(sessionStorage.lastname);
+</script>
+
+
+HTML5 新的 Input 类型
+HTML5 拥有多个新的表单输入类型。这些新特性提供了更好的输入控制和验证。
+本章全面介绍这些新的输入类型：
+email 
+url 
+number 
+range 
+Date pickers (date, month, week, time, datetime, datetime-local) 
+search 
+color 
+
+
+Input 类型 - email
+email 类型用于应该包含 e-mail 地址的输入域。
+在提交表单时，会自动验证 email 域的值。
+
+Input 类型 - url
+url 类型用于应该包含 URL 地址的输入域。
+在提交表单时，会自动验证 url 域的值。
+
+Input 类型 - number
+number 类型用于应该包含数值的输入域。
+您还能够设定对所接受的数字的限定：
+
+Input 类型 - number
+number 类型用于应该包含数值的输入域。
+Points: <input type="number" name="points" min="1" max="10" />
+
+Input 类型 - Date Pickers（数据检出器）
+HTML5 拥有多个可供选取日期和时间的新输入类型：
+date - 选取日、月、年 
+month - 选取月、年 
+week - 选取周和年 
+time - 选取时间（小时和分钟） 
+datetime - 选取时间、日、月、年（UTC 时间） 
+datetime-local - 选取时间、日、月、年（本地时间） 

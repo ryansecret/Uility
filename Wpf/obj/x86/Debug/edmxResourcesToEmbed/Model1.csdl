@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true" a:TypeAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+    <EntitySet Name="Athletes" EntityType="Model.Athletes" />
+    <EntitySet Name="Events" EntityType="Model.Events" />
+    <EntitySet Name="EventTypes" EntityType="Model.EventTypes" />
+    <EntitySet Name="ReferenceTimes" EntityType="Model.ReferenceTimes" />
+    <EntitySet Name="sysdiagrams" EntityType="Model.sysdiagrams" />
+    <AssociationSet Name="FK_Events_Athletes" Association="Model.FK_Events_Athletes">
+      <End Role="Athletes" EntitySet="Athletes" />
+      <End Role="Events" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Events_EventTypes" Association="Model.FK_Events_EventTypes">
+      <End Role="EventTypes" EntitySet="EventTypes" />
+      <End Role="Events" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReferenceTimes_EventTypes" Association="Model.FK_ReferenceTimes_EventTypes">
+      <End Role="EventTypes" EntitySet="EventTypes" />
+      <End Role="ReferenceTimes" EntitySet="ReferenceTimes" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Athletes">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Events" Relationship="Model.FK_Events_Athletes" FromRole="Athletes" ToRole="Events" />
+  </EntityType>
+  <EntityType Name="Events">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Nullable="false" />
+    <Property Name="Athlete" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SwimTime" Type="Time" Nullable="false" />
+    <Property Name="CycleTime" Type="Time" Nullable="false" />
+    <Property Name="RunTime" Type="Time" Nullable="false" />
+    <Property Name="OverallTime" Type="Time" Nullable="false" />
+    <NavigationProperty Name="Athletes" Relationship="Model.FK_Events_Athletes" FromRole="Events" ToRole="Athletes" />
+    <NavigationProperty Name="EventTypes" Relationship="Model.FK_Events_EventTypes" FromRole="Events" ToRole="EventTypes" />
+  </EntityType>
+  <EntityType Name="EventTypes">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SwimMiles" Type="Single" Nullable="false" />
+    <Property Name="CycleMiles" Type="Single" Nullable="false" />
+    <Property Name="RunMiles" Type="Single" Nullable="false" />
+    <NavigationProperty Name="Events" Relationship="Model.FK_Events_EventTypes" FromRole="EventTypes" ToRole="Events" />
+    <NavigationProperty Name="ReferenceTimes" Relationship="Model.FK_ReferenceTimes_EventTypes" FromRole="EventTypes" ToRole="ReferenceTimes" />
+  </EntityType>
+  <EntityType Name="ReferenceTimes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OverallPos" Type="Int32" Nullable="false" />
+    <Property Name="OverallTime" Type="Time" Nullable="false" />
+    <Property Name="SwimPos" Type="Int32" Nullable="false" />
+    <Property Name="SwimTime" Type="Time" Nullable="false" />
+    <Property Name="CyclePos" Type="Int32" Nullable="false" />
+    <Property Name="CycleTime" Type="Time" Nullable="false" />
+    <Property Name="RunPos" Type="Int32" Nullable="false" />
+    <Property Name="RunTime" Type="Time" Nullable="false" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="EventTypes" Relationship="Model.FK_ReferenceTimes_EventTypes" FromRole="ReferenceTimes" ToRole="EventTypes" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Events_Athletes">
+    <End Role="Athletes" Type="Model.Athletes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Events" Type="Model.Events" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Athletes">
+        <PropertyRef Name="Name" />
+      </Principal>
+      <Dependent Role="Events">
+        <PropertyRef Name="Athlete" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Events_EventTypes">
+    <End Role="EventTypes" Type="Model.EventTypes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Events" Type="Model.Events" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EventTypes">
+        <PropertyRef Name="Name" />
+      </Principal>
+      <Dependent Role="Events">
+        <PropertyRef Name="Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReferenceTimes_EventTypes">
+    <End Role="EventTypes" Type="Model.EventTypes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ReferenceTimes" Type="Model.ReferenceTimes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EventTypes">
+        <PropertyRef Name="Name" />
+      </Principal>
+      <Dependent Role="ReferenceTimes">
+        <PropertyRef Name="Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,53 @@
+﻿NorthwindDataContext ctx = new NorthwindDataContext("server=xxx;database=Northwind;uid=xxx;pwd=xxx");
+
+string newcity = "Shanghai";
+
+ctx.ExecuteCommand("update Customers set City={0} where CustomerID like 'A%'", newcity);
+
+IEnumerable<Customer> customers = ctx.ExecuteQuery<Customer>("select * from Customers where CustomerID like 'A%'");
+
+
+DataLoadOptions options = new DataLoadOptions();
+
+options.LoadWith<Product>(p => p.Order_Details);
+
+options.AssociateWith<Product>(p => p.Order_Details.Where(od => od.Quantity > 80));
+
+ctx.LoadOptions = options;
+
+
+[Column(Storage="_UnitPrice", DbType="Money", UpdateCheck = UpdateCheck.Never)]判断语句在执行期间数据是否被修改，如果有的话引发ChangeConflictException
+ cc.Resolve(RefreshMode.OverwriteCurrentValues); // 放弃当前更新，所有更新以原先更新为准
+ cc.Resolve(RefreshMode.KeepCurrentValues); // 放弃原先更新，所有更新以当前更新为准
+ cc.Resolve(RefreshMode.KeepChanges); // 原先更新有效，冲突字段以当前更新为准
+
+
+Provider负责执行表达式目录树并返回结果。如果是LINQ to SQL的Provider，则它会负责把表达式目录树翻译为T-SQL语句并并传递给数据库服务器，并返回最后的执行的结果；如果是一个Web Service的Provider，则它会负责翻译表达式目录树并调用Web Service，最终返回结果。
+
+对与One : Many的关系型的，在提交One端新数据时，Linq To Sql会自动将Many端的数据一起提交。注意，是提交One端哦。比如
+    var newCategory = new Category { CategoryName = "Widgets",
+                                     Description = "Widgets are the customer-facing analogues " +
+                                                   "to sprockets and cogs."
+                                   };
+    var newProduct = new Product { ProductName = "Blue Widget",
+                                   UnitPrice = 34.56M,
+                                   Category = newCategory
+                                 };
+    db2.Categories.Add(newCategory);
+    db2.SubmitChanges();
+
+	而对于Many : Many的关系（关于M:M请参考上篇），就需要你从One 一个个开始，一直到Many端，自己去提交了。如：
+    var newEmployee = new Employee { FirstName = "Kira",
+                                     LastName = "Smith"
+                                   };
+    var newTerritory = new Territory { TerritoryID = "12345",
+                                       TerritoryDescription = "Anytown",
+                                       Region = db.Regions.First()
+                                     };
+    var newEmployeeTerritory = new EmployeeTerritory { Employee = newEmployee,
+                                                       Territory = newTerritory
+                                                     };
+    db.Employees.Add(newEmployee);
+    db.Territories.Add(newTerritory);
+    db.EmployeeTerritories.Add(newEmployeeTerritory);
+    db.SubmitChanges();

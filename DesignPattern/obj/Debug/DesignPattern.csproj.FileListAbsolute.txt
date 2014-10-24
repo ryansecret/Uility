@@ -1,0 +1,12 @@
+D:\我的酷盘\Uility\DesignPattern\bin\Debug\DesignPattern.dll
+D:\我的酷盘\Uility\DesignPattern\bin\Debug\DesignPattern.pdb
+D:\我的酷盘\Uility\DesignPattern\obj\Debug\ResolveAssemblyReference.cache
+D:\我的酷盘\Uility\DesignPattern\obj\Debug\DesignPattern.dll
+D:\我的酷盘\Uility\DesignPattern\obj\Debug\DesignPattern.pdb
+D:\我的酷盘\我的酷盘\Uility\DesignPattern\bin\Debug\DesignPattern.dll
+D:\我的酷盘\我的酷盘\Uility\DesignPattern\bin\Debug\DesignPattern.pdb
+D:\我的酷盘\我的酷盘\Uility\DesignPattern\obj\Debug\DesignPattern.dll
+D:\我的酷盘\我的酷盘\Uility\DesignPattern\obj\Debug\DesignPattern.pdb
+C:\Users\dell\Desktop\Uility\DesignPattern\obj\Debug\DesignPattern.dll
+C:\Users\dell\Desktop\Uility\DesignPattern\obj\Debug\DesignPattern.pdb
+C:\Users\dell\Desktop\Uility\DesignPattern\obj\Debug\DesignPattern.csprojResolveAssemblyReference.cache

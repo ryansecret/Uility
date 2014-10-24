@@ -1,0 +1,21 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\Uility\Mef\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\Uility\Mef\bin\Debug\Mef.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\Uility\Mef\bin\Debug\Mef.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\Uility\Mef\bin\Debug\WPFToolkit.Extended.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\Uility\Mef\obj\Debug\Mef.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\Uility\Mef\obj\Debug\Mef.pdb
+E:\备份\Uility\Mef\bin\Debug\Mef.dll
+E:\备份\Uility\Mef\bin\Debug\Mef.pdb
+E:\备份\Uility\Mef\obj\Debug\ResolveAssemblyReference.cache
+E:\备份\Uility\Mef\obj\Debug\Mef.dll
+E:\备份\Uility\Mef\obj\Debug\Mef.pdb
+D:\我的酷盘\我的酷盘\Uility\Mef\bin\Debug\Mef.dll
+D:\我的酷盘\我的酷盘\Uility\Mef\bin\Debug\Mef.pdb
+D:\我的酷盘\我的酷盘\Uility\Mef\obj\Debug\Mef.csprojResolveAssemblyReference.cache
+D:\我的酷盘\我的酷盘\Uility\Mef\obj\Debug\Mef.dll
+D:\我的酷盘\我的酷盘\Uility\Mef\obj\Debug\Mef.pdb
+C:\Users\dell\Desktop\Uility\Mef\bin\Debug\Mef.dll
+C:\Users\dell\Desktop\Uility\Mef\bin\Debug\Mef.pdb
+C:\Users\dell\Desktop\Uility\Mef\obj\Debug\Mef.csprojResolveAssemblyReference.cache
+C:\Users\dell\Desktop\Uility\Mef\obj\Debug\Mef.dll
+C:\Users\dell\Desktop\Uility\Mef\obj\Debug\Mef.pdb

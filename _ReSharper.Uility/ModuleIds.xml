@@ -1,0 +1,14 @@
+<Modules>
+  <Module PersistentId="9E55E61B-E1F3-403D-ABA8-309144997030" ModuleId="Uility" />
+  <Module PersistentId="DF501D0C-8FC1-4F5C-8944-10A7D4E1350C" ModuleId="EnterPriseLibrary" />
+  <Module PersistentId="20EC2D3B-4F53-4470-A5F9-0AFF9BD2F4E8" ModuleId="Silverlight" />
+  <Module PersistentId="5CEC860C-CD14-43E0-A05E-58CB0AB39221" ModuleId="Mef" />
+  <Module PersistentId="F37E6A53-487F-40F6-87BE-AF856544FAA9" ModuleId="ConsoleApplication1" />
+  <Module PersistentId="70F70CC3-0815-454D-A0EA-ED9BEAF1EA76" ModuleId="DesignPattern" />
+  <Module PersistentId="716ADFE5-F209-42F9-99F0-CD7BBF67168D" ModuleId="WinPhone7" />
+  <Module PersistentId="378E1DC6-FB11-4E38-8EE5-DBBA37F08EC5" ModuleId="Console" />
+  <Module PersistentId="6CEA9B96-EFED-497A-9620-B7AC3FC40A85" ModuleId="Wpf" />
+  <Module PersistentId="C66BD4C6-F66C-4A7E-9323-B712A141D802" ModuleId="Web" />
+  <Module PersistentId="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="mscorlib" />
+  <Module PersistentId="780D5479-B63E-4B20-8DC5-D1F805A824FC" ModuleId="DataStucture" />
+</Modules>

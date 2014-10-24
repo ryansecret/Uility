@@ -1,0 +1,283 @@
+﻿在WCF预定义绑定类型中，WSDualHttpBinding和NetTcpBinding均提供了对双工通信的支持，但是两者在对双工通信的实现机制上却有本质的区别。WSDualHttpBinding是基于HTTP传输协议的；而HTTP协议本身是基于请求-回复的传输协议，基于HTTP的通道本质上都是单向的。WSDualHttpBinding实际上创建了两个通道，一个用于客户端向服务端的通信，而另一个则用于服务端到客户端的通信，从而间接地提供了双工通信的实现。而NetTcpBinding完全基于支持双工通信的TCP协议。
+
+我们的.NET Object通过Serialization转化成XML Infoset。但是要使我们的数据能够通过网络协议在网络上传递，必须把生成的XML Infoset转化成字节流（Byte Stream）。所以Encoding关注的是XML Infoset到字节流（Byte Stream）这一段转化的过程。在WCF中，有3中不同的方式可供选择：Binary；Text和MTOM（Message Transmit Optimized Mechanism）。Binary具有最好的Performance，Text具有最好的互操作性，MTOM则有利于大量数据的传送。
+
+xml序列化 
+所有Public Field和可读可写Property
+
+
+在WCF中，支持以下3中不同级别的Instance Context Mode：
+•PerCall：WCF为每个Serivce调用创建 一个Service Instance，调用完成后回收该Instance。
+•
+PerSession：在Session期间的所有Service调用绑定到某一个Service Instance，Session被终止后，Service Instance被回收。所以在Session结束后使用同一个Proxy进行调用，会抛出Exception。这种方式和Remoting中的CAO相似。
+
+•
+Singleton：这种方式和Remoting的Singelton相似。不过它的激活方式又有点特别。当为对应的Service type进行Host的时候，与之对应的Service Instance就被创建出来，此后所有的Service调用都被forward到该Instance。                                                                                                                                                                                                                                                                                                      
+
+WCF的默认的Instance Context Mode为PerSession，但是对于是否对Session的支持，Instancing的机制有所不同。
+
+认的Session支持是这样：Service Instance和Proxy绑定在一起，当调用Proxy的任何一个方法的时候Session开始，从此Session将会和Proxy具有一样的生命周期。一个支持Session的Binding：wsHttpBinding
+
+ <behaviors>
+            <serviceBehaviors>
+                <behavior name="calculatorServiceBehavior">
+                    <serviceMetadata httpGetEnabled="true" />
+                    <serviceDebug includeExceptionDetailInFaults="true" />
+                </behavior>
+            </serviceBehaviors>
+        </behaviors>
+MSMQ通过Message Queue进行通信，这种通信方式为离线工作成为了可能。如果在客户离线的情况下，他仍然可以通过客户端程序进行订单递交的操作，存储着订单数据的Message会被暂时保存在本地的Message Queue中，一旦客户联机，MSMQ将Message从中取出，发送到真正的接收方，而这个动作对于用户的透明的。MSMQ使用于那些对于用户的请求，Server端无需立即响应的场景
+
+消息契约(MessageContract)：对控制消息头和消息体元素提供了强力支持，支持MessageHeaderAttribute和MessageBodyMemberAttribute属性。可以添加自定义头，控制消息是否被包装(IsWrapped)，以及控制签名与加密(ProtectionLevel)。
+
+一些情况下，具有这样的要求：当序列化一个对象并生成消息的时候，希望将部分数据成员作为SOAP的报头，部分作为消息的主体。比如说，我们有一个服务操作采用流的方式进行文件的上载，除了以流的方式传输以二进制表示的文件内容外，还需要传输一个额外的基于文件属性的信息，比如文件格式、文件大小等。一般的做法是将传输文件内容的流作为SOAP的主体，将其属性内容作为SOAP的报头进行传递。这样的功能，可以通过定义消息契约来实现。由此可见，MessageContract的主要作用就是给我们提供了自己来操作SOAP的一种方式。
+
+ 
+ [Serializable]
+    public class SoapFormatterOjbect
+    {
+        public Guid ID { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public DateTime Time { get; set; }
+    }
+
+
+。InstanceContextMode 枚举定义了实例化模式。
+
+可以使用下列实例化模式：
+
+PerCall：为每个客户端请求创建一个新的 InstanceContext（以及相应的服务对象）。
+
+PerSession：为每个新的客户端会话创建一个新的 InstanceContext（以及相应的服务对象），并在该会话的生存期内对其进行维护（这需要使用支持会话的绑定）。
+
+Single：单个 InstanceContext（以及相应的服务对象）处理应用程序生存期内的所有客户端请求。
+
+<system.serviceModel>
+    <services>
+      <!--name - 提供服务的类名-->
+      <!--behaviorConfiguration - 指定相关的行为配置-->
+      <service name="WCF.ServiceLib.Message.Duplex" behaviorConfiguration="MessageBehavior">
+        <!--address - 服务地址-->
+        <!--binding - 通信方式-->
+        <!--contract - 服务契约-->
+        <!--双向通讯可以基于Http, TCP, Named Pipe, MSMQ；其中基于Http的双向通讯会创建两个信道(Channel)，即需要创建两个http连接-->
+        <!--endpoint address="Message/Duplex" binding="wsDualHttpBinding" contract="WCF.ServiceLib.Message.IDuplex" /-->
+        <endpoint address="Message/Duplex" binding="netTcpBinding" contract="WCF.ServiceLib.Message.IDuplex" />
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://localhost:12345/Message/Duplex"/>
+            <add baseAddress="net.tcp://localhost:54321/"/>
+          </baseAddresses>
+        </host>
+      </service>
+    </services>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="MessageBehavior">
+          <!--httpGetEnabled - 使用get方式提供服务-->
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="true"/>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+  </system.serviceModel>
+
+
+  绑定指定如何与终结点进行通信。这包括：
+要使用的传输协议（例如，TCP 或 HTTP）。
+要用于消息的编码（例如，文本或二进制）。
+必需的安全要求（例如，SSL 或 SOAP 消息安全）。
+
+若要切换到对特定操作或整个服务使用 XmlSerializer，请将 XmlSerializerFormatAttribute 属性应用到相应的操作或服务。例如：
+ [ServiceContract]
+public interface IAirfareQuoteService
+{
+    [OperationContract]
+    [XmlSerializerFormat]
+    float GetAirfare(Itinerary itinerary, DateTime date);
+}
+public class Itinerary
+{
+    public string fromCity;
+
+    public string toCity;
+    [XmlAttribute]
+    public bool isFirstClass;
+}
+
+<wsHttpBinding>
+        <!--messageEncoding - 指定用 MTOM 还是 Text 对 SOAP 消息编码-->
+        <!--maxReceivedMessageSize - 在采用此绑定配置的通道上可接收的最大消息大小（单位：字节）-->
+        <!--receiveTimeout - 在传输引发异常之前可用于完成读取操作的时间间隔-->
+        <binding name="MtomBindingConfiguration" messageEncoding="Mtom" maxReceivedMessageSize="1073741824" receiveTimeout="00:10:00">
+          <!--maxArrayLength - 配额控制：允许的最大数组长度-->
+          <readerQuotas maxArrayLength="1073741824" />
+        </binding>
+      </wsHttpBinding>
+
+Message 类是 Windows Communication Foundation (WCF) 的基本类。客户端与服务之间的所有通信最终都会产生要进行发送和接收的 Message 实例。
+
+WCF 的运行时组件可分为两个主要部分：通道堆栈和服务框架，其间使用 Message 类作为连接点。Message 对象不提供元数据支持，因此如果您以这种方式使用 WCF，则不能生成强类型的 WCF 客户端。
+
+二进制编码优于基于文本编码的一个方面就在于大型二进制数据项，例如，图片、视频、音效剪辑或者必须在服务与其使用者之间交换的任何其他形式的非透明二进制数据。为了使这些类型的数据也适合 XML 文本，常用的方法就是使用 Base64 编码对其进行编码。
+
+消息传输优化机制 (MTOM) 标准允许将消息中包含的大型数据元素外部化，并将其作为无任何特殊编码的二进制数据随消息一起传送。利用 MTOM，消息将以一种与带附件或嵌入式内容（图片和其他嵌入式内容）的简单邮件传输协议 (SMTP) 电子邮件类似的方式交换；MTOM 消息会打包为多部分/相关 MIME 序列，其中根部分是实际的 SOAP 消息。
+
+处理大型负载的策略是流。尽管消息（尤其是以 XML 表示的消息）通常会被认为是相对紧凑的数据包，但消息大小也可能达到 GB 数量级，这样的大小与连续的数据流而不是数据包相仿。当以流模式而不是缓冲模式传输数据时，发送方会以流的形式将消息正文的内容提供给接收方，并且消息基础结构会不断地将就绪的数据从发送方转发给接收方。
+
+如果需要使用Stream操作，可以使用的绑定只能是BasicHttpBinding，NetTcpBinding以及NetNamedPipeBinding。此外，在使用Stream操作时，不能使用Reliable Messaging。如果考虑到消息安全，则此方式是不可取的。
+ 
+每个标准绑定都包括一个预配置编码器，因此默认情况下带 Net* 前缀的绑定使用二进制编码器（通过包括 BinaryMessageEncodingBindingElement 类），而 BasicHttpBinding 和 WSHttpBinding 类则使用文本消息编码器（通过 TextMessageEncodingBindingElement 类）。
+netTcpBinding，wsHttpBinding，wsFederationHttpBinding中的ReliableSession属性均是RelibaleSession的一个派生类型，名为OptionRelibaleSession，也就是提供了可选的功能。相比ReliableSession，OptionReliableSession仅仅多了一个属性：Enabled
+
+注意stream中的：
+[MessageContract]
+public class FileData
+{
+    [MessageHeader]
+    public string FilePath { set; get; }
+
+    [MessageBodyMember(Order = 1)]
+    public Stream FileData { set; get; }
+}
+
+
+当要求互操作性，并且必须发送大型二进制数据时，MTOM 消息编码是一个备选的编码策略，您可以在标准 BasicHttpBinding 或 WSHttpBinding 绑定上启用它，方法是：将该绑定的 MessageEncoding 属性设置为 Mtom，或者将 MtomMessageEncodingBindingElement 编写为 CustomBinding。
+。因为SOAP使用XML语言进行消息传递，XML是基于BASE64编码的语言。 
+MIME表示多用途Internet邮件扩允协议。
+
+您不应在数据协定内使用 System.IO.Stream 派生类型。应使用流模型传输流数据，如下面的“数据的流模式”一节所述。
+
+<system.serviceModel>
+     …
+    <bindings>
+      <basicHttpBinding>
+        <binding name="ExampleBinding"  transferMode="Streaming"/>
+      </basicHttpBinding>
+    </bindings>
+     …
+<system.serviceModel>
+种情况下仅限制最大传入消息大小是不够的。要限制 WCF 缓冲的内存量，必须使用 MaxBufferSize 属性。进行流处理时，将此属性设置为一个安全值（或保留为默认值）很重要。例如，假设您的服务必须接收大至 4 GB 的文件，并将其存储在本地磁盘上。另外，还假设您的内存存在一些约束，一次只能缓冲 64 KB 的数据。这样，您应该将 MaxReceivedMessageSize 设置为 4 GB，将 MaxBufferSize 设置为 64 KB。另外，在您的服务实现中，必须确保仅按 64 KB 大小的块从传入流中读取数据，并且在上一块写入到磁盘并从内存中丢弃之前，不读取下一块。
+
+
+除非对成员应用 IgnoreDataMemberAttribute 属性 (Attribute)，否则所有公共字段以及具有公共 get 和 set 方法的属性 (Property) 都会序列化。
+可以在serviececontract 中添加xmlSerializerFormat
+
+出错契约：[FaultContract(typeof(SomeError))]  catch后通过detail属性访问。当服务协定将 System.ServiceModel.ServiceContractAttribute.SessionMode 属性设置为 System.ServiceModel.SessionMode.Required 时，该协定表示所有调用（即，支持调用的基础消息交换）都必须是同一个对话的一部分。
+
+[OperationContract(IsOneWay=true)]
+one-way calls是最没良心的，对于客户端，one-way calls就如肉包子打狗，有去无回。
+request/reply比起one-way来说，就更懂得礼尚往来，它是缺省的消息交换模式，类似于http协议中的请求/响应模型。
+Duplex 当二者存在着至关重要的不同，它在客户端也有监听节点，在callback的时候，服务器和客户端的角色会进行交换
+
+Binding包括三个组成部分：NameSpace，Name和BindingElement.Name和NameSpace是服务元数据(meta date)的唯一标志，换句话说，二者就像Binding的姓名一样，而BindingElement则描述Binding的特征，我们说Binding能解决通讯方式的问题，关键是靠BindingElement来进行描述。 
+
+Binding Element中最核心的组成部分，它分为以下三种类型 
+
+Encoding Binding Element：它用于描述传输数据的编码方式，比如用text/xml进行编码，用binary编码，用MTOM进行编码都是在这个上面定义，每个Binding Element必须包含一个Encoding Binding Element。 
+Transport Binding Element:它用于描述数据的传输方式，例如使用tcp进行传输，还是用http进行传输，还是用msmq，这些都是由Transport Binding Element来定义，每一个Binding Element 必须包含一个Transport Binding Element 
+
+Protocol Binding Element:指定诸如安全性、可靠性、上下文流设置（context flow settins） MTOM(Message Transmission Optimization Mechanism)
+
+
+
+1、支持数据流传输的绑定有：BasicHttpBinding、NetTcpBinding 和 NetNamedPipeBinding
+/// 2、流数据类型必须是可序列化的 Stream 或 MemoryStream
+// /3、传递时消息体(Message Body)中不能包含其他数据，即参数中只能有一个System.ServiceModel.MessageBodyMember
+
+  <!--transferMode - 指示通道是使用流处理模式还是缓冲模式来传输请求和响应消息-->
+          <!--maxReceivedMessageSize - 在采用此绑定配置的通道上可接收的最大消息大小（单位：字节）-->
+          <!--receiveTimeout - 在传输引发异常之前可用于完成读取操作的时间间隔-->
+          <binding name="StreamedBindingConfiguration" transferMode="Streamed" maxReceivedMessageSize="1073741824" receiveTimeout="00:10:00" />
+
+
+ServiceBehavior
+    ·InstanceContextMode.PerCall - 新的 System.ServiceModel.InstanceContext 对象在每次调用前创建，在调用后回收。
+    ·InstanceContextMode.PerSession - 为每个会话创建一个新的 System.ServiceModel.InstanceContext 对象。
+    ·InstanceContextMode.Single - 只有一个 System.ServiceModel.InstanceContext 对象用于所有传入呼叫，并且在调用后不回收。如果服务对象不存在，则创建一个。
+
+  <bindings>
+            <wsHttpBinding>
+                <!--wsHttpBinding 可提供 安全会话 和 可靠会话-->
+                <binding name="PerSessionModeBindingConfiguration">
+                    <!--指示是否在通道终结点之间建立 WS-RM (WS-ReliableMessaging) 可靠会话。默认值为 false。-->
+                    <reliableSession enabled="true"/>
+                    <security>
+                        <!--此属性控制安全上下文令牌是否通过客户端与服务之间的 WS-SecureConversation 交换建立。将它设置为 true 要求远程方支持 WS-SecureConversation。-->
+                        <message establishSecurityContext="true"/>
+                    </security>
+                </binding>
+            </wsHttpBinding>
+        </bindings>
+
+ /// SessionMode - 获取或设置是否允许、不允许或要求会话
+    /// SessionMode.Allowed - 指定当传入绑定支持会话时，协定也支持会话（默认值）
+    /// SessionMode.Required -  指定协定需要会话绑定。如果绑定并未配置为支持会话，则将引发异常
+    /// SessionMode.NotAllowed - 指定协定永不支持启动会话的绑定
+    /// </remarks>
+    [ServiceContract(SessionMode = SessionMode.Required)]
+
+	 /// DeliveryRequirements - 指定绑定必须提供给服务或客户端实现的功能要求
+    /// QueuedDeliveryRequirements - 指定服务的绑定是否必须支持排队协定
+    /// QueuedDeliveryRequirementsMode.Allowed - 允许排队传送
+    /// QueuedDeliveryRequirementsMode.Required - 要求排队传送
+    /// QueuedDeliveryRequirementsMode.NotAllowed - 不允许排队传送
+
+
+	<security>
+                        <!--msmqAuthenticationMode - 指示 MSMQ 传输必须采用什么方式对消息进行身份验证，默认值 WindowsDomain -->
+                        <!--MsmqAuthenticationMode.None - 不使用任何安全性-->
+                        <!--MsmqAuthenticationMode.WindowsDomain - 通过 Kerberos 进行身份验证，客户端和服务器必须连接到受信任域-->
+                        <!--MsmqAuthenticationMode.Certificate - 客户端通过 X.509 证书进行身份验证，客户端证书必须显示在服务器的证书存储区中-->
+
+                        <!--msmqProtectionLevel - 保护级别，设置与 MsmqAuthenticationMode 相关联的 ProtectionLevel，默认值 Sign -->
+                        <!--ProtectionLevel.None - 只做身份验证-->
+                        <!--ProtectionLevel.Sign - 对数据做签名，以确保所传输数据的完整性-->
+                        <!--ProtectionLevel.EncryptAndSign - 对数据做加密和签名，以确保所传输数据的保密性和完整性-->
+                        <transport msmqAuthenticationMode="None" msmqProtectionLevel="None" />
+
+                        <!--clientCredentialType - 客户端用以进行身份验证的凭据的类型，默认值 UserName -->
+                        <!--BasicHttpMessageCredentialType.UserName - 使用用户名凭据对客户端进行身份验证-->
+                        <!--BasicHttpMessageCredentialType.Certificate - 使用证书对客户端进行身份验证-->
+                        <message clientCredentialType="UserName" />
+                    </security>
+
+
+WCF为了改善性能，是有限流（Throttling）措施的。主要包括三种 
+
+maxConcurrentCalls ：最大并发数，默认为16 
+maxConcurrentSessions ：最大的会话数，主要针对于PerSession的情况，默认为10 
+maxConcurrentInstances：  
+
+
+这是因为实现了事务的得服务还要受到TransactionAutoCompleteOnSessionClose的限制，该属性默认情况是true，它指示WCF在事务操作完成之后强制销毁服务实例，相当于调用服务的Dispose()方法进行释放，尽管是PerSession或者Single都难逃它的法网。如果想维持实例模式，可以将其设置为false,更改后运行效果便可如期望一致效果图不再给出。 
+·对契约方法使用TransactionFlowAttribute声明（设置TransactionFlowOption参数），以指定服务操作的事务流策略
+    ·对服务方法是用OperationBehaviorAttribute声明（设置TransactionScopeRequired参数），以指定方法是否在事务范围(TransactionScope)内执行
+    ·配置host和client的binding节点的transactionFlow属性，以指定绑定是否支持流事务
+
+
+ /// TransactionFlow - 指定服务操作是否愿意接受来自客户端的传入事务
+        /// NotAllowed - 禁止事务。默认值
+        /// Allowed - 允许事务
+        /// Mandatory - 强制事务
+
+		即使设置了transactionFlow,也需要显示通知服务启用事务。
+		/// OperationBehavior - 指定服务方法的本地执行行为
+        /// 1、TransactionScopeRequired - 如果方法需要事务范围才能执行，则为 true；否则为 false。默认值为 false
+        /// 将 TransactionScopeRequired 设置为 true，可以要求操作在事务范围内执行。如果流事务可用，则操作会在该事务内执行。如果流事务不可用（也就是客户端没有传播事务），则会创建一个新事务并使用它来执行操作
+        /// 2、TransactionAutoComplete - 默认值为 true
+        /// true - 当方法完成执行时，将把该事务标志为完成（自动提交事务）
+        /// false - 需要调用OperationContext.Current.SetTransactionComplete()方法来手工配置该事务的正确完成；否则，该事务将被标志为失败（手动提交事务） 只有会话服务可以设置为false
+
+		只有Tcp\Ipc\ws绑定支持事务传播。 最佳实践是在启动事务时，启动可靠性传输。WCF坚持事务流在操作级别实现。
+
+		在服务端显式捕获异常并处理本地事务后,应该将异常重新抛出.
+		事务合适结束时由事务发起者决定的.
+
+		  TransactionScopeOption.RequiresNew  成为根事务. 
+
+		  当ReleaseServiceInstanceOnTransactionComplete设置为true时，如果有个服务的TransactionScopeRequired为true,那么并发模式为single.
+
+	

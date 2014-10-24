@@ -1,0 +1,52 @@
+﻿•方法：在上面的代码中我们已经Mock了一个对象并反回指定的对象。值得注意的是It.IsAny<string>()这句话，它的意思是不去匹配所传参数，当然也有具体匹配，范围匹配。
+
+•验证：这里的验证和我们在Test Framework中的Assert不大一样，它验证的是Mock对象在执行过程中的一些行为和属性，例如方法是否被调用，调用次数、属性取值是否为期望值，Set方法是否将值赋给对象的属性。
+
+
+public void TestVerify()
+
+{
+
+    var customer = new Mock<ICustomer>();
+
+    customer.Setup(p => p.GetCall(It.IsAny<string>()))
+
+.Returns("方法调用")
+
+.Callback((string s) => Console.WriteLine("ok" + s))
+
+.Verifiable();
+
+ 
+
+    customer.Object.GetCall("调用了！");
+
+    customer.Verify();
+
+}
+
+把Mock对象中的GetCall方法设置为可证实的（Verifiable()），
+
+如果不调用粗体部分语句，那么customer.Verify()执行就不能通过。这个方法很有用。
+
+
+
+在使用Verify方法时，只有被标记为可证实的（.Verifiable()）的才可以验证。
+
+但VerifyAll会验证所有的调用：
+
+ 
+
+customer.Setup(p => p.GetCall(It.IsAny<string>()))
+
+         .Returns("方法调用")
+
+         .Callback((string s) => Console.WriteLine("ok" + s));
+
+ 
+
+customer.Object.GetCall("call");
+
+customer.VerifyAll();
+
+ 

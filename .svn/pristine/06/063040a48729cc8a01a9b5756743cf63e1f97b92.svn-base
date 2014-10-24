@@ -1,0 +1,204 @@
+﻿AJAX = Asynchronous JavaScript and XML.
+
+jQuery 的 load 函数是一种简单的（但很强大的）AJAX 函数。它的语法如下：
+
+$(selector).load(url,data,callback)请使用 selector 来定义要改变的 HTML 元素，使用 url 参数来指定数据的 web 地址。
+
+$(selector).load(url,data,callback) 把远程数据加载到被选的元素中 
+$.ajax(options) 把远程数据加载到 XMLHttpRequest 对象中 
+$.get(url,data,callback,type) 使用 HTTP GET 来加载远程数据 
+$.post(url,data,callback,type) 使用 HTTP POST 来加载远程数据 
+$.getJSON(url,data,callback) 使用 HTTP GET 来加载远程 JSON 数据 
+$.getScript(url,callback) 加载并执行远程的 JavaScript 文件 
+，在以下情况中，请使用 POST 请求：
+
+无法使用缓存文件（更新服务器上的文件或数据库） 
+向服务器发送大量数据（POST 没有数据量限制） 
+发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠 
+
+
+为了应对所有的现代浏览器，包括 IE5 和 IE6，请检查浏览器是否支持 XMLHttpRequest 对象。如果支持，则创建 XMLHttpRequest 对象。如果不支持，则创建 ActiveXObject ：
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+  向服务器发送请求
+如需将请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send() 方法：
+open(method,url,async)
+xmlhttp.open("GET","test1.txt",true);
+xmlhttp.send();
+
+
+一个简单 POST 请求：
+xmlhttp.open("POST","demo_post.asp",true);
+xmlhttp.send();
+
+如果需要像 HTML 表单那样 POST 数据，请使用 setRequestHeader() 来添加 HTTP 头。然后在 send() 方法中规定您希望发送的数据：
+xmlhttp.open("POST","ajax_test.asp",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("fname=Bill&lname=Gates");
+setRequestHeader(header,value)
+当使用 async=true 时，请规定在响应处于 onreadystatechange 事件中的就绪状态时执行的函数：
+
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","test1.txt",true);
+xmlhttp.send();
+
+当您使用 async=false 时，请不要编写 onreadystatechange 函数 - 把代码放到 send() 语句后面即可：
+xmlhttp.open("GET","test1.txt",false);
+xmlhttp.send();
+document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+
+服务器响应
+如需获得来自服务器的响应，请使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。
+
+如果来自服务器的响应并非 XML，请使用 responseText 属性。
+responseText 属性返回字符串形式的响应，因此您可以这样使用：
+document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+
+responseXML 属性
+如果来自服务器的响应是 XML，而且需要作为 XML 对象进行解析，请使用 responseXML 属性：
+请求 books.xml 文件，并解析响应：
+xmlDoc=xmlhttp.responseXML;
+txt="";
+x=xmlDoc.getElementsByTagName("ARTIST");
+for (i=0;i<x.length;i++)
+  {
+  txt=txt + x[i].childNodes[0].nodeValue + "<br />";
+  }
+document.getElementById("myDiv").innerHTML=txt;
+
+
+onreadystatechange 事件
+当请求被发送到服务器时，我们需要执行一些基于响应的任务。
+
+每当 readyState 改变时，就会触发 onreadystatechange 事件。
+属性 描述 
+onreadystatechange 存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数。 
+readyState 存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。
+0: 请求未初始化 
+1: 服务器连接已建立 
+2: 请求已接收 
+3: 请求处理中 
+4: 请求已完成，且响应已就绪 
+ 
+status 200: "OK"
+404: 未找到页面
+ 当 readyState 等于 4 且状态为 200 时，表示响应已就绪：
+
+
+function showHint(str)
+{
+var xmlhttp;
+if (str.length==0)
+  {
+  document.getElementById("txtHint").innerHTML="";
+  return;
+  }
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","gethint.asp?q="+str,true);
+xmlhttp.send();
+}
+
+
+
+
+CSS:
+属性（property）是您希望设置的样式属性（style attribute）。每个属性有一个值。属性和值被冒号分开。
+selector {property: value}
+如果值为若干单词，则要给值加引号：
+p {font-family: "sans serif";}
+p {
+  text-align: center;
+  color: black;
+  font-family: arial;
+}
+
+你可以对选择器进行分组，这样，被分组的选择器就可以分享相同的声明。用逗号将需要分组的选择器分开。在下面的例子中，我们对所有的标题元素进行了分组。所有的标题元素都是绿色的。
+
+h1,h2,h3,h4,h5,h6 {
+  color: green;
+  }
+
+  li strong {
+    font-style: italic;
+    font-weight: normal;
+  }
+请注意标记为 <strong> 的蓝色代码的上下文关系：
+
+<p><strong>我是粗体字，不是斜体字，因为我不在列表当中，所以这个规则对我不起作用</strong></p>
+
+<ol>
+<li><strong>我是斜体字。这是因为 strong 元素位于 li 元素内。</strong></li>
+<li>我是正常的字体。</li>
+</ol>
+
+id 选择器以 "#" 来定义。
+
+下面的两个 id 选择器，第一个可以定义元素的颜色为红色，第二个定义元素的颜色为绿色：
+
+#red {color:red;}
+#green {color:green;}
+#sidebar p {
+	font-style: italic;
+	text-align: right;
+	margin-top: 0.5em;
+	}
+
+
+在 CSS 中，类选择器以一个点号显示：
+.center {text-align: center}
+
+属性选择器
+下面的例子为带有 title 属性的所有元素设置样式：
+[title]
+{
+color:red;
+}
+
+
+下面的例子为包含指定值的 title 属性的所有元素设置样式。适用于由空格分隔的属性值：
+
+[title~=hello] { color:red; }  就是属性值中包含hello
+
+每个页面使用 <link> 标签链接到样式表。<link> 标签在（文档的）头部：
+
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css" />
+</head>
+你可以使用 <style> 标签在文档头部定义内部样式表，就像这样:
+
+<head>
+<style type="text/css">
+  hr {color: sienna;}
+  p {margin-left: 20px;}
+  body {background-image: url("images/back40.gif");}
+</style>
+</head>
+

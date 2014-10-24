@@ -1,0 +1,1346 @@
+
+性能需求，可扩展性需求，或者其他复杂的功能需求，
+
+】⒈做人不能太单纯 适度伪装自己 ⒉凡事留余地 要留退路 ⒊话不说绝 口无遮拦难成大事 ⒋成熟而不世故 ⒌心态好 想得开活得不累 ⒍懂方圆之道：没事不惹事，来事不怕事 ⒎不可少二礼:礼仪与礼物 ⒏人在江湖飘 防挨朋友刀 ⒐偶尔"势利眼" 寻可靠伙伴 ⒑放下面子来做人。
+
+管理者未能明确定义执行团队中各参与者的角色；2）管理者未能准确描述项目成功之后各参与者个人所获得的收益；3）管理者未能充分阐述将如何评估每位参与者在项目执行过程中所做出的贡献；4）管理者未能营造出适当的项目执行紧迫感，误以为像企业日常运作一般带领团队即可达成理想的效果。
+建议大家以开放性视角接纳建议，尝试找出最适合项目执行的理想方案
+
+永远别为“不顺心”浪费沉淀的机会
+一是学会最基本的技能，比如听话、做事、沟通的基本技能，比如时间管理，比如安排业余生活与工作的平衡等生命中最基本的技能
+
+二是建立一个美满的家庭，维系一个好的人脉圈，这是人生幸福的来源。所有财富，所有成就都是过眼云烟，一个人的人生幸福最终是映射在他身边最重要的人身上。
+
+三是积累一定的财富，比如有两至三处房产，学会理财与投资
+适当在老板面前增加“曝光率”。老外经常会提到一个单词“Exposure”。翻译成中文就是曝光率的意思。
+我们总是要学会既做经济性博弈，也要学会跟体制和社会转型的节奏配合。其实大部分企业都是因为这件事情死的，因为我们在转型社会经济责任、权利不确定，所有的事情都不确定，所以你在做的时候拿捏不好就掉坑里了
+
+大多数外资企业每年的加薪幅度往往在制定年度预算时已确定，因此，每年平均加薪的比例是相对固定的。
+你可以要求自己对别人好，但不要期望别人同样对你，如果看不透这一点，只能怎天不必要的烦恼！
+
+“中国有些职业经理人的道德成问题。”尹明善说起这点特别激动：“他们不知道怎么尊重老板的利益，而且一天到晚想出去当老板。”
+
+对创业者我有两点提醒：一是一定不能去抓眼前人人都看得到的机会，而是要看三四年之后可能会出现的机会。大家现在都看得到的机会，大企业一出手你就没机会了。只有耐得住寂寞，避开大企业的视野，才有可能做好铺垫和培育的过程。二是在最初的三四年中，不要暴露在阳光下，不要到处做宣传，要低调，不要让别的企业盯上你。
+有人扔鞋，只要不被砸死，我们就还要在阳光下走下去。
+
+我也因此深刻理解到创业是一个长期的过程，没有9年时间是不可能有大成的：第一个3年是活下来的问题，第二个3年是发展壮大，第三个3年才有可能取得辉煌。中国取得大成就的企业，哪一个不是经过八九年的磨炼才成熟？人要是有这样的心里预期，创业就不会急躁。
+
+契约式编程是另一种很好的编程实践，它的目标是让程序的各个模块各司其职，仅仅关注自己需要完成的事情，而不用去关心其它模块该关心的事情。从而可以降低模块之间的耦合度，同时也让程序在语义上更加容易理解。
+所有的RIA框架都会通过隐藏底层细节，提供统一的一致的API来
+
+构架师不是一个技术角色，做的不是技术决策，而是业务和商业决策。
+Memcached 一个数据缓存的开源库。
+准确来说说REST只是一种概念、风格或者约束，是回归HTTP本身的建议。
+
+团队文化，开放的氛围，领导能够听得进下属的意见，能够得到下属的信任。
+团队的精神和意志会让事情朝着不同的方向发展。
+
+Happy is the man who is living by his hobby.
+
+结构的赋值直接赋值即可。
+为了留住人才、留住客户，你必须有一个值得坚持下去的愿景  
+
+只有技术负责人热爱技术，追求卓越，才可能为技术人员创造环境，激励他们钻研和创新。技术负责人需要深入项目，和工程师们一起讨论技术设计，从而通过具体问题来提升工程师的能力，同时也防止自己的技术能力滑坡。在技术管理上，很多国内的公司把工程师简单地作为资源，过于强调流程管理和资源管理。我的观点是：工程师不是高级蓝领，不能以管理生产线的方式来进行管理。
+
+
+技术人员最容易犯的错误是“保守秘密”，觉得自己开发的成果属于自己，不喜欢和别人共享。生怕影响自己在组织内的地位。 
+
+帮助别人也是帮助自己，这个简单的道理却被高智商的软件开发人士忽视。在其他行业中，帮助别人可能仅仅是一个美德，但在软件开发组织中，帮助别人还能为组织降低成本、缩短开发周期、提高产品质量，所有这些正是软件工程学科所研究、并试图解决的问题。
+版权意识不敏感 
+公私分明是职业化的另一个重要特征。利用公司设备做自己的事情；在上班时间浏览自己感兴趣、和工作无关的网站，如上班炒股票，都是不职业化的行为和习惯，属于假公济私。 
+
+反过来也一样是不职业的：用自己私人的设备处理公司的事务，用免费的邮箱发送和接收公司的邮件；带个人的电脑来办公室处理公司的业务。这样做，可能给组织的软件安全性造成危害，也可能对组织的工作造成麻烦、惹出版权官司。在公和私之间画上一道红线，做到公私分明，是职业化软件工程师必备的素质。
+
+业的与非职业的软件工程师一个重要区别就在于职业化的人士经常学习，不断更新自己的知识，保持自己在本行业的竞争能力。 
+
+我接触到的很多工程师，他们想走捷径，对技术浅尝辙止；知其然不知其所以然；他们畏难而退：不想在一线战斗，喜欢搞他们想象的所谓的管理；想做测试，因为他们错误地认为测试对技术的要求不高……这些都是和职业化的软件工程师很不相称的。
+
+
+沟通，在软件开发领域，是责任问题，不是性格问题。
+
+不主动沟通，其背后隐藏的更为重要的原因是工程师的责任感不够。主动和上级、同行、下属沟通是职业化所必需的，因为软件开发需要团队协作，任何一个工程师的工作都可能会影响别人，进而影响全局。软件工程的实践表明，个别人缺乏主动沟通，往往导致整个团队的技术方案出现偏差，或整个项目的进度受到影响。
+一些工程师不能很好地遵守软件行业的职场规则。比如：互相告知或打听工资和奖金的多少；离职时带走公司的源代码和文档；或急于到新单位工作而不专心交接等等。
+
+软件计划的不精确性，导致开发任务的分布不均匀，特别是重要里程碑（如产品发布）之前，往往需要一定程度的加班。对此，职业化的软件工程师应给予理解和配合。
+
+会另外安排相关的指导培训：比如如何开始创业、如何撰写商业计划书、如何和风险投资商打交道，以及相关的金融财务知识等。
+
+
+彻底沉浸到用户中去，成为毋庸置疑的用户专家，但不要盲从于用户。 
+区分愿景和假想的不同，通过与用户面对面交流来验证愿景，虚怀若谷。 
+
+成功的前提是你必须知道：要解决什么问题？为谁而解决？如何解决？ 
+拥抱用户体验，因为用户体验通常比开发更重要、更困难。 
+
+快速过滤糟粕，要铭记：产品部门的核心职责是进行产品探索。 
+确保坦诚合作。 
+快速改进，向着卓越的方向不断优化产品。 
+敏捷化，通过增量和迭代的方式构建和发布，务必确保产品是可信赖的版本。 
+
+追求卓越，保持高标准的同时注重每个细节。 
+打造、培育和鼓励创新文化，为其优化组织和流程。 
+
+
+本科以上学历，具备5年以上的实际项目经验和2年以上的项目管理工作经验；
+2、熟悉软件开发流程管理方法（如软件工程、迭代开发、配置管理、测试管理等）；
+3、了解相关的架构设计知识（如服务器配置、系统软件配置和部署、可扩展性设计等）；
+4、熟悉或了解相关的软件系统知识（如C/C++服务端编程、.Net客户端/WEB/WPF/Silverlight编程、数据库编程、GIS编程等）
+5、熟悉或了解工程师能力评估、绩效考核和技术招聘工作；
+6、能够理解和分析用户需求，并制定和主导执行开发计划；
+7、沟通表达能力良好，对待工作有清晰的目标感和强烈的责任心；
+
+架构是系统的组成部件及其之间的相互关系。”它告诉了我们系统在性能、负载、吞吐量、可伸缩性方面的特性，目标系统的架构必须对这些特性提供支持。
+
+ AOP（面向方面编程）也是关注点分离思想的一种体现。记日志是说明AOP思想的一个常用例子。当我们在业务代码中嵌入很多日志代码时，业务代码的可读性就下降了，因为业务逻辑和日志是两个不同的关注点。通过AOP技术来分离这两个关注点，就提高了代码的可读性和可维护性。
+     回归测试是指修改了旧代码后，重新进行测试以确认修改没有引入新的错误或导致其他代码产生错误。
+    关注点分离带来的是高内聚、低耦合的系统，这是美丽架构的终极原则。在实践中，这种关注点分离可以是一开始就设计好的，也可以是逐渐形成的。如果是逐渐形成的，那就是所谓的演进式架构。
+
+由于项目经理主要是看用户的需求，对整个系统性能提出要求，对工作品质提出要求，同时还要确认在用户应用场景，产品是否可以有效地被系统支撑，因此它具备了非常不同的职能。”
+
+开发组的架构师比较侧重于技术，尽管某些问题上会与项目经理架构师重叠，但更多时候分工还是非常明确的。技术架构师的一大职能是技术选型，比如在产品中选择使用什么技术，比如数据库要采用哪种规格的SQL server， 比如数据库的模式（schema）应该怎么样设计。当然，这里也包括.NET组件的选择等，这些是开发组架构师所关注的。
+
+产品需求定义得越细、需求的优先级定义得越好，说明项目经理架构师很好地完成了自己的工作，对于开发架构师的衡量，则是采用什么技术以及何种组件/架构提高了开发效率。”
+
+我觉得架构师必须学会的第一件事情就懂得如何进行权衡。因为我们面对的都是相互矛盾的一些设计要素和限制，但事实却要求你在这些相互矛盾的要素限制和约束条件之间取得非常巧妙的平衡
+架构师必须足够成熟。因为他们往往需要在无法获得完整信息的情况下，迅速领会问题，根据经验做出审慎判断。其实微软内部有能力要求，能把一张比较模糊的图片清晰化。这里我想归纳四个方面。首先是在专题领域的经验和对微软软件开发工程的经验。第二个就是判断力、决定能力和领导力，推动各个团队的技术进展，并且能在压力下作出关键性的决策，然后将开发贯彻到底，而且要提高效率。架构师有权在技术上作出决定，在大家意见不一致的时候，他要能给出自己的一个意见。
+第三则是善于沟通。这其中首先就是赢得他人的信任。只有这样，才可以对他们进行说服，而后进行指导。微软架构师跟其他的合作的人没有直接的上下级关系，所以不能靠命令进行指导，所以必须要靠赢得其他人的赞同。第四点，是通常说的抽象思维和分析的能力。具体思维的人可能比较注重细节，但往往也会将问题复杂化，使头绪增多而无法收敛。 抽象思维可以帮架构师地从大量信息、系统文件中，看出一些规律来，而且找出与之相关的方面，归纳关键问题，表述模糊的概念并将其变成相关各方能够理解的项目构件。
+我认为无论是什么样的架构师都要具备一定的商业头脑，业务的知识要充分把握，因为对业务把握能够带来一个拥抱变化的能力，而且可以在设计的时候留出一点扩展的余地，适应将来可能来临的需求变化。”
+
+
+有利于提升项目质量，减少Bug； 
+有利于知识传递，降低学习成本； 
+多人熟悉同一段代码，减少项目风险； 
+与别人一起工作会增加责任和纪律性等。 
+不成功的配对，经常引发争吵，产生内耗，导致团队不和谐等。 
+老板还要扮演导师的角色。他比你见多识广，意味着可以将任何问题、想法或者困难摆在他面前，而他会就此发表意见……很可能是有价值的。
+创业者和非创业者的唯一差别：一个动手干了，另一个没干，动手干的学到了、干成了，没干的什么也没发生;真理和理论也是这样：真理必须经过实践证明，理论就是一种说法而已。
+
+不少创业团队让投资人(土财主，不是天使)拿走50-60%甚至90%股份，有的投资人承诺将来给股份，团队先干起来，最后投资人改口不给。和财主谈判调整股份，99%无圆满结果。切记： 1)启动时别拿太多钱，创始人务必控股; 2)找真天使，否则宁可不要;3)股份上别打擦边球，别希冀财主开恩，命运自己掌握。
+
+大公司高管创业的优势：1)见多识广，在大公司平台上能看到行业的趋势和机会;2)有管理的经验和行业的资源;3)简历和经历容易让投资人动心;高管创业的弱势：A. 能说不一定能做;B. 放不下身段，省钱和拼搏精神不够草根;C. 优越感，且不知在成功和失败面前人人平等。
+
+创业公司激励员工的股份叫"期权"，一般占公司股份10%，需3-4年兑现。例如：给一位优秀员工10000股期权，他必须干足四年才可获得全部10000股，如果第二年初他离开，只能得到2500股，其余股份公司收回放入"期权池"，留给别人。创业公司不必"全员持股"，期权应该只给最出色的员工，既是财富，更是荣誉。
+市场定位 
+产品差异 
+功能特性 
+竞争状况 
+市场研究 
+
+
+
+
+1. 架构设计：这是最直观的理解。
+
+2. 组间协调：在大型项目中，各项目组的架构师完成组间沟通工作，成为连接项目各个部分的桥梁。
+
+3. 设计评审：对其他人（不限于架构师）提出的设计方案进行评审。
+
+4. 框架与基础库的开发和维护。
+
+5. 技术攻关：一些项目组的架构师承担着核心模块或关键问题的攻关，虽然并不涉及整体架构，但是项目的其他部分都是围绕着架构师承担的这一块进行。
+
+6. 技术传播：一些项目经理希望架构师能够承担起培训、代码评审等工作。
+
+7. 技术管理：协助项目经理进行任务分解、人员分工和计划制定。
+
+8. 技术基础设施构建，例如代码管理、持续集成等。
+
+架构师通常产生于核心开发人员，这源于以下两个理由：
+
+对问题域有较深的了解，掌握已有实现（如果有）的大部分重要细节。 
+在项目组中得到信任，组员容易接受其做出的判断和决策。 架构师需要针对性地培养抽象思维能力、表达和沟通能力、协作能力、领域知识。
+关于架构师是否要编码的问题，从我的经验来看，如果架构师有繁重的编码任务，就很容易沉浸到代码细节而忽略了整体（特别是其他人开发的部分）。因此，我倾向于只负责少量的框架和基础库，大部分时间都应该在代码之上思考问题。
+
+系统分析师，他专注于问题域的分析、用户需求的提取，一般多见于业务性软件组织中。还有专注于领域的资深工程师，通常具有超常的领域问题分析和实现能力，例如操作系统平台、优化、用户交互等。我们称他们为领域专家，也有冠以架构师的，例如平台架构师、安全架构师。
+对于架构师而言，从各种来源摄取信息的能力非常重要。另外，阅读设计优秀的代码，可以增加自己的经验。
+
+
+仅仅确定事物的本质或将其传达给员工是不够的。睿智的领导者必须将人们凝聚到一起，鞭策他们采取行动，即把每个人的知识结合起来，把大家拧成一股绳，一心一意地追求自己的目标。智慧型领导者会在日常的语言或非语言交流中了解他人的观点和情感，从而做出政治判断。他们谨慎地考虑时机——何时采取行动或讨论问题。智慧型领导者还努力去理解人性中的各种矛盾。
+
+。健康的身体提高你思维的敏捷度，使你的精神准备好接受新鲜有趣的刺激。通过日常的生活方式、你的兴趣、阅读的杂志、所会见的人、工作场所，甚至是吃的食物，你就可以基本达到这种要求。
+
+
+，有很多架构工作是需要技术与业务相平衡的，参加这样的会议有利于架构师更好理解业务和它的发展，从而为架构的平衡做出更好的判断； 
+
+产品的用户体验包括几个方面：产品的功能便利性、产品可用性、性能、安全性等等。例如：枪战类的游戏，需要优先保证其实时性。而在C2C订单交易中则优先保证其金钱的安全性。因此如何从架构层面就去关注用户体验非常重要。
+
+一切以用户体验和价值为核心是每个架构师在架构互联网服务的基本准则。互联网服务不同于传统软件，UGC型的互联网产品更是如此，没有用户参与，再好的架构都是无益的，因此架构设计需要围绕用户体验和价值来持续进行
+
+序列化与反序列化的过程是非常消耗CPU的操作。我们自己实现的方式与.NET默认的序列化机制的最大区别在于：没有使用反射。自己实现的这种方式速度可以是默认机制的上百倍。
+
+有些公司愿意奖励杰出的个人，而不是奖励团队；或者晋升那些惯于单打独斗，特别是那些不会也不可能与他人共事，常常一个人解决问题的程序员，而不是表彰整个团队。这样的公司会做出如下论断：最好的软件是他们的天才程序员开发出来的。这些公司意识不到，除了这种方法以外，其实还有其他的方法可以达到更好的效果。
+最终事实，用事实说话
+
+慎重选择，结交“有用”的朋友，建立良性循环的人际关系网,努力寻找自己的贵人结识关键人物，改变你的人生。与对你有帮助的人经常联系，结交比自己优秀的人积极结交社会名流助己成事，朋友也要分等级，友谊背后也有骗局.
+嫂洗澡，弟误入。 嫂斥道：你这样做对得起你哥吗？ 弟羞，欲走。 嫂曰：你这样走对得起我吗？ 弟站住。 嫂又言：你这样傻呆着对得起你自己吗？ ——MBA管理点评：决策永远不可能让所有人满意~
+
+ listen don't defend  gracious
+Don’t  speak  negatively  about  someone.  Harsh  words  will  negatively  affect 
+your relationship with that person; it is a weed that will take root and grow. 
+
+Are you avoiding personalization of the issue?
+ (It could appear that you are attacking the person and not the issue.)
+
+Are you presenting facts and not conclusions?
+ (The conclusions you draw may have no basis in reality.) 呈现事实
+complaining to everyone else after  the meeting does not help.If the problem is just with one individual, however, a 
+private conversation with that individual may be warranted.
+
+don't bury issues,they will come back
+
+normally, reality is not as scary as our imagination. It sometimes seems as if many of the issues we face in life are tests. Until we pass the test, we seem to get the opportunity to deal with the issue repeatedly until we can manage it confidently.
+Buried issues eventually turn into real problems, so deal with them now
+Sometimes it turns out that we don’t all agree, but do agree that the direction is the best given the priorities before us.
+
+Confronting  problematic  issues  most likely will not be fun, but if they are not addressed now, there will likely be real pain in the future
+
+You need to provide the best  quality  of  service  regardless  of  how  you  feel,  how  others  are  treating you, or how many different ideas are bouncing around in your head.
+
+Learn to focus on others, not yourself. (Be aware of others around you.)
+
+Learn to build trust. (If you say something, do it; if you have an issue with someone, deal directly with that person, rather than discussing the problem with others.)
+
+Learn to listen. (Repeat what you have heard; don’t draw conclusions; ask questions out of genuine interest.)
+
+Allow choice. (One of the best ways to direct a decision is not to dictate, but rather to present selectable alternatives—it allows the other person to take ownership. The next time you are at a restaurant, watch how your interactions with the waiter or waitress progress.
+
+Be aware of the entire context of the discussion, and do not repeat unnecessary information or stray outside it.
+Treat them like normal people, and they will respond as such. If the conversation appears to be moving toward blame, try saying, “I don’t want to talk out of turn, but is this arguing over blame helping us solve the problem?”
+
+As  an  architect,  you  need  to  be  able  to  work  with  people  regardless  of whether you like them or dislike them, and whether they are nice to you or not.
+
+If you have had negative experiences with someone, you need to forgive that person  and  put  the  “offense”  out  of  your  thinking. 
+
+
+If the person truly meant to be destructive with the words or behavior, you are still better off not receiving the poison—leave it with the aggressor. (If need be, minimize your encounters with the individual until you are able to interact peacefully.)
+The “reason” you thought the person acted in a certain manner was completely a figment of your imagination. 
+
+In  our limited  perception,  we  appear  to  be  the  center  of  the  universe.  In  reality, everyone  around  you  is  acting  in  his  or  her  own  context  over  which  you have  a  limited  influence,  so  the  offense  you  perceive  may  simply  be  your own perception
+
+Even if the person you are dealing with truly is a complete jerk, you will personally feel better about yourself and be happier having taken the high road. If nothing else, for purely selfish reasons choose to respond positively: It will help you save your sanity and avoid a trip to the local psychologist.
+
+Dealing with others with integrity and honesty without bluntness.
+
+For  technically  inclined  individuals,  working  toward  becoming  a  gracious professional  not  only  makes  life  as  a  whole  more  enjoyable,  but  also  opens new opportunities for advancement and growth.
+
+You can have brilliant ideas, but  if  you  can't  get  them  across ,  your ideas won't get you anywhere.
+
+Learning to communicate effectively is a lifelong process—there is always room  for  improvement.   The  series  of  principles  shown  in  Figure  2-2  can help lay the foundation for you to become an effective communicator.
+
+Most people tire of this type of conversation quickly when their words  are  simply  ripples  through  the  air  with  no  destination.  The  person talking may decide he or she has better things to do and work to wrap up the conversation. If you do this only once in a while, the behavior is probably not a big deal. If it is your normal mode of operation, you are building a wall between yourself and others.
+
+ You may be biased to focus on one approach rather than the other based on the outcome you desire. You can also be neutral, however, and just present the facts as they stand with no emotion, although this is often difficult to achieve.
+
+Learn to eat your pride and go apologize to the affected parties. Issuing a heart-felt apology will not be fun or easy, but you will gain the respect of the parties and demonstrate that you are trying to grow and become a better person.
+
+What may have been an embarrassing  matter  can  be  turned  into  something  positive.  Your  relationship  with that person now has the opportunity to grow instead of shrink.The individual may also repeat the story to others to dem-onstrate the type of person you are. 
+
+ If  you  are  insincere  in  issuing  an  apology,  the false  note  you  project  will  likely  make  matters  worse.  If  you  cannot  bring yourself to be sincere, avoid the apology, but your goal should be striving to build positive relationships with the people with whom you interact. Avoiding  apologies  moves  you  in  the  wrong  direction  and  limits  your  personal growth.
+
+The authors of the item will naturally feel a little uneasiness as these imperfections are revealed.The authors of the item will naturally feel a little uneasiness as these imperfections are revealed.
+
+Out  of  common  courtesy,  once  three  or  four  issues  have  been  raised  in  a particular  area,  don’t  pile  the  criticism  on  higher  and  deeper.  If  you  have additional  items  that  need  to  be  addressed,  write  them  down  so  that  the affected individual has a log of points to refer to later. 
+
+Avoid words that personalize the comments such as “you” or “your.”Find opportunities to say positive things about the work that has 
+been done. Most people feel very defensive and finding positive points will help soften the blows.
+
+In other words, it’s not about you; it’s about striving for excellence.
+
+It  is  important  that  any  issues  are  documented—not  just  for  your  benefit in tracking, but also as a log for other interested parties. If there really are a significant number of items that require attention, a follow-up review may be necessary.
+
+If an executive asks you to do something, you should ascertain the priority of the request. If it is a high-priority request, you should always  analyze the impact of not doing other tasks and give the feedback to the executive. Providing a set of options to select from will naturally help build good relationships with your customers and coworkers. 
+
+
+The sales person likely listened closely to what you wanted and put you in the driver’s seat for deciding what you wanted by providing the following information:
+ Available options
+ Costs of the various options
+ Benefits of the various options
+ Options that go well together
+ Risks associated with various options
+ Known problems or defects with each optio
+
+
+Reserve Your No’s for Special Occasions
+As an architect, you are in sales. You need to be prepared to sell the solu-tion even when questions arise. During the questioning, it may appear that 
+opposition to your position is rising when, in fact, people are actually prob-ing to validate the solution or their understanding of the solution. 
+
+If at all possible, try to avoid actually saying the word “no.” Instead, explain 
+the rationale behind the decision given the context of the person or group 
+you are interacting with.
+
+One  exception  to  the  rule  of  avoiding  the  urge  to  defend  yourself  is  when 
+the issue at hand involves company policy or your integrity. 
+
+Get to the point where you can restate her 
+idea in a manner that captures the essence of what she is trying to convey. 
+
+to reinforce core concepts that can help you focus the direction of the meeting and enable the meeting to be  drawn  to  a  successful  conclusion.  
+Because  every  individual  is  different  and  has  different  needs  relative to  communications,  an  architect  must  adapt  his  or  her  means  of  message delivery to those needs to ensure effective communications.
+
+  If  you  listen  carefully,  you  will  still  be  able  to  hear  variances 
+in participants’ voice inflections, the tone of their voice, the speed of their 
+delivery—all of these aspects help to give feedback about the effectiveness of 
+the communication
+
+Are you giving eye contact to those who are speaking?
+Executives  have  an  unquenchable  thirst  for  trust,  loyalty,  and  consistency 
+
+When you are meeting with executives, do not roast other individuals who are not in the room. Such behavior demonstrates that you are neither trust-worthy nor loyal.Facts are something that can be dealt with rationally, even by the person 
+who is not in the room (
+
+They will want to know that you are well versed technically, but they don’t have time to consume all of the project minutiae. 
+During a meeting, if you get to a spot where you don’t know or are unsure of 
+the information, be clear that you do not know, but state that you will follow 
+up with the information that was asked for. And always do follow up: If you 
+don’t, you are putting your hard-earned trust at risk
+
+Most project risks brew slowly: They are known by those parties who are on 
+or near a project. If you listen carefully, you will hear the information f loat-ing  all  around.  Unfortunately,  the  buzz  about  these  risks  may  not  always rise to those who need to hear it.
+
+
+As a general rule of thumb, you are  far  better  off  having  exposed  the  risk  early  rather  than  forcing  senior 
+management  and  executives  to  deal  with  the  cleanup  efforts  when  it’s  too late to fix the problem
+
+Execute does not like surprise.If you have bad news ,deliver it early.
+
+The rewards for focusing on becom-ing  a  more  skilled  communicator  not  only  make  my  vocational  life  more enjoyable  and  geared  toward  career  advancement,  but  also  make  my  per-sonal life more enjoyable.
+
+In business you don't get you deserve,you get what you negotiate.
+
+A  wide  variety  of  architectural  roles  may  be  embodied  within  an  organi-
+zation,  from  enterprise  architects  to  platform  architects  to  application 
+architects to research architects. The responsibilities and areas that require 
+negotiation for each architect role vary, but one thing is certain: The ability 
+to negotiate is a key asset for all architects. 
+
+essential soft skills for 
+
+If you don’t disclose pertinent information when you are negotiating with 
+your  would-be  partners,  they  will  not  trust  you  in  the  future  and  likely 
+will not be willing to compromise on critical factors that may be needed to 
+ensure  a  project’s  success.  
+
+When you make a decision, stick with it. Constantly changing project decisions are an organizational nightmare.  
+If you come to realize that a decision was truly a poor one, make the neces-sary  adjustments  and  change  your  decision  (but  take  this  approach  sparingly). 
+
+Don’t Waver on Decisions
+
+It builds rapport and shared collaborative success.
+
+Seek Help When You Are in over Your Head.
+In these scenarios, you need to be clear with oth-ers  that  this  is  not  a  decision  you  can  make. 
+
+You  need  to  quickly  bring  in superiors who do have the authority to make the decision, or who can get you access to the help you need to inform them which decision should be made.
+
+“Open” and “honest” should be the bywords in all architectural decisions.
+
+If you make a decision that ends up going bad, take some remedial steps:
+Don’t try to transfer responsibility to others by blaming them. 
+Don’t go silent when others are trying to figure out what is going on
+
+If  people  know  that  you  are  honorable  in  your  decision  making,  they  will 
+gain respect for you and will want to work with you in the future.
+
+Praise the good work done by others who help you remediate the situation. Doing so will make them more likely to help you in the future. 
+
+If you go down, remember that all organizations change their personnel and hierarchies from time to time
+
+Whenever you are engaging in the negotiation process, you can use a variety of  strategies  to  help  you  achieve  a  successful  outcome.  The  strategies  dis-cussed here are intended to improve your negotiation skills.
+
+Listen to Your Gut Feelings
+
+This  gut  feeling  should  nudge  you  to  do  some  investigations  to  help  vali-date or invalidate your thoughts on a particular point. 
+
+During the course of the day as an architect, you are constantly bombarded with tough decisions that need a quick response. 
+
+The technical obstacles are usually the easier ones to overcome
+
+Don’t  try  to  solve  the  problem  immediately.  Try  to  keep  the  other  person talking as much as possible to get as much context as possible. If necessary, gather an impromptu meeting of others who can give an even broader con-text  for  the  issue.  
+
+If you don’t do so, you are simply enabling yourself to be a crutch for that person, and your coworker is miss-ing a potentially valuable learning opportunity. Of course, to avoid a nega-tive project impact, you may need to seed ideas after a time.
+
+Once  you  believe  that  the  person  is  in  a  position  to  articulate  alternatives 
+and a recommendation, you can provide additional alternatives, thoughts, 
+and rationale for why one recommendation may be preferred over another. 
+In this way, you can develop a broader context of points to consider in decision making a valuable lesson in itself.
+
+This  solution  may  not  always be  technically  “the  best,”  but  rather  something  that  is  technically  “good 
+enough” and serves many other needs and aspects of the project.
+
+Former  adversaries  can  come  together  to  find  common  ground  in  a way that benefits all their people, to let go of the past and embrace the future, to forgive and to reconcile.
+When different organizations come together to solve a particular problem, 
+they come to the table with their own preconceived notions of what is best, 
+what is easiest for them to do, what their areas of expertise are, which pat-terns are valid and invalid for framing problems, and so on
+Find out what the root causes of their positions are
+When the opposing views and needs are understood, finding common ground is much easier. 
+
+Our  first  aim  is  that  everyone  should  be  happy  with  an  approach,  but  we must recognize that such an outcome often isn’t possible.
+
+Use Negotiation as a Means of Improvement
+This situation is a bit like  polishing  a  rock:  The  forces  at  play  remove  the  rough  edges  and  will likely deliver a smooth result.
+
+There  is  a  fine  balance  between  letting  creative  ideas  flourish  and  killing  them  early  on  without  proper  investigation.  This  balance  is  achieved through collaboration.
+
+Areas that are non-negotiable because of integrity reasons, such as morals, company rules, and integrity of solution. You absolutely 
+cannot give on them. 
+
+Don’t play favorites—including when it comes to your favorite pet technologies. If you are biased and you know it, make sure that valid reasons—such as cost, timing, functionality, or strategic reasons—are driving the decision.
+
+Ultimately,  you  need  to describe the rationale in terms of balancing cost, time, and quality, includ-ing  why  certain  tradeoffs  were  made.  If  the  decision  making  is  fair,  balanced, complete, and fact based, you will likely win over a dissenter.
+
+ Clarifying gains and losses will not always be fun, but dealing with hard conversations in a direct manner will increase your credibility and build your relationship with the team members involved in the negotiation. 
+
+If you don’t let them know the real reasons, people will try to fill in the blanks, and you may end up unintentionally feeding the rumor mill. General architecture best practice is to use an architectural decisions docu-ment to document every decision, its background, the alternatives, and the reasons why the choice is the right one. 
+This group or individual is the “mover and shaker” behind nearly every impor-tant  decision  and  often  influences  the  strategy  that  determines  where  the organization is heading.
+
+For  an  architect,  organizational  boundaries  need  to  disappear.  
+
+The obvious solution to this dilemma is to prepare for the meeting by con-structing  a  neutral  agenda  that  provides  context  to  avoid  surprises. 
+
+Take the time to document key principles and standards, and the reason-ing behind them.
+
+Say “thank you.” (They are trying to help in their own way.)
+
+One characteristic of a good architect is being able to recall detailed information accurately at a moment’s notice (sometimes months or years later).
+
+Be publically available to all team members and stakeholders
+
+You can refer to a small problem or difficulty as a hiccup, You won, a nd you h ave s ome posit ive m a rg i n to de a l w it h t he nor-mal set of hiccups. This will be an enjoyable ride. 
+
+There is no real margin. Things are tight, but can be managed; you just need to suck it up. 
+
+Sometimes,  when  faced  with  a  win-lose  decision  the  best  thing  to  do  is make  it  win-win  by  changing  the  rules,  changing  the  players,  or  changing 
+the game
+
+The fact that things may not go as planned is a routine part of life. Embrace mistakes, apologize for them, and then learn from them.
+
+Such  feedback  helps  the  person’s  manag-ers, directors, and vice presidents understand who has potential within the organization
+
+Look at reducing your workload, so that you can be near decisions.
+
+Although all soft skills can be learned, it takes an internal commitment to set in motion your personal growth in the area of soft skills. 
+
+Management is doing things right; leadership is doing the right things
+
+Leadership is the art of getting someone else to do something you want done because he wants to do it.
+
+  shorter  path  for  you to just do the job yourself. 
+
+The other person is becoming more engaged and now appears to be willing to take on the task.
+leadership through inf luence without required compliance
+Leadership requires delivering on the pyramid of trust, vision, safety, and clarity.
+
+standing up for someone when that individual is in a defenseless position
+
+Trust can be established in any number  of  ways:  being  an  expert  in  a  particular  area;  successfully  deliver-ing a project or part of a project
+
+ They realize that everyone is human and makes mistakes—but their forbearance is a very limited commodity, and you shouldn’t rely on it. Instead, learn to apologize and make it more than right.
+
+Abstracting the key points of a solution for a particular model of a solution is the main skill underpinning architecture
+
+ Their  input  will  help  you  formulate  in  your  mind  the  organi-zational approach you may need to take to ensure the vitality of the vision.
+
+Eat Your Own Dog Food (Bring Safety to What You Say)
+
+If  your  coworkers  see  that  your  walk  and  talk  don’t  match,  they  are  likely going  to  have  a  lower  level  of  trust  in  what  you  say.  
+One question I routinely ask myself is, “Will any of the vice presidents get upset 
+if this issue is not dealt with?” If the answer is no, I have more freedom in deter -mining how to deal with the situation. If the answer is yes, I usually have to drop 
+whatever I am doing, jump on the grenade now, and avoid as much collateral damage as possible.
+
+Was bad informat ion d isseminated ?
+
+Don’t let negative history repeat itself
+
+When things go off track, take the time to find ways to point this part of the project  back  toward  the  vision  of  what  you  are  trying  to  accomplish.  Find 
+nonthreatening  ways  to  explain  what  happened  and  let  everyone  involved know what things could be done differently.
+
+Don’t assign blame to people. Deal with the facts in an appropriate manner. Deal with private issues privately
+
+This is more of the firecracker size impact: The situation will get your attention, but it is manageable
+
+Part of good leadership is learning to listen to your gut. If someone tells you something  and  the  information  gives  you  an  uneasy  feeling,  you  probably  want to listen carefully and look into matters in more detail. 
+
+For  most  contexts  and  people,  the  best  way  to  convey  information  gener-ally is to put it into pictures. That doesn’t mean that the detail isn’t written 
+down  elsewhere  in  words;  rather,  it  means  that  when  it  comes  to  abstract concepts, vision, and other elements, a picture gives the necessary context and framework on which to build
+
+Try to break things up so that no more than five to nine ideas are conveyed at a time. 
+
+ There  will  always  be  a  cloud of  distractions  that  surface  during  the  course  of  a  project. 
+
+Will it affect one of the core tenets of the vision? 
+
+Occasionally, some areas or items may require you to stand up and hold your ground—that is, they may be areas where compromise is simply not an option.
+
+Lead by Keeping Things Focused
+
+As a leader, you are selling a concept, a vision, or a goal. When you are sell-ing and working toward getting others to buy into a direction, you need to provide information that is relevant to each person’s context.
+
+How they can help build the future?
+This approach will also help you determine which of the competing delivery dimensions (cost, quality, and time) can be sacrificed to improve the others. 
+By  working  with  executives,  you  can  gain  critical  allies  in  helping  sell the  vision.  Part  of  good  leadership  is  building  cohesive  organizational 
+alignment.
+
+If the right strategies are employed at the wrong time, what  would  have  normally  been  smooth  sailing  can  quickly  turn  into  a disaster. The following items will help you develop a context for timing.
+
+In doing so, engage with  the  enterprise  architects  and  standards  enforcers  to  get  their  buy-in and avoid problems later on.
+In addition, consultancy is usually a means to quickly bridge any skills gap if its cost can be accommodated
+
+If you can step in and quickly avert the issues with minimal impacts, do so (a rescue here is a good thing).
+
+Gather and present the facts neutrally and honestly to make sure there is no loss  of  trust.  Later,  you  can  do  some  root-cause  analysis  so  you  can  avoid this kind of fun in the future.
+
+Which alternatives are available for avoiding these impacts?
+If the project impacts are manageable, the best option may be to simply allow the team to work though its problems and figure out how to get out of the hole they just dug—experience is always a good teacher. If they have struggled for a while and they  are  still  encountering  problems,  stepping  in  to  help  them  overcome 
+some of the hurdles is a good idea.
+
+ These types of efforts normally necessitate  that  organizations  take  a  fresh  look  at  how  to  solve  a  problem.At these times, the organization is usually more accepting of expanding or altering its technology base.
+As the old saying goes, “To a man with only a hammer, everything looks like a nail. ”
+In  a  good  architect,  these  two  extremes  are  balanced  such  that  the architect chooses a new technology or approach only when it offers a clear and proven benefit—not just because it is cool
+Generally, building a better mouse trap is not warranted, although making incremen-tal improvements may be. In addition, there are times when taking calcu-lated risks is a worthy endeavor.
+
+If you choose to take the “ask for forgiveness” approach, you need to be fully aware of the risks you are taking on and the likelihood of success. You need 
+to ensure that you will have enough rope so that you will land on your feet versus hanging.
+
+The  downside  of  this  strategy  is  that  you  may  be  putting  your  boss  in  an untenable position of explaining why your rogue decision was made and why it  failed. 
+
+In either case, the route you take will likely not be neatly laid out for you. You  w i l l  ne e d  to  fol low  you r  ow n  interna l  compass  to  fi nd  a  pat h  you  a re comfortable with.
+ It  may  appear  that  you  are  laying  the  groundwork  for  the blame game.
+
+Your  ability  to  effectively  engage  others  in  your  leader-ship  hinges  on  your  followers’  successful  contributions  to  the  goal  being pursued.
+
+A leader is not a cult leader who is trying to indoctrinate others, but rather is more of tour guide on a shared journey
+
+To   h e lp   y ou   id e nt i f y   t ho s e   a re a s   i n   w h ic h   y ou   c a n   b e   f le x i ble   w it h   re s p e c t  
+to  the  vision  and  allow  others  to  contribute,  you  need  to  learn  where  it  is acceptable to be f lexible and where rigidity is required. 
+
+Which resources do you have available or at your disposal?
+
+Even though most plans are wrong at some level, they 
+provide useful information to others for how you envisioned reach -ing your destination.
+
+ Sometimes, the impact crater that another project created when it crash-landed may not be worth navigating due to built-in organizational resistance. Conversely, a project that has been wildly successful may have established a foundation that is worth leveraging.
+
+nowing this type of information can help sell your vision
+
+ Success breeds trust.You  c a n not  s ay  ye s  to  e ver y t h i ng  i n  a n  at tempt  to  pl ac ate  ot hers  a nd  ga i n 
+their buy-in. 
+
+once the vison is established,allow others to help figure out how to get there.
+
+The essential quality of a leader is the ability to engage others to willingly travel toward a vision.
+one of the most effective ways to lead a transition from vision to project execution is to engage others in determining how things will be done.This procees allowd the team take ownership of the ideas and bring them to reality.
+
+The documents need to be 
+available at multiple levels, starting with a simple presentation slide setting 
+out  the  vision  and  principles  in  a  particular  area,  backed  up  with  a  more 
+detailed  document  that  describes  how  to  execute  plans  based  on  the  prin-ciples and best practices and clearly states what the boundaries are.
+
+As a leader ,you will find that conflict routinely arised and must be actively dealt with,rather than being allowed to fester.your ability to resolve and redirect the conflict is critical.
+Restate your undrestanding of the problem in your own word as succinctly as possible.
+
+Seek to find a resolution that is palatable to the parties involved.
+
+Maintain integrity with the vision you are trying to accomplish.
+
+The ability to mediate and resolve the conflict is one of  the hallmarks of the true leader.
+
+They recall some bad experience associated with politics and hope to avoid encountering the situation again at almost cost.
+
+Given the multifaceted nature of the role of an architect,the reality of politics comes into play on daily basis from many different directions.
+
+Politics,is a process by which groups of people make collective decisions.
+
+The interplay between these different aspects of each individual in an organization and its hierarchy is what creates politics, and politics is part of being human. 
+
+Political  power/influence ebbs and f lows. The person or group that you have historically relied upon 
+to  help  solidify  a  deal  may  suddenly  be  gone  due  to  a  reorganization  or 
+simply  may  have  changed  due  to  the  current  stresses  and  strains  operat-ing between people on an everyday basis. Play nice—the person you made unhappy may suddenly become your boss.
+
+Unintended political consequences may be the result of our not fully seeing or being aware of the true financial,organizational,or personal costs of a particular decision.Think and act carefully and always maintain a 360 view of what is going on is the orgaization around you.
+
+Before joining forces, however, you should step into the other per-son’s shoes and see the world and the relationship you are entering into from his or her point of view; that perspective will help you determine whether you will be an equal partner and whether you will really get out of it what you expect. 
+
+ Gut feelings have a critical place in politics because politics is all about people; your subconscious senses many things that can legitimately give you a positive or negative feeling.
+
+Don't take advantage of people when they are down.
+Many people are  held back in their careers because they lack these key soft skills.
+
+Understanding the context simplifies your decision making and guides you in establishing a polictically viable for your projects.
+In general,you shoule attempt to maximize the overlap between your goals and the company's goals.
+The inverse is also true:the more closely aligned you are with the company's goals,the higher your implicit value in the political maketplace will likely be.
+
+Getting to a point where you share a common understanding of the assumptions, risks, and issues associated with a particular set of decisions is essential to ensuring the long-term success of those decisions. 
+
+you are far better off doing sth.
+ Great just isn’t good enough.
+
+Although every concern and issue bears a different weight with respects to the impact it may have on the organization as a whole,your ability to manange or soften the collateral damage surrounding the issue often is in direct proportion to ability to deal with the issue quickly.
+
+The more you let things fester on their own with no attention,the more you allow the issue to take on a personality of its own,and the more you allow it be cast in the light selected by those raising the concern.
+Whatever the impact of the issue,the key response needed to advoid executive backlash and ruined carrer prospects is simply to address the issue quickly before it gets out of control and takes on a life of its own.
+
+Quickly shift context--push what you were previously thinking about onto your internal stack to deal with later.
+
+If you belive the issue can be left to its own devices,let it go(be careful with these decisions--they have a habit of coming back to bite you)
+
+Make sure you have expressed clearly to you boss why you have decided to let the issue remain unaddressed to advoid the perception of incompetence.
+
+You may not always be passionate about what you are selling during the normal daily grind,but you do need to belive in what you request of others.If we are't motivated and engaged in a task,how can we ask someone else to do it?Your body language and tone of voice will give away the value you place on that task.
+think throught the task from multiple perspectives to determine 
+feel free to share what you feel is 
+don't stick your nose where it doesn't belong
+
+pitch in and help them out 
+engenders good will
+let him know how his behavior is being preceived.
+
+In the end,you should focus on having a positive relationship with everyone(even those people who drive you completely  nuts).This will enble you have better days regularly and feel better about yourself.
+Realize that life is reflexive.
+You need to have a clear understanding of what your values are and your boundaries are.You don't want to extend youself across a boundary .
+Take the time to think through your values and adhere to them as best you can.
+The world of politics is filled with competition.Only a few wiil survive,and you need to be willing to step into the ring,take a few pounches,and give a few pounches.That does't you must play dirty so you can win.
+
+operation with transparent.One way to accomplish this goal is to document each architectureal decision with the reasoning that underpins it and the alternatives considered but not selected.
+Sometimes during the course of events,you may be tempted to present yourself as something you are not simply for the sake of expedicency.Although this may be effective for a short period of time,it is not sustainable strategy.
+Companies want people who have some drive within them.They want leaders who have visions even when it's rainy and cloudy.
+take time to forge relationships
+You need figure out who you are,what you want to be,and where you want go.Perhaps there are specific areas in which you want to grow and actively improve specific skills,but you are unlikely to holistically change fundamentally who you are.Be who you are-the best,most authetic person you can be.
+
+Help others and don't expect anything in return.
+When you help someone out ,give that assistance with a minset of no strings attached;assume that your action is simply an act of goodwill.
+Other people will see through your intensions and perceive you as shallow.
+
+Be genuine in all your interactions,and others will be more likely to be genuine with you.Give praise where it is deserved.All of these small steps build trust.
+say something just downright mean
+
+In challenging situations,if you are able to keep your cool and behave in a gracious manner,your composure will be noticed.The peole with the power to promote you will likely notice that you are not only technically capable,but also socially even under duress.Grace under fire or in defeat usually earns the respect of others.
+
+By choosing to embrace the reflexivity of life,you can be reasonably happy even when political storms abound,because you are in control of how you choose to respond,regardless of the circumstance.
+
+We do need to strive for excellence,but really only to the degree that it will benifit the company in a meaningful way.
+
+As you progress throught your day's activties,keep in mind that sometimes gool enough is well enough.Do what needs to be done,do ite well and proceed to the next highest-priority item.
+
+It may be remedied-compensation of some sort may be provided-but it is now simply a fixture of history.
+At this point,choosing to be offended by what just happened will not do you any favors;it can affect nearly every aspect of your personality,and most likely not in a positive manner.Instead,choose to forgive the person and ignore the bad behavior rather than respond.That approach will make you more relaxed and give you the high ground in the future;it will also likely deflate the offender and defuse the situation.This outcome is far better than creating a situation that rapidly escalates.
+
+let him know that his actions or words were neither acceptable nor appreciated.
+
+When the right course is to simply drop the matter and let it pass 
+
+Execute things in a timely fashion 
+
+The organizational willpower to carry through the decision may come to an end.To avoid this kind of waffling,focus on timely delivery of projects.
+
+Don't get discouraged when things aren't going your way.Success is usually just around the corner from discouragement.
+Dogged persistence will get you to where you want to be.
+
+Learn to smile and be lightheated about the times when things didn't go your way.
+
+especially those who were,of course,not politically aligned with your goal.
+You are much more likely to be perceived by others in a positive fashion if you can rase your head and continue to be a productive member of the team.
+
+My experience has been that when i take the focus off doggedly pursuing a goal,forgive other for the temporaty roadblocks they seem to have unintentionally set before me,and go about enjoying the current day,my ability to have fun goes up dramatically and the goal i was chasing sometimes surprising shows up at my doorstep.
+
+It may not always seem fun,but you will enjoy the personal growth over time.
+
+You may get a few bumps and bruises along the way,but you will come out stronger in the end.
+If you can master youself,you can master anything.
+Your ability to operate and interact with other people,and to have all of the cards on the table,face up.
+There is no persuasiveness more effectuall than the transparency of a single heart,of a sincere life.
+
+The things that you and others fail to disclose are potential landmines for any project's ability to succeed.They will erode trust and hinder your ability to continue advancing up the corporate ladder.
+
+When you are in this position,your weakness and strengths become plainly visible for other to see.
+
+
+You need to learn how to jump into tough situations and still relate to others in a positive manner.Sometimes,it may seem like the position magnifies all of your imperfections.
+
+You will be asked to jump into new areas that you have not previously dealt with,and you will likely have very little time to prepare.You will need to learn and think on your feet.Others will get to watch you stumble,get up,brush off the dust,and move on.
+
+After a while,you will learn to accept that when you are faced with never-before-encountered challenges,fear is not bad.It is actually a good thing.It signals that your body is preparing for the new challenge.
+
+
+
+As the saying goes,early birds get the worm.
+Formalate a strategy for how to repesent the information you have acquired.
+Understands the concerns of each group.
+Capture areas of concern for which you may not have a solution.
+
+Self-transparency includes areas such as being yourself,acknowledging your weakness,acknowleging your strenghs and intreres.
+
+Life is reflexive.That is,what you project out is reflected back to you.
+
+In general,being yourself will build trust with others and will be substainable.
+
+If you are a good fit for the position,the things you have said and done to sell yourself as good fit for the position will be assumptions of those who hired you:They expect you to be able to do at least what you claimed,and usually much more.
+
+Being nice to someone you dislike doesn’t mean you’re a fake. It means you’re mature enough to tolerate your dislike towards them.
+
+If you are good at doing something or are passionate about pursuing something,let those in authority know this information can help them look for opportunities for you to pursue your goals.Follow this path with care and subtlety,howerver,as appearing to be pushy and suck-up will likely count against you with your boss and your collegues.
+
+Don't be a "Jack of all trades and master of none",as this superficiality will be a carrer limiter.The more rounded your skills are,are better you will be in balancing prioritis as you progress into management.
+
+Until they see competency and ideally mastery in what you currently are responsible for,they will not want to incur the risks of giving you more responsibilities.
+
+ For your own benefit,you are far better off sprinting to your boss's office in person to let him know what you said or did rather than allowing the organizational network to craft its message and deliver it to your boss.
+
+Tell your boss about your latest issue or an event that could be perceived as a trangression gives your boss time to perpare to defend you--even thought you might initially be given a dressing-down--rather than having to hastily come to your rescue when something unexpected is raised.Forcing your boss to put out a fire in this way certainly won't help your career progression.
+
+This omission will erode trust,which is a valuable commmodity. You can let the grapevine provide news about you to your boss a few  times,but don't make it a habit.
+
+You need to be upfront about what you did;don't color the story to your benefit because the truth will be disclosed shortly anyway.It demonstrates that you are trustworthy even when the going gets tough.However,if you don't provide full diclosure,you may be diging yourself a deeper hole.
+
+It allows the organization to know that you have a good working relationship with your boss,ang managers may not feel as inclined to meddle int the problem because they know that it will be handled effectively without their involvement.
+
+Others are more subtle and require executive help to work through.Let the executives see all your cards.
+
+They are motivativated to ensure that the company's revenue numbers are met and expenses are held to a mininum.
+
+Executives involvement at the right time can greatly smooth the way during the execution of projects.However,if you have failed to open or to recognize the flashing yellow lights along the way indicationg danger ahead,the executives's ability to do something to help the project may be severely handicapped.If the situation is bad enough,they will work to ensure that you don't get the opportunity to put them in that situation again.
+
+When issues must be dealt with,take the time to work through at least three viable alternatives for their resolution and have a recommnended approach for executives to approve or disapprove.
+
+What are risks are you incurring by making these assumptions?
+
+The answers to these questions will help you determine the current value and potential future value of the proprosed acquisition.
+
+The gracious approach to giving credit servers many purposed.In particular,it allows you t fan the spark provided by the individual into a flame,thereby bringing broader reconition to someone who clearly deserves to receive a few accolades.It will help others gain confidence in knowing they car make real contributions to the company's sucess.
+
+As you can see,having a large group of friends to call on in an emergency is in your own interest.
+
+Executives also look with favor on those who have shown grace to ther collegues,considering them to be "team players" whose own career are worthy of being furthered.
+
+Be consistent in what you say.The message you are trying to convey needs to be repeated,but not altered in its core direction based on audience.
+
+Architects have a relatively high technical profile with a company.
+
+Render a heartfelt apology helps to reestablish trust for a relationship with the other person.
+
+It is never too early or too late to apologize.If something happpened recently and it is nagging you,swallow your pride and appologize.
+
+There is likely no imminent doom that will occur if you wait just a few minutes to fully hear what the other person has to say.
+By modeling transparency in you actions,you allow others to be less defensive and more open in their interactions with you.Transparency is all about building trus in all working relationships.
+
+Becoming an architect who embraces transparency leads you down a road filled with sucess,The biggest hurdle to overcome is your own pride.The good news is that most people are more than willing to accept the real you and will appreciate your openness.
+
+Passion is the genesis of genius.
+
+Perhaps you have amazing ideas for all kinds of things,but getting those ideas through the gauntlet of the product business cycle to actually reach a customer can begin to wear you down.
+
+As time progress,that small voice(your passion,the source of the ideas)begins to quiet.The excitement you first had gives way to a slower,less exiting and more realistic cadence.You may even feel as if the weight of the organization has literally bound you up,making it hard to breath.
+
+After the initial flame of enthusiasm is quenched,it is hard to get your passion rekindled.You need to recognize the warning signs that the flame is dimming and learn to adjust your environment to allow you to pursue a meaningful life and career.
+
+Racher than simply setting for a miserable job.
+Passion is an intense feeling,enthusiasm,or desire for something.A person is said to have a passion for something when he has a strong positive affinity for it.
+
+The key is to begin applying action toward those thoughts.
+
+Work surrounded by passion feels less like an obligation and more like a great day to do what you love to do.
+
+One of the best things you can do to help your career is discover the things that you are passionate about.
+
+When you talk to them,certain topics and activities cause your eyes to light up,your voice to be enthusiastic,your body posture to be engaged--you don't need to tell anyone,because your whole body will shout the message.
+
+The ideas may seem odd or goofy at first,but write them down anyway.There is no wrong answers.
+
+I　usually keep the list of these things in my wallet ,they are always with me.  Nonetheless,the outcomes are clearly related to some of the earlier thoughts that were merely seeds.
+
+Identification of your passions gives you additional information when you are weighing options in making a particular decision and gives you a better understanding which path to take.
+
+My final decision usually comes at the last moment,after i have had time to write down the pros and cons to a decision.For some reason,it it not until the last minute that clarity presents itself.
+
+These areas are likely to change over time.
+
+Mastery of a particular area usually comes only with dogged persistence.For me,mastery ususlly requires  running at a problem repeatedly,making mistakes,learning,runing at hte problem again.and repeating the process again.Each time I approach the problem from a different angle,I try to step back and think.
+
+Each piece of the puzzle reveals itself only when diligently pursued.
+
+The areas you are passionate about require the same kind of tenacity.You must be willing to deal with setbacks,course adjustment,and putting in the extra effort to bring what you are passionate about to life.
+
+It is also how we learn--by making mistakes and picking ourselves up to try again.
+
+Perhaps the position looks great from a monetary perspective and increased responsibility perspective,but fails to capture your heart.You need to seriously consider what will happen when the honeymoon period of getting this position wears off and the daily grind sets in.Can you find something that makes you want to get up in the morning to do the required work?
+
+Do you really want to spend your valuable life doing something that fails to inspire you?
+
+Change is a good thing.It gives you the opportunity to learn new things,find out different ways to solve new problems ,expand your network of relationships,and grou as an individual.
+
+Even if this position is more of a lateral move,it will show those above you in the organizational hierachy that you are capable of handling a broad set of problems and resilient to change.
+
+Occasionally,life loses its sense of excitement and sense of a dull routine seems to engulf you-you can fell it,you can sense it.
+My outlook brighten and I am ready to take on a whole new set of problems with vigor and enthusiasm.
+
+It's amazing how a little activity can have a dramatic impact on your perception of what is happening around you and and your ability bo be more accommodating by life's daily hassles.
+
+Watch for opportunity:It usually seeks you and speaks quitely.
+The challenge for me is to listen diligently enough to hear and internalize what is being said,and not be dranw away by the loud distactions.
+
+The change seems like a 90 hard left,at least until i begin slowing down and contemplating the essence of what has presented itself.
+
+At first,you are not quite sure what it is,but you have a gut feeling that is impaortant.
+
+When I have the presence of mind to disengage for just a monment and fully consider the opportunity,i have rarely been disppointed in pursuing it.
+
+follow your instincts.In today's media-centric world,trying to find and hear your inner voice can be challenging.
+
+Listen to this sixth sense;it can guid you out of troublesome areas when you don't know all of the details.
+Recongnize that you,like every human being,have different motivators.
+
+The upper levels of maslow's hierachy consist of esteem,where we look for repect from others and self-respect.and selft-actualization,such as occurs throught cretivity and problem solving.
+
+Pick the path that you will love,and the money will follow.If it doesn't,at least you will enjoy the journye you are on.
+
+You probably need the cash flow to keep yourself financially afloat.
+
+Once you fan the embers of your daily living,you may begin to see ways to change and opportunities that you can begin pursuing on  a small scale.If the interest really engages you,look for ways to turn it into more of a full-time pursuit.
+
+Your new pursuits will make you want to smile every day,simpley because life is good.You may not be making as much money,but money-although nessary-truely is not everything.
+
+Lack of passion acts as a ceiling to your carreer.
+
+The great candidates typically work on technology even in their spare time.In many respects,their thirst for knowledge is unquenchable.
+
+If you go to work just to punch the clock and get a paycheck,your attitude,approach,and level of knowledge about what you do will be adequate,but it will be clear to everyone around you that you lack any level of passion about your endeavors.
+
+That will fully engage your heart and soul.
+
+Sometimes you may be asked to do tasks that seem small,unglamorous,and and downright hard.The first reaction to this kind of request is typically to contemplate saying no.
+
+Because of the individual trusts.
+It serves to build up their trust in you-and trust is valuable commodity.It should also boost your own confidence,by proving that you can take on nearly any task and bring it to completion.
+
+Passion:The internal fuel that supplies drive.
+
+After a while,it seems as if almost any pursuit can lose its sparkle.At first,the drop-off is imperceptible,but over time your energy level slowly dwindles and the enthusiasm you once possessed fades. 
+It's usually at this point in time that you need to dig deep to rediscover what inspired you to begin this pursuit in the first place.Knowing what your passions are and knowing that they may change over time can supply the energy that is needed to keep your momnetum moving forward when the environment seems a bit rainy and dreary.
+
+Ignore the critics:it's your passion,your vision-not theirs.
+
+Be cautious about sharing your dreams and goals.
+
+After you have had more time to pursue your goal and you have some success under your belt,it seems like the amount of positive feedback grows naturally.
+
+At any given time,there seems to be a never-ending stream of activities that are competing to consume your time.If you don't careful,these activities will sap your time and energy,and result in   you losing your focus on what is truly important to you.
+
+By formalizing what is important to you,you have a better shot at priortitizing what you do each day.
+
+One of the chief things that you should put aside is the TV.Television has a unique way of devouring time;although it is certainly entertaining and fun to watch,it will rob you of the most precious resource you have in pursuing your passions-time.
+
+The key is to just get moving.The momentum you generate will help refuel your inner commitment and give you the strength to take the next step.After a while,the steps you take become automated-they are now a habit.
+
+Sometimes you have to jump without knowing all the details.
+You have to make the rest of the world vanish,follow your instincts,and jump.Try the small cliffs first.
+
+Enjoy the journey:smile on the way down,and if you hit the bottom,ge up,dust yourself off,climb back up the hill,and jump off again.
+
+Realize that a lack of passion will limit your career path.
+
+
+The role of architect is one that is fundamentally based on fast-paced contxt switching in an environment that deals with a broad protion of the organizaiton,both horizontally and vertically;that deals with both technical and business issues.
+
+Leaving the old context and entering the new context with your full attention is essential,must happen in seconds,and can happen at a rapid pace.
+
+The challenge in dealing with each request effectively is that each person bringing forward questions and issues haa a slightly different context.
+
+This chapter shows you how to sucessfully use context switching as a key soft skill that will enable you to find sucess as as software architect and help you to maitain level o sanity.
+
+When yyou sense the need to refocus your attention,take a monment to mentally file away the privious context and think about the new context.Ideally,you deal with the issue one time and move on.
+
+if you are not careful,you car literally consume yourself.
+
+Seek proper coupling and cohesion.
+
+Can priorities and communication be maintained in such a way that the desired delivery dates and quality mesures are met?
+
+Find out which assumptions are made,and question these assumptions before you adopt them as part of your decison-making process.
+
+Who needs to be informed about the decision?
+
+Sometimes dealing with the issues head on is the best approach.
+
+If you allow others to frame the information,they will have the opportunity to slant it in a way that may be difficult to manage later on.Your best course of action is to attack the matter head on and just deal with it.
+
+help them think through the various facets of the problem.Understanding of this context many times makes the answer or decision clear,even if it is not the answer they are looking for.
+
+Understanding the constraints that this tool will bring is critical.It may solve today's problem,but prevent you from scaling up in the future.
+
+When it comes to making a decision,put everything on the table.You need to operate in the best interest of the business,even if it means your pet project disappears or is radically altered.
+
+Meeting and email are the bane of corporate life.Gather up who you need to make a decision,hold an impromptu meeting,and decide.
+
+This type of joint decision with all the information on the table is powerful and supportable throughtout the organization.The hurdles can be removed before they become public obstacles.
+
+Ideally,you will learn to adjust your style of interaction when making a decision based on who you are interacting with.
+
+Sometimes role playing can help establish a good context for the decisions that need to be considered.If need be,flip the roles;this reversal can help people think through the issue from multiple perspectives and gain an appreciation for all of the considerations that went into the decision.
+
+Your answers will likely need to change depending on variables that are at play,such as budget,resources,and assumptions.
+
+If you make decisions without understanding the constraints,you may fail to deliver the project on time.In general,there is little forgiveness for missing project deadlines,regardless of the reason for the failure.
+
+keep a pragmatic view of what needs to be done.
+Nearly everyghing you say and do is a finacial decision for the company-be a good steward of the resource you influence.
+
+The architect,by the very nature of his or her job,plays a central role throughout project development.
+
+You always need to know where you are and where you are going even through there is a lot of commotion going on around you.
+a natural prioritization occurs.
+
+Be aware of your tendencies and keep them in check.
+
+Navigate the treacherous waters of technology projects.
+
+Software architecture is all about building systems that meet the business's ness.However,it is easy to get caught up in the frenzy of reveling in the technical details that surroud building the system.
+
+Most software architects achieve their position through excellence in technical details.They are able to synthesize that knowledge in a manner that allowed them to complete the following tasks.
+
+Prompt executives to begin considering an individual for an architectural position.
+
+The chanllenge for the architect is being able to see the big picture:no matter how technically awesome a particular system is.
+Specially,the architect cannot be solely focused on the technical aspecsts of system construction,but rather must incorporate a solid understanding of cusotmer value  in conjuction with business value when considering the true worth of the proposed software architecture.
+
+This improved understanding          roi  return on investment 
+
+Usually mesh together like well-oiled gears.IN doing so,they help deliver the return on investment that is needed to drive to business to a profitable state.
+
+Are the decisions you are making in alignment with the finacial marketing,and sales goals of the company?
+
+Is the product you are working on considered a cash cow?
+
+The business side of the world,although interesting,does not hold the same sway on my attention.
+Even so,I　recognize that sucess in technology can be truly attained only when the business is successful.
+
+Our futures are dependent and interwined.
+
+Although this form of communication is commonplace,it is not effective 
+
+The approach that I　determined was best for me in immersing myself in the world of business was to seek an advanced business degree.
+
+As the courses progressed,it felt as if I　had a series of increasingly better glasses to improve my business vision.
+
+Has this always been their value proposition,or has it changed over time?
+
+Great ideas have no value.What you need is the money to go with them.
+
+Know your company's value proposition:live it,embrace it,enhance it.
+
+Write a trip reprort,even if it is just for yourself.Such documentation helps you remember all of the valuable information that you gathered.
+
+It is truly humbling  exprience.You will realize that your limited view of the world may be just hat-limited.
+
+The good thing is that you can learn this information prior to your ship date and adjust the product accrodingly.
+
+but the results can be truly spectacular
+
+I　need to immerse myselft in the language of the customer to the point where the language is natural,and I understand the basic nuances of what is being said.
+
+In many respects,you will become adopted into their tribe.
+
+You may be,by the process of omission,causing yourself some serious future haadaches.
+
+Of course,everything does not run smoothly all of the time,but this integration of the business and software sides.
+
+Innovation is the ablity to see change as an opportunity-not a threat.
+
+The flip side is that without actively pursuing a vision,the amount of future work could become unsustainable and turn into mundane drudery.
+
+Innovation is more than just coming up with a novel idea.
+
+Novelty does not serve the business well.Instead,innovation is the work entailed in translating that idea into an economic force.
+
+Establishing margin,which allows you think openly and freely in a safe space that's free from negavity.
+
+Blending essential concepts,which is the ablility to recognize and combine old ideas and new ideas that enhance the overall value.
+
+Margins are needed in many different areas-margins in time,margins from negativity,margins from existing systems.Essentially,extra space must be set aside for activity of innovation.
+
+Whereas the new delopment is a longer-term recognition prcess.In a timely fashion
+
+Marketing and sales personel are probably the most likely partied to be supportive of the effort,as innovation will directly hellp them address customer needs.The challenge is to align the rest of the organization with this perspective.
+
+New solutins will tend to be more prone to errors and have higher support needs during initial rollout.In many respects,rolling out a new innovative product likely will require significant amounts of resources,both planned and unplanned.
+
+Invavation by ites very nature is a venture into the world of the unkonwn.That doun't mean you show cower in the corner in fear of innovation.Rather,it simply means you need to have a realistic sense of what you are approaching and keep others' expectations properly set.If you sell the innovation in its early phased as the answer to all proplems and a sure thing,you are destined for a bad outcome sometime in the future.
+
+The span from initial novel idea to some form of business manifestation may take months or even years.Be patient:These types of things tend to take time to mature.
+
+Let pragmatism guid you in this realm when you are contemplating where to introduce this novelty:You don't necessarily want to upset the apple cart.
+
+Innovating at the edges of the system causes less disruption and provides the incubation time needed for new ideas to grow peacefully.
+
+The initial relegation of the innovation to the organiztional fringes will give you an opportunity to learn,adjust,and try again in a peaceful environment.
+
+Encourage others to think and be open.
+
+Ideally,we will learn from the mistake,improve our knowledge,and move on-no harm,no foul.It is okay to make a mistake tody;it's not okay to make the same mistake tomorrow.
+
+When you innovate,you've got to be prepared for everyone telling you're nuts.
+
+Keep a positive attitude.Wish the naysayers well and move on.There really isn't much you can do.Reponding in kind will do nothing except hurt you.Once success is achieved,the detractors will either quietly go away or claim to have been belivers the whole time.
+
+The essential part of creativity is not being afraid to fail.
+
+Once the naysayers have presented themselves,avoid them if at all possible-the seeds of doubt that they plant can dramatically sap your energy and confidence.By avoiding these negative forces,or at least minimizing your interactions with them,you can safely consider what needs to be done to get things finished and successful lanched.Put plenty of margin between yourself and negativity.
+
+Innovation is often a quiet process; you need to listen to those ideas whose voice seem the faintest.Write them down so they don't escape your notice.
+
+Over time,as you accumulate these little nuggets,you may begin to see larger landscape,almost like pieces of puzzle falling into palce.Eventually,you may assemble enough of puzzle pieces to start seeing the true picture.
+
+Listen to the customer closely,but maintain your own vision.
+core competency  
+
+In many repects,your role is to find the story behind the story,similar to what would be done in investigative reporting.
+
+Occasionally,you may find someone who complements your position and capabilites-someone you can trust,and someone with whom you can communicate effortlessly.Joining together with this individula,you may be able to forge a nearly unstoppable partnership.
+
+Two individulas who are collaborative partners ofen have a dramatic ability to influence the organization.Such a duo is able to sell the vision,handle the naysayers from multiple perspectives,and openly collaborate to bring visionary ideas to fruition.
+
+The most successful people are those who are good at play B.
+
+The path to glory is usually a long road marked by failed attempts,corrections,and persistence in pursuing the goal.
+As exectutives begin seeing you deliver incremental parts of the vision(laying the bricks of the foundation),you will begin to earn chits.This bank acount of trust will allow you have the opportunity to recover from them.
+
+over time,step by step,you may climb the mountain and end up at your desied destination.Sometimes this path may take years to traverse.Be prepared to stay the course for the long haul,and limit the number of visionary pursuits that you entertain.If your interests are too diverse,you will become diluted in your purisuit and ultimately ineffective at delivering anything.This an put you in a severely demotivated state if you become blocked on too many fronts.
+
+Innovation often happens when you take new ideas from other areas and blend them with existing ideas.
+Reading books,blogs,and other materials can help you build a backlog of knowledge that you can readily draw upon whenever you face a challenging problem.
+
+When you feel stuck trying to solve a particular problem,brainstorming about all of the approaches that could possibly work can help fuel an innovative approach.Don't be critial of any ideas that are generated;just focus on capturing them.Let yourself be free to be  explore the universe of possibilities;throw out he rules.Going outside the normal boundaries can help you reframe your context and allow you to see other possibilities-ones that might initially seem a bit oulandish.
+
+Once you step outside your normal comfort zone,you have the chance to evaluate a wide range of possible solutions.One thing to keep in mind is that the boundaries of yesterday are not nessarily the boundaries that exist today:Technology is always advancing and,as a result,new solutions become available that can act as steppingstones to where you want to go.
+
+The vision acts as a natural boudary-a set of fixed assumptions that may be difficult to perceive as a limiting factor.
+
+There may be absolutely incredible business opportunities next door to where you are,but these opportunities may remain imperceptible because they are outside the realm of consideration-they don't match your vision.In fact,if someone does bring up the opportunity,the idea is likely to be attacked.
+
+When you are setting your vision,think big.Try to stretch far enough so that the vision is something that will requrie you to grow to attain it now,and will require you to continue to grow well into the future to fully exploit the innovation.This kind of expansive vision will allow you to naturally consider a wide set of alternatives and directions that will provide your company with many new opportunities in the future.
+
+
+The challenge lies in having a thorough unerstanding of what your sore competencies are,what the core competencies of your competetitors in the adjacent markets are,and how you can leverage what you are good at to become a dominant player in an adjacent market.
+
+For many problems,looking to other industries can help shed light on solutions or patterns that can be used to spark innovative ideas and approaches.
+
+The trick is to find the magic blend that produces a spark that can be fanned into a flame.
+
+As you begin to peel away the layers from your innovative ideas,take the time to reduce each idea to its simplest elemnts.Focus on understanding what the novelty is.
+
+Once your financial stakeholders grok the innovation in its bare form,they will quickly be able to see many potential areas of development and application. 
+
+If you define the problem right,the solution may be readily apparent.Write down some ideas about how to approach it.
+
+Sometimes,thinking too hard about a problem will nearly guarantee your failure to discover the novelty needed for a breakthrough.Letting your consious mind focus on other things or sleeping on it can work wonders.
+
+Innovating for the sake of innovation does not provide value.In fact,it may destablilize a working system.Be pragmatic where it makes sense.
+
+The hardest thing to learn is how to balance your work by blending tactical needs with stategic vision without compromising the integrity of the vision.Effective innovation is more of an art than a fixed recipe for achieving success.
+
+Strategy directly combined with tactical skill is the real killer combo.
+
+This chapter shows how to bring pragmatism to the everyday world of software architecture.
+The key to pragmatic architecture is to manage through scope management,risk management,and communication.
+
+The project will deliver a key strategic advantage for your company over your competitors.
+
+build the solution primarily from the ground up--a mostly greenfield development project.
+
+You have three days to come up with a final decision;complete cost estimates,resource needs estimates,risks estimates,and key assumptions;and review the proposal with all affected parties.
+
+Helping the business to prioritize those elements of the project that deliver the highest value for a reaonable cost,and achieving early momentum instead of being entangled in endless analysis.
+
+If your pet technologies will truly help the business better meet its needs ,then by all means consider them.
+The priority cut-off card serves as a checkpoint of whether to continue with the project.
+
+Unless the feature is truly unfeasible or not viable with the budget being proposed.
+which limits it will impose upon the future.
+
+No matter how many details you seek,there will always be a level of ambiguity in the decision-making process.
+The challenge is to get to the point where you are comfortable with ambiguity and develop a sense of when you have sufficient information to make a reasonably calculated approach to allow a project to move forward with known assumptions and risk.
+
+Rarely in a project will a known risk jump out and bite you.Instead,it is always the unknown,undiscovered risk that comes out of nowwhere and derails a project.If at all possible,spend time early on in the discovery phase of project estimation to identify,document,and mitigate as many of these potential risks as possible.
+
+Are you willing to go to bat for this tool if you are challenged by executives?Choosed your battles wisely.
+
+How does this project align with the company's strategic long-term goals?
+
+Do you understand key alternatives?If some aspect of the project fundamentally fails,what are the alternatives-do you have a good Plan B?
+
+Bringing in new thing is fun,but trying to get them operationalized is nearly always a challenge.
+
+to properly set expaectations of 
+
+If you are able to deliver on your promises even under dire circumstances,you will gain the reputation you need to be able to advance further up in the organization.
+
+Those people who can dive into murky,uncharted waters and get tasks done with minimal help.
+
+A certian amount of flexibility is needed during the implementation of a project. 
+
+I'm not a fan of chinese productions.They are just too predictable and one-dimensional.
+
+Just me,perhaps,but I don't like moives in the service of the State,whatever the county.It's like watching a two-hour advert.
+
+Once a decision(a commitment) has been made for a particular path,you need to enforce it by following through with the decision.Sometimes,the business may be a bit tentative or unsure of what the right answer is.If possible,try to understand the nature of where changes may be required,and build flexibility into the designs to accommodate these changes if it is not overly expensive.
+
+need to be kept to a minimum.
+
+Take the time to document decisions along the way.Ensure that the decision log is properly distribute so that there are no surprises.The key to sucess is proper expectations setting and transparency.
+
+Whenever you need to present alternatives as part of making a decision,whether to executives,business parteners,or even your kids,you ability to clearly articulate which options are available and which option you would recommend will produce a great starting point for the conversation.
+
+Be willing to defend your choice and show that you have really thought through the decison,but be supportive of others who options that don't match your recommendation.
+
+If someone choose an option you don't recommend,move forward and own the decision as if you made it.At the same time,make sure the decision maker understands the consequences of that decison.
+
+You should strive for a policy of no surprises.
+the rule of thumb
+
+Learning to be a pragmatic architect can sap some of the fun from the honeymoon phase of a prject,but delivering project after project on time and on buget in the end is very rewarding.It will help you move up in your carrer and it will give you a great sense of accomplishment to see the real customer value being delivered.
+
+If you want to be happy,set a goal that commands your thoughts,liberates your energy,and inspires your hopes.
+
+The greatest danger for most of us is not that our aim is too high and we miss it,but that it is too low and we reach it.
+
+Vision is invisible.Although you can't see it,you know when it's present.You can feel it;it surrounds you and permeates everything.Vision drives how you think,what you do,how you do it,your energy level,and your sense of purpose.
+
+can be used as a guiding force in the world of 
+
+Vision is mental image or concept representing an ideal end state that can be used as a guide for focusing and aligning everything that surrounds what you seek to accomplish.
+
+Vision usually begins as a faint glimmer,a sparkle off in the distance that for some reason grabs your attention.
+Write down or sketch any of the ideas that have been boucing around in your head.
+Collaborating with others will likely enable you to come up with a much crisper image of the future and state,especially if the people with whom you are working share your passion and a sense of trust.
+
+The most important aspect of discovering vision is just to start.Take time to brainstorm,include others when appropriate,and give it time to evolve and grow.
+
+Crafting a compelling story from vague facts.
+
+These insights and facts usually begin to emerge from having immersed yourself in a particular area that you are passionage about.
+
+As you dive deeper and deeper into the area,you begin to see nuances that were not apparent to you before.
+
+Usually at this point,you nearly get goose bumps thinking about arriving at your newfound destination.You have a level of passion and intrest that are nearly overwhelming.
+
+Documenting this information will give others the context they need to see the possibilities surrounding the vision and potentially add insights that may bring more clarity to overall vision.
+
+You may encounter challenges in trying to formulate a vision;sometimes it seems as if there are distractions at nearly every corner.
+
+Are there ways to vet the ideas with a company or industry expert who may be able to shed light on alternative approaches to move you past the roadblock?
+
+What changes need to be made to eliminate the roadblocks?
+Be aware of roadblocks as they emerge and prioritize theri importance against the overall goals you are trying to achieve.It also begins to give any roadblocks the nessary attention needed to remove or ignore them.
+
+This section focuses on key aspects of developing and establishing a strategic roadmap.
+The best way to eat the proverbial elephant is to take one bite at a time.
+
+To take things step by step,build a roadmap to your ideal end state.Even if it proves to be inaccurate,you can adjust it once you have more and better information.
+
+Are there three to five natural steps or progressions that can be used as the beginings of a vision roadmap?
+Having some early successes may provide enough momentum to propel you through more difficult stages later on,when the trip is more challenging.
+
+Can you describe the steps in a relatively short manner?
+
+Getting your vision laid out on paper may initially seem deflating,as it highlights the arduous path to glory,but it will be an essential tool for bringing other on board.
+
+Do you have the skill set needed to realize your vision?Do you need to hire,train,or contract with individual?
+This section focuses on three important aspects of bringing a vision to life:alignment,partnership,and funding.These aspects are analogous to good soil,plenty of sunshine,and nutrient-filled water:If you don't have these resources,your vision will wither and die,so be prepared and seek them early.
+
+Who are the caretakers of your company's or division's vision?You need to seek alignment from these key individuals,as they will likely influence your ability to receive funding.
+
+The reality of a vision can be significantly magnified if partnerships can be forged with key stakeholders.These stakeholders often have the political influence and investment dollars necessary to make a vision truly possible.
+
+It also creates a powerhouse of consecutive projects that are able to incrementally build the strategic infrastructure nessary for delivering on the vision.
+The challenge is to find and partner with the key individuals within your company or within the industry who can help bring the nessary support and funding you need to move forward.
+
+Although the exploratory parts of envisioning are fun,the venture will go nowhere if it does not have financial support.If you have drawn in key stakeholders,you may have the political support nessary to put your vision into action.
+
+What business value will be reached by pursuing your vision?
+
+What is the mininum amount of investment required to seed your vision?
+Can you obtain funding from mutiple sources to support your vision?
+
+Obtaining the necessary funding may be the hardest step in turning your vision into a reality.It will require persistence,salesmanship,detailed working knowledge,and enthusiastic passion to get the funds you need.
+
+To address this issue,be prepared with an explanation of how the company will benifit,including finacially,possibly with some estimated roi figures to back up the request.
+
+You've got to think about big things while you're doing small things,so that all the small things go in the right direction.
+
+If you want to build a ship,don't herd people together to collect wood and don't assign them tasks and work,but rather teach them to long for the endless immesnsity of the sea.
+
+If shortcuts need to be taken,you have a measuring stick with which to determine their long-term impacts.Aa result,you can choose to take shortcuts in areas that do not fundamentally prevent you from moving toward your strategic vision.
+
+The synergizing of projects also helps to establish a strategic heatbeat throughout the organization,which will implicitly drive others to begin looking for ways to align their work with the vison.
+
+Using vision to instill a sense of purpose.
+
+When there is no vision,the prople perish.
+
+When you have vision,it affects your attitude.Your attitude is optimistic rather than pessimistic.
+
+Have you ever been on a project that lacked vision and marched colorlessly toward what appeared to be a random delivery date,but was nonetheless driven hard by management?People fell by the wayside,but the march continued;even after important features dropped,the march continued...
+
+Customers are standing in line just hoping to use your product.
+
+It helps energize them for tackling the work that needs to be done,and if helps align the organization so that employees naturally march in the same direction.Vision helps draw the best people to your organization.It helps you deliver your products and services faster and cheaper with each incremental step forward.
+
+If the leadership is devoid of vision,the organization will likely wither and die.
+
+The whole world steps aside for the man who knows where he is going.
+The vision will naturally weave itself through the disparate thinking that occurs within each part of the organization and help align current and future deliverables.
+
+Many companies will allow as much as 10% variance on overall project costs before they requre a formal revision of the project estimation.
+
+A spending envelope applied to each phase of a roadmap will assist you in determining when a more tactial approach needs to be pursued in favor of a strategic solution.
+
+By taking the time to go above and beyond your normal architectual duties,and by striving to develop an architectural vision that aligns with the business you work for,you boost your career potential and launch yourself on an exciting journey.
+
+How to leverage bold ideas and leave small thinking behind.
+
+跟踪变化：1 迭代和增量式学习 2 了解最新行情 3 参加研讨会议 4 如饥似渴的阅读 
+
+一些成熟的方法论很强调设计，例如，统一过程（Unified Process，UP）十分重视和产品相关的文档。无论采用哪种过程管理都要首先进行设计。
+设计可以分为两层：战略和战术。前期的设计属于战略，通常只有在没有深入理解需求的时候需要这样的设计。
+
+不要一开始就进行战术设计，它的重点是集中在单个的方法或数据类型上。这时，更适合讨论如何设计类的职责。
+
+好的设计应该是正确的，而不是精确的。也就是说，它描述的一切必须是正确的，不应该涉及不确定或者可能会发生变化的细节。它是目标，不是具体的处方。 
+
+正如美国总统艾森豪威尔所说：“计划是没有价值的，但计划的过程是必不可少的。在设计过程中学习是有价值的，但设计本身也许没有太大的用处。
+
+复杂的建模工具只会让你分散精力，而不是启发你的工作。
+
+Don't repeat yourself,产生令人误解的文档。源代码可以被读懂，不是因为其中的注释，而应该是由于它本身优雅而清晰——变量名运用正确、空格使用得当、逻辑分离清晰，以及表达式非常简洁。
+
+使用细心挑选的名称和清晰的执行路径，代码几乎不需要注释。
+
+使用细心选择的、有意义的命名。用注释描述代码意图和约束。注释不能替代优秀的代码。
+
+内聚性会影响一个组件的可重用性。组件粒度是在设计时要考虑的一个重要因素。
+  
+Liskov 替换原则[Lis88] 告诉我们：任何继承后得到的派生类对象，必须可以替换
+任何被使用的基类对象，而且使用者不必知道任何差异。
+
+白白的过一天，无所事事，就像犯了窃盗罪一样。
+随缘不是得过且过，因循苟且，而是尽人事听天命。
+不要因为小小的争执，远离了你至亲的好友，也不要因为小小的怨恨，忘记了别人的大恩。
+心是最大的骗子，别人能骗你一时，而它却会骗你一辈子。看轻别人很容易，要摆平自己却很困难。
+
+因为你自己的内心，你放不下。你永远要感谢给你逆境的众生。认识自己，降伏自己，改变自己，才能改变别人。 当你快乐时，你要想，这快乐不是永恒的。当你痛苦时你要想这痛苦也不是永恒的。
+
+实际的目标和期望。这是幸福进入无限循环的内驱力。人倘若无所追求，幸福之水会在懒散中干涸。                                                    ，做领导要有艺术的眼光与风格、有方法地去解决问题，而不是用艺术的方法去推卸责任与打太极、做推、拖、脱的高手。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+益友。这是幸福的开心果。一位益友就是一眼幸福的喷泉。
+拿沙特工资，住英国房子，用瑞典手机，戴瑞士手表，娶韩国女人，包日本二奶，做泰国按摩，开德国轿车，坐美国飞机，喝法国红酒，吃澳洲海鲜，抽古巴雪茄，穿意大利皮鞋，玩-西班牙女郎，看奥地利歌剧，买俄罗斯别墅，雇菲律宾女佣，配以色列保镖，洗土耳其桑-拿，当中国干部……老师批语：啰嗦！只需说当中国干部就行，前面皆可实现！
+
+一女县长夜归，突被两男架上车，一男威胁说：老实点，劫色的！女县长闻听笑骂道：你大爷的，这事呀，吓死我了，还以为是被双规了呢，原来是双飞呀！
+
+把对方的愤怒视为一种谈判技巧，而非情绪反应
+
+
+对于非技术出身的创业者，我的建议是，尽量使用开源系统、现成的解决方案。这时就需要考虑引入一个好的技术带头人，建立自己的技术路线。通常也会有一番波折，但这也是种甜蜜的烦恼，因为不发展到一定程度，根本不需要考虑。发展到这样的程度，公司的现金储备和知名度都有了很大的提升，招人也就会容易一些。
+
+激进的技术路线的另一个好处是，可以作为人才过滤器。如果公司使用的技术刚出现或者刚开始流行，那么愿意尝试甚至可以用好这种技术的人，往往是善于学习、不怕麻烦的。这是技术团队里面最喜欢的一种人。
+
+技术团队的任务不是提供核心竞争力，而是给公司的业务部门提供坚实可靠的技术基础，那些不能带来产品和服务体验升级的技术亮点并不重要。
+
+除非你可以让某段代码明确变得更好，否则不要随意批评别人的代码。
+Prevention is better than cure.
+
+软件测试是一个永无止尽的任务。基本上没有什么软件简单到我们能够尝试完它的每一个可能的路径的。我们会在全面测试了软件以后，把主要精力放在价值高的功能点上。合理的利用项目有限的时间。
+
+所以除了针对定义好的软件行为进行测试，我们还会做很多探索性测试。我们通常可以通过这样的测试发现一些没有定义的、不曾预期的行为。这些行为往往将会构成软交付的风险
+
+如果你发现开发人员们做出的架构决定使测试工作变得更困难。那么请大声地告诉他们，design for testability（提高你们设计的可测性）。
+
+ 数据库中存在一些脏数据，可能是长期的使用、维护或误操作导致，但没人知道它们有多少，具体存在哪里。
+
+我们发现如果没有仔细思考全局和细节问题而直接编写代码，带来的后果是无法控制的。我们应该首先充分了解这个过程可能存在的风险，然后决定采用什么样的策略，
+
+我们发现如果没有仔细思考全局和细节问题而直接编写代码，带来的后果是无法控制的。我们应该首先充分了解这个过程可能存在的风险，然后决定采用什么样的策略，
+
+耗时操作阻塞了UI 线程。UI 线程一般负责着渲染界面
+
+由于DVCS 的工作目录与中央仓库（Central Repository）别无二致，同样保存了全部的元数据，那么Subversion 需要通过网络完成的操作(诸如提交、追溯历史、更新等), Mercurial 可以在离线条件下通过操作本地仓库完成
+
+包含了全部元数据的工作目录可以在中央仓库出现问题时（图2-b）成为备用仓库（图2- c），而整个过程只需运行一条命令 
+
+但是它有自己的适用范围，并不是银弹。
+
+CruiseControl.Net就是一款由ThoughtWorks公司提供给我们的轻量级的持续化集成工具。它能够将代码版本控制，单元测试，代码规范检查，项目的发布部署等工作步骤有机的组织起来，并且利用其调度性可作自动化处理，它还有强大的日志记录功能，能将集成结果及时地反馈给项目管理人员和项目开发人员。
+
+持续集成包括：编译、代码规范检查、单元测试、报告、发布
+
+先求运行，再求正确，最后求快
+
+比较合理的方法是利用轮询的方式查
+看外部系统是否处于所需状态（譬如某个文  件存在、端口打开等），只有当状态满足时，才运行测试或者进行Assertion ，为了避免进入无限等待的状态，还应该设计合理的 timeout 策略，帮助确定测试失败的原因。
+
+漠视测试环境的清理也常常是产生脆弱测试的原因，它主要表现在
+测试之间互相影响，测试只有按照某种顺序运行时才会成功/失败，这种问题一旦出现会变
+的非常棘手，开发者必须逐一对有嫌疑的测试运行并分析。
+
+This will cause the following behavior which is not something you normally expect from class hierachies.
+Don't hide inherited members with the new keyword.
+
+Avoid bidrectional dependencies.
+
+Take the time to dive into the C# language to learn how to take full advantage of the language.
+Define a method with optional parameters to replace overloaded methods.
+
+These language features have added new and better ways to write better software.
+
+red-green-refactor development methodology 
+
+This chapter describes many specific paractices to improve automated testing,consistent with those principles.
+If it is unreliable and burdensome,then over time the tests will be commneted out,ignored,or abandoned.
+
+Any defects found during regression test are expensive.
+
+The primary and the secondary
+
+So far this chapter has focused on ways to make test code clear and concise.The next sections build on readability with some additional practices for writing more maintainable test code.
+
+It is best to use implicit typing in test code to concentrate on the higher-level goal of maintainability.
+
+ continuous integration (CI)
+
+where a single change causes cascades of unexpected behaviors and bugs.
+[ProgramFilesFolder]
+
+
+
+
+我想对所有大学生说：1)找到自己最喜爱的事情，勇敢执着地去做;2)有机会一定要出国，世界很大，值得体验;3)在一个创业公司和一个大公司的工作机会面前，先去尝试前者;4)不要去考公务员，掉进了这个染缸你就毁了;5)永远永远不要失去梦想!!
+
+给那些已经加入创业公司、或准备加入创业公司的童鞋三句话：1)创业公司里没废话，使命必达，2)创业公司里没官职，能者必上;3)创业公司里没天顶，前途无量，就看你自己的能量有多大!
+
+ 公司人事部并不是你的倾谈对象，人事部的首要任务不是去帮助雇员，而是保护公司利益不受雇员损害，这才是最为重要的。 公司或你的领导倒希望先看到你的忠诚，而不是显摆自己的能力。
+
+千万不能先自作聪明，你首先要做的是熟悉环境熟悉上司同事的性格，即使你是一个专家也要先摆低姿 态，当然必要的是关键时刻也需要显示自己的能力，让别人觉得你是深藏不露。
+
+如果你自己身体不太好，不需要把自己的健康情况告诉同事或上司，因为对上司来说你不健康说明你不能百分之百投入或有可 能影响工作，这样你的上司 会不安，他甚至会提前想对策或再额外招人，这样的话到时候即使你的身体恢复了，你有可能会面临失去自己位置的尴尬局面。
+
+很多人认为如果我做好自己的事情，我出业绩了，公司肯定会给我加薪，是的，公司会给你加薪，但是~~ 加薪的幅度肯定不能满足你的期望。
+
+领导们在决定晋升人选时除了业绩、 工作能力之外，还会考察很多其他能力，比如领导能力，组织能力，对公司的忠诚度等，而且作为管理人员应该要沉 得住气、该谦虚的时候需要谦虚，你事先提出来会破坏你的形象的。
+
+如果你一味地讨好他人没有一点自己的主见，你会失去他人对你的尊重，在工作中别人也会把你看作是没有真学问的空瓶。
+
+我们非常不喜欢经常跳槽的人，因为频繁跳槽说明此人目标不清晰，对公司的忠诚度值得怀疑。因此我们目前认为在一家工作的中高层职位上干满3年的候选人是比较理想的。
+
+让对方感受到你的谦逊和真诚，永远记住，多善待每一个希望结识你的人，你就多增加一份人脉并可能多一次事业良机。
+
+既新的工作与现在的工作相比，是不是提高了30%的综合满意度。这里的内容不仅包括薪资，还包括升迁机会、发展空间、工作的兴趣度、同事关系、工作环境等等。
+
+项目经理成为此次薪酬榜榜首，主要是存在职责担负重和市场需求量大两个原因。作为策划和执行项目的负责人、团队的领导者、项目成败的关键人物，项目经理往往承担了项目绝大部分的责任。并且在不断发展变化的市场环境下，项目经理对项目的管理为企业创造了利润空间，并且降低了风险系数，于是企业也越来越倾向于项目管理，加大了对此类人才的需求。
+
+
+
+而将你和普通的代码工人区分开来的是快速编写出生产级别代码的能力。你可以同时拥有好的代码和速度，但是你需要先对你用于构建的过程投入。
+
+他们会开始对一项任务编写代码，认为他们会永远拥有这段代码。而强大的开发者会知道技术债务的说法，从而试图通过设计代码来对其限制，让它尽可能可维护和自解释。
+
+：如果你想要成为更好的程序员，那么就要从改变你看待代码以及编码的方式开始。你需要理解所编写的每行代码背后的业务成本；你需要从客户或者最终用户的角度来看待工作；你需要接受代码会比你在组织中存在的时间更长，所以要以其他开发者能够继承的方式来设计；最重要的，永远都不要害怕新的挑战，也不要害怕请求帮助，你无法独居一隅来提升工作效果，软件开发也是社会化的工作。
+
+
+

@@ -1,0 +1,652 @@
+﻿create or replace trigger TRG_LOG_FILE_INFO
+  after insert on LOG_FILE_INFO
+  referencing new as new old as old
+  for each row
+declare
+  v_username varchar2(30);
+begin
+  select t.name
+    into v_username
+    from cfg_user_info t
+   where t.create_status = 1
+     and t.user_area = :new.province_id;
+
+  execute immediate 'insert into ' || v_username || '.pkg_log_file_info
+    (log_id,
+     province_id,
+     city_id,
+     area_id,
+     time_begin,
+     time_end,
+     iscollect,
+     isretry,
+     WORK_ID,
+     ITEMS_ID,
+     LOG_TYPE,
+     DEVICE_TYPE,
+     TEST_CASE,
+     TEST_TYPE,
+     TEST_SCENE,
+     NETWORK_TYPE)
+  values
+    (''' || :new.auid || ''',
+     ''' || :new.province_id || ''',
+     ''' || :new.city_id || ''',
+     ''' || :new.area_id || ''',
+     ''' || :new.time_begin || ''',
+     ''' || :new.time_end || ''',
+     0,
+     0,
+     ''' || :new.work_id || ''',
+     ''' || :new.items_id || ''',
+     ''' || :new.log_type || ''',
+     ''' || :new.device_type || ''',
+     ''' || :new.test_case || ''',
+     '||:new.TEST_TYPE||',
+     '||:new.TEST_SCENE||',
+     '||:new.network_type||')';
+	
+exception
+  when others then
+    null;
+end;
+
+
+
+在处理EXCEPTION时应特别注意WHEN OTHERS THEN的使用，因为WHEN OTHERS THEN会吃掉所有的EXCEPTION
+
+
+
+将对象缓存和读取的时候是要进行序列化与反序列化的，缓存的对象越大（例如，有1M等），整个过程中就消耗更多的CPU。
+
+它通过在内存中缓存数据和对象来减少读取数据库的次数，从而提供动态、数据库驱动网站的速度。Memcached基于一个存储键/值对的hashmap。其守护进程（daemon ）是用C写的，但是客户端可以用任何语言来编写，并通过memcached协议与守护进程通信。
+Memcached将数据库负载大幅度降低，更好的分配资源，更快速访问。
+
+TRUNC（89.985，2）=89.98
+TRUNC（89.985）=89
+TRUNC（89.985，-1）=80
+注意：第二个参数可以为负数，表示为小数点左边指定位数后面的部分截去，即均以0记。
+在逻辑编程中，经常用到If – Then –Else 进行逻辑判断。在DECODE的语法中，实际上就是这样的逻辑处理过程。它的语法如下：
+DECODE(value, if1, then1, if2,then2, if3,then3, . . . else )
+
+TO_CHAR 是把日期或数字转换为字符串
+TO_DATE 是把字符串转换为数据库中得日期类型转换函数
+TO_NUMBER 将字符转化为数字
+
+数字格式格式 
+9 代表一个数字 
+0 强制显示0 
+$ 放置一个$符 
+L 放置一个浮动本地货币符 
+. 显示小数点 
+, 显示千位指示符 
+
+TO_CHAR(salary,’$99,999.99’); 
+SELECT TO_DATE('2006-05-01 19:25:34', 'YYYY-MM-DD HH24:MI:SS') FROM DUAL6
+可用CPU将变得更少从而导致其他的操作将面临CPU饥饿。系统一处出现了饥饿，就会传播到其他各处。这样一来就没有足够的CPU来处理那些需要去完成的必要任务。导致这样的原因可能是任务的基数过高或某些情况下很多高优先级的任务需要完成。
+
+// Ensure the current culture passed into bindings is the OS culture.
+// By default, WPF uses en-US as the culture, regardless of the system settings.
+FrameworkElement.LanguageProperty.OverrideMetadata(
+      typeof(FrameworkElement),
+      new FrameworkPropertyMetadata(
+          XmlLanguage.GetLanguage(CultureInfo.CurrentCulture.IetfLanguageTag)));
+
+<TextBlock Name="textBlock" Text="{Binding JustificationDate, StringFormat='Justification Date: \{0:dd-MMMM-yy hh:mm\}'}">
+<TextBlock Text="{Binding Name, Mode OneWay, StringFormat=Hi, {0}}"/>
+
+Memcahce不适合缓存大数据，超过1MB的数据，可以考虑在客户端压缩或拆分到多个key中。大的数据在进行load和uppack到内存的时候需要花很长时间，从而降低服务器的性能。
+Before an instance of a class can be serialized a class map must exist. You can either create this class map yourself or simply allow the class map to be created automatically when first needed (called “automapping”). 
+
+Inject is a pseudo-method that is used to inject a lower level MongoDB query into a LINQ query. The following query looks for X values that are larger than 0 and are 64-bit integers.
+
+var query =
+    from c in collection.AsQueryable<C>()
+    where c.X > 0 && Query.Type("X", BsonType.Int64).Inject()
+    select c;
+
+
+GridFS is a specification for storing and retrieving files that exceed the BSON-document size limit of 16MB.
+
+副本集能够自动进行故障切换恢复。如果primary掉线或者无反应且多数的副本集成员能够相互连接，则选出一个新的primary。
+
+在多数情况下，当primary宕机、不可用或者是不适合做primary时，在没有管理者干预的几秒后会进行故障切换。
+
+多数情况下，回滚操作可以优雅的对不能进行故障切换恢复的情况进行恢复。
+当任意的故障切换发生，都会伴随着一个选举的出现，以此来决定哪个成员成为primary。
+
+选举提供了一种机制，用于副本集中的成员无需管理员的干预，自动的选出一个新的primary。选举可以让副本集快速和坚决的从故障中恢复。
+
+分片是mongoDB扩展的一种方式。分片分割一个collection并将不同的部分存储在不同的机器上。当一个数据库的collections相对于当前空间过大时，你需要增加一个新的机器。分片会自动的将collection数据分发到新的服务器上。
+
+
+路由服务器 配置服务器 分片服务器
+
+
+select student,sum(decode(subject,'语文', grade,null)) "语文",
+sum(decode(subject,'数学', grade,null)) "数学",
+sum(decode(subject,'英语', grade,null)) "英语"
+from table
+group by student
+
+
+WHERE LOWER(colorname) LIKE '%
+
+NVL
+
+TO_CHAR(date,'format')
+SQL> select to_char(sysdate,'yyyy/mm/dd hh24:mi:ss') from dual;
+
+TO_NUMBER
+将给出的字符转换为数字
+SQL> select to_number('1999') year from dual;
+
+EMPTY_BLOB()和EMPTY_CLOB()
+这两个函数都是用来对大数据类型字段进行初始化操作的函数
+
+MOD(n1,n2) 返回一个n1除以n2的余数
+SQL> select mod(10,3),mod(3,3),mod(2,3) from dual;
+
+TRUNC（number,num_digits） 
+Number 需要截尾取整的数字。 
+Num_digits 用于指定取整精度的数字。Num_digits 的默认值为 0。
+TRUNC()函数截取时不进行四舍五入
+SQRT 返回数字n的根
+ADD_MONTHS
+增加或减去月份
+
+NEXT_DAY(date,'day')
+给出日期date和星期x之后计算下一个星期的日期
+SQL> select next_day('18-5月-2001','星期五') next_day from dual;
+
+execute immediate 'sql'
+
+  for I in ( select log_type, test_type, test_scene, net_type, project_gid
+                 from test_kpi_check_log
+                 group by log_id, log_type, test_type, test_scene, net_type, project_gid) LOOP
+
+
+会话级的临时表创建方法：
+
+Create Global Temporary Table Table_Name  
+(Col1 Type1,Col2 Type2...) On Commit Preserve Rows ; 
+
+事务级临时表是指该临时表与事务相关，当进行事务提交或者事务回滚的时候，临时表中的数据将自行被截断，其他的内容和会话级的临时表的一致(包括退出SESSION 的时候，事务级的临时表也会被自动截断)。
+事务级临时表的创建方法：
+
+Create Global Temporary Table Table_Name  
+(Col1 Type1,Col2 Type2...) On Commit Delete Rows ; 
+
+
+
+会话级临时表采用 on commit preserve rows ;而事务级则采用 on commit delete rows ;用法上，会话级别只有当会话结束临时表中的数据才会被截断，而且事务级临时表则不管是 commit 、 rollback 或者是会话结束，临时表中的数据都将被截断
+ 
+ SELECT T.ENNAME
+    INTO M_EXP_SENDER
+    FROM DATA_PARAM_INFO T
+
+
+insert into tablename select * from another tablename
+
+ M_SQL := 'SELECT COUNT(*) CNT
+      FROM ' || M_TABLE ||
+             ' EVENT
+     WHERE
+       EVENT.GRID_ID =  :GRID_ID
+       AND ((EVENT.EXP_TIME >=  :M_STARTTIME AND EVENT.WORKORDER_STATE IS NULL) OR
+           (EVENT.WORKORDER_STATE = 1))
+       AND EVENT.IS_AUTO = 1
+       AND EVENT.EXP_ID IN
+           (SELECT CONFIG.EVENT_TYPE
+              FROM exp_WORKORDER_CONFIG CONFIG
+             WHERE CONFIG.EVENT_TYPE <> -1
+               AND CONFIG.NET_TYPE = :NET_TYPE
+               AND config.terminal_type = :M_TERMINALTYPE)';
+    EXECUTE IMMEDIATE M_SQL
+      INTO M_EXP_EVERYEVENTCOUNT
+      USING GRID_ID, M_STARTTIME, NET_TYPE, M_TERMINALTYPE;
+
+declare
+l_depnam varchar2(20) := 'testing';
+l_loc    varchar2(10) := 'Dubai';
+begin
+execute immediate 'insert into dept values (:1, :2, :3)'
+    using 50, l_depnam, l_loc;
+commit;
+end;
+
+用package不仅能把存储过程分门别类，而且在package里可以定义公共的变量/类型，既方便了编程，又减少了服务器的编译开销。
+
+对过程和函数的任何声明都必须只对子程序和其参数进行描述,不能有任何代码的说明,代码的实现只能在包体中出现.它不同于块声明,在块声明中,过程和函数的代码可同时出现在声明部分.
+
+ DBMS_OUTPUT.PUT_LINE('编码为'||v_empno||'员工工资已更新!'); 
+
+CREATE OR REPLACE TRIGGER tr_insert_emp
+BEFORE INSERT ON employees
+FOR EACH ROW
+BEGIN
+  IF :new.first_name IS NULL OR :new.last_name is null THEN
+    RAISE_APPLICATION_ERROR(-20000,'Employee must have a name.');
+  END IF;
+END;
+
+
+RAISE_APPLICATION_ERROR
+
+merge into bonuses d
+
+
+ function  datetoutc(p_date date) return number
+       as
+         v_res number(10);
+         begin
+           v_res := (p_date - to_date('1970-1-1 8:00:00','yyyy-mm-dd hh24:mi:ss'))*86400;
+          return  v_res;
+       end;
+
+
+
+CREATE OR REPLACE PROCEDURE CTUNI_BJ.P_TS_WORKORDER(GRID_ID  IN NUMBER,
+                                           TS_ID    IN NUMBER,
+                                           NET_TYPE IN NUMBER) IS
+  M_MAX_WORKORDERID          NUMBER; --栅格未处理工单
+  M_EVENTOVERCOUNT           NUMBER; --超限事件类型数
+  M_EVERYEVENTCOUNT          NUMBER; --总事件数
+  M_TS_EVERYEVENTCOUNT       NUMBER; --投诉总事件数
+  M_EVENTSTATISTICTIME       NUMBER; --统计时间天
+  M_STARTTIME                NUMBER; --统计开始时间
+  M_TSEXISTCOUNT             NUMBER; --ts_id对应投诉单数量
+  V_SQL                      VARCHAR2(200);
+  M_TS_EVENTID               NUMBER; -- 投诉事件类型
+  M_CURRENT_DEAL_EVENT_COUNT NUMBER; --当前处理指定事件投诉数
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('--开始');
+
+  DBMS_OUTPUT.PUT_LINE('输入参数:GRID_ID = ' || GRID_ID);
+  DBMS_OUTPUT.PUT_LINE('输入参数:TS_ID = ' || TS_ID);
+  DBMS_OUTPUT.PUT_LINE('输入参数:NET_TYPE = ' || NET_TYPE);
+
+  IF GRID_ID = 0 THEN
+    DBMS_OUTPUT.PUT_LINE('栅格号为0');
+    RETURN;
+  END IF;
+
+  V_SQL := 'SELECT COUNT(1)
+    FROM TS_EVENT_ANSWER T
+   WHERE T.TS_ID = ' || TS_ID;
+
+  EXECUTE IMMEDIATE V_SQL
+    INTO M_TSEXISTCOUNT;
+
+  DBMS_OUTPUT.PUT_LINE('投诉单' || TS_ID || '记录数:' || M_TSEXISTCOUNT);
+
+  IF M_TSEXISTCOUNT = 0 THEN
+    DBMS_OUTPUT.PUT_LINE('投诉单:' || TS_ID || '不存在');
+    RETURN;
+  END IF;
+
+  V_SQL := 'SELECT t.event_id
+    FROM TS_EVENT_ANSWER T
+   WHERE T.TS_ID =' || TS_ID;
+
+  DBMS_OUTPUT.PUT_LINE('查询当前投诉单事件类型:' || V_SQL);
+  EXECUTE IMMEDIATE V_SQL
+    INTO M_TS_EVENTID;
+  DBMS_OUTPUT.PUT_LINE('查询当前投诉单事件类型为:' || M_TS_EVENTID);
+
+  IF M_TS_EVENTID = 0 OR M_TS_EVENTID IS NULL THEN
+    DBMS_OUTPUT.PUT_LINE('投诉事件类型为0或为空，不支持统计');
+    RETURN;
+  END IF;
+
+  IF NET_TYPE <> 1 AND NET_TYPE <> 5 THEN
+    DBMS_OUTPUT.PUT_LINE('不支持网络类型：' || NET_TYPE);
+    RETURN;
+  END IF;
+  -----------时间天数-------
+  BEGIN
+    SELECT T.SUM_DAY SUMDAY
+      INTO M_EVENTSTATISTICTIME
+      FROM TS_WORKORDER_CONFIG T
+     WHERE T.EVENT_TYPE = -1
+       AND T.NET_TYPE = NET_TYPE
+       AND ROWNUM = 1;
+  EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+      M_EVENTSTATISTICTIME := NULL;
+      DBMS_OUTPUT.PUT_LINE('--统计时间天数无数据');
+  END;
+
+  IF M_EVENTSTATISTICTIME IS NULL THEN
+    DBMS_OUTPUT.PUT_LINE('--统计时间天数为空');
+    RETURN;
+  END IF;
+
+  DBMS_OUTPUT.PUT_LINE('--统计时间天数：' || M_EVENTSTATISTICTIME);
+
+  SELECT ROUND(TO_NUMBER(SYSDATE - M_EVENTSTATISTICTIME -
+                         TO_DATE('1970-01-01', 'yyyy-mm-dd hh24:mi:SS')) * 24 * 60 * 60)
+    INTO M_STARTTIME
+    FROM DUAL;
+
+  DBMS_OUTPUT.PUT_LINE('统计开始时间 M_STARTTIME =' || M_STARTTIME);
+
+  ------------时间天数 end-------------
+
+  --所有事件总门限
+  DBMS_OUTPUT.PUT_LINE('--所有事件总门限');
+  SELECT CONFIG.EVENT_COUNT
+    INTO M_EVERYEVENTCOUNT
+    FROM TS_WORKORDER_CONFIG CONFIG
+   WHERE CONFIG.EVENT_TYPE = -1
+     AND CONFIG.NET_TYPE = NET_TYPE
+     AND ROWNUM = 1;
+
+  DBMS_OUTPUT.PUT_LINE('所有事件总门限 M_EVERYEVENTCOUNT' || M_EVERYEVENTCOUNT);
+
+  DBMS_OUTPUT.PUT_LINE('--栅格最大未处理工单初始值 M_MAX_WORKORDERID =' ||
+                       M_MAX_WORKORDERID);
+  BEGIN
+    SELECT T.WORKORDER_ID MAX_WORKORDERID
+      INTO M_MAX_WORKORDERID
+      FROM TS_EVENT_ANSWER T
+     WHERE T.IS_AUTO = 1
+       AND T.WORKORDER_ID IS NOT NULL
+       AND T.WORKORDER_STATE = 1
+       AND T.GRID_ID = GRID_ID
+       AND T.NET_TYPE = NET_TYPE
+       AND ROWNUM = 1;
+  EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+      M_MAX_WORKORDERID := NULL;
+  END;
+
+  IF M_MAX_WORKORDERID IS NULL THEN
+    DBMS_OUTPUT.PUT_LINE('当前栅格最新未处理工单为空');
+  ELSE
+    DBMS_OUTPUT.PUT_LINE('当前栅格最新未处理工单 M_MAX_WORKORDERID=' ||
+                         M_MAX_WORKORDERID);
+  END IF;
+
+  --是否向工单中追加投诉单
+  DBMS_OUTPUT.PUT_LINE('是否向工单中追加投诉单' || M_MAX_WORKORDERID);
+
+  --栅格已经存在工单
+  IF M_MAX_WORKORDERID IS NOT NULL THEN
+    --判断是否超总值追加工单 start--
+    SELECT COUNT(*) CNT
+      INTO M_TS_EVERYEVENTCOUNT
+      FROM TS_EVENT_ANSWER EVENT
+     WHERE EVENT.GRID_ID = GRID_ID
+       AND ((EVENT.TS_TIME >= M_STARTTIME AND EVENT.WORKORDER_STATE IS NULL) OR
+           (EVENT.WORKORDER_STATE = 1))
+       AND EVENT.IS_AUTO = 1
+       AND EVENT.NET_TYPE = NET_TYPE
+       AND EVENT.EVENT_ID IN
+           (SELECT CONFIG.EVENT_TYPE
+              FROM TS_WORKORDER_CONFIG CONFIG
+             WHERE CONFIG.EVENT_TYPE <> -1
+               AND CONFIG.NET_TYPE = NET_TYPE);
+
+    DBMS_OUTPUT.PUT_LINE('当前投诉总事件数 M_TS_EVERYEVENTCOUNT ' ||
+                         M_TS_EVERYEVENTCOUNT);
+
+    IF M_TS_EVERYEVENTCOUNT >= M_EVERYEVENTCOUNT THEN
+      DBMS_OUTPUT.PUT_LINE('--投诉超总值，追加工单');
+      UPDATE TS_EVENT_ANSWER T
+         SET T.WORKORDER_ID    = M_MAX_WORKORDERID,
+             T.IS_AUTO         = 1,
+             T.WORKORDER_STATE = 1
+       WHERE T.TS_ID = TS_ID;
+      DBMS_OUTPUT.PUT_LINE('向工单中追加投诉单m_max_workOrderId=' ||
+                           M_MAX_WORKORDERID);
+      COMMIT;
+      RETURN;
+    END IF;
+    --判断是否超总值追加工单 end--
+
+    V_SQL := 'SELECT COUNT(1)
+      FROM TS_EVENT_ANSWER T
+     WHERE T.IS_AUTO = 1
+       AND T.WORKORDER_ID IS NOT NULL
+       AND T.WORKORDER_STATE = 1
+       AND T.GRID_ID = ' || GRID_ID || ' AND T.NET_TYPE = ' ||
+             NET_TYPE || ' AND t.event_id = ' || M_TS_EVENTID;
+    EXECUTE IMMEDIATE V_SQL
+      INTO M_CURRENT_DEAL_EVENT_COUNT;
+
+    IF M_CURRENT_DEAL_EVENT_COUNT = 0 THEN
+      --栅格此事件类型无工单,确认新类型是否追加工单------------------
+      DBMS_OUTPUT.PUT_LINE('--栅格此事件类型无工单,确认新类型是否追加工单---');
+      SELECT COUNT(*) CNT
+        INTO M_EVENTOVERCOUNT
+        FROM TS_WORKORDER_CONFIG CONFIG,
+             (SELECT EVENT.EVENT_ID, COUNT(*) CNT
+                FROM TS_EVENT_ANSWER EVENT
+               WHERE EVENT.GRID_ID = GRID_ID
+                 AND EVENT.TS_TIME >= M_STARTTIME
+                 AND EVENT.IS_AUTO IS NULL
+                 AND EVENT.NET_TYPE = NET_TYPE
+                 AND EVENT.EVENT_ID = M_TS_EVENTID
+               GROUP BY EVENT.EVENT_ID) EVENTCOUNT
+       WHERE CONFIG.EVENT_TYPE = EVENTCOUNT.EVENT_ID
+         AND CONFIG.NET_TYPE = NET_TYPE
+         AND EVENTCOUNT.CNT >= CONFIG.EVENT_COUNT;
+      IF M_EVENTOVERCOUNT > 0 THEN
+        --达门限更新投诉单
+        DBMS_OUTPUT.PUT_LINE('--栅格达门限更新投诉单');
+        UPDATE TS_EVENT_ANSWER T
+           SET T.WORKORDER_ID    = M_MAX_WORKORDERID,
+               T.IS_AUTO         = 1,
+               T.WORKORDER_STATE = 1
+         WHERE T.GRID_ID = GRID_ID
+           AND T.TS_TIME >= M_STARTTIME
+           AND T.IS_AUTO IS NULL
+           AND T.NET_TYPE = NET_TYPE
+           AND T.EVENT_ID = M_TS_EVENTID;
+
+        RETURN;
+      ELSE
+        DBMS_OUTPUT.PUT_LINE('此事件未达触发单事件生成工单权限');
+      END IF;
+    ELSE
+      --此投诉已经有工单
+      DBMS_OUTPUT.PUT_LINE('--此投诉已经有工单');
+      UPDATE TS_EVENT_ANSWER T
+         SET T.WORKORDER_ID    = M_MAX_WORKORDERID,
+             T.IS_AUTO         = 1,
+             T.WORKORDER_STATE = 1
+       WHERE T.TS_ID = TS_ID;
+      DBMS_OUTPUT.PUT_LINE('向工单中追加投诉单m_max_workOrderId=' ||
+                           M_MAX_WORKORDERID);
+      COMMIT;
+      RETURN;
+    END IF;
+
+  END IF;
+  --当前栅格无工单时判断是否超投诉总事件数
+  DBMS_OUTPUT.PUT_LINE('--投诉总事件数');
+  SELECT COUNT(*) CNT
+    INTO M_TS_EVERYEVENTCOUNT
+    FROM TS_EVENT_ANSWER EVENT
+   WHERE EVENT.GRID_ID = GRID_ID
+     AND EVENT.TS_TIME >= M_STARTTIME
+     AND EVENT.IS_AUTO = 1
+     AND EVENT.NET_TYPE = NET_TYPE
+     AND EVENT.EVENT_ID IN
+         (SELECT CONFIG.EVENT_TYPE
+            FROM TS_WORKORDER_CONFIG CONFIG
+           WHERE CONFIG.EVENT_TYPE <> -1
+             AND CONFIG.NET_TYPE = NET_TYPE);
+
+  DBMS_OUTPUT.PUT_LINE('当前投诉总事件数 M_TS_EVERYEVENTCOUNT ' ||
+                       M_TS_EVERYEVENTCOUNT);
+
+  IF M_TS_EVERYEVENTCOUNT >= M_EVERYEVENTCOUNT THEN
+    DBMS_OUTPUT.PUT_LINE('生成工单');
+    P_TS_CREATEWORKORDER(GRID_ID, M_STARTTIME, NET_TYPE, M_TS_EVENTID, 2);
+     COMMIT;
+     RETURN;
+  END IF;
+
+  --超事件门限--------------
+  DBMS_OUTPUT.PUT_LINE('--超单事件门限--------------');
+  SELECT COUNT(*) CNT
+    INTO M_EVENTOVERCOUNT
+    FROM TS_WORKORDER_CONFIG CONFIG,
+         (SELECT EVENT.EVENT_ID, COUNT(*) CNT
+            FROM TS_EVENT_ANSWER EVENT
+           WHERE EVENT.GRID_ID = GRID_ID
+             AND EVENT.TS_TIME >= M_STARTTIME
+             AND EVENT.IS_AUTO IS NULL
+             AND EVENT.NET_TYPE = NET_TYPE
+             AND EVENT.EVENT_ID = M_TS_EVENTID
+           GROUP BY EVENT.EVENT_ID) EVENTCOUNT
+   WHERE CONFIG.EVENT_TYPE = EVENTCOUNT.EVENT_ID
+     AND CONFIG.NET_TYPE = NET_TYPE
+     AND EVENTCOUNT.CNT >= CONFIG.EVENT_COUNT;
+
+  DBMS_OUTPUT.PUT_LINE('超过单事件门限的数量 M_EVENTOVERCOUNT= ' || M_EVENTOVERCOUNT);
+
+  IF M_EVENTOVERCOUNT > 0 THEN
+    DBMS_OUTPUT.PUT_LINE('生成工单');
+    P_TS_CREATEWORKORDER(GRID_ID, M_STARTTIME, NET_TYPE, M_TS_EVENTID, 1);
+    COMMIT;
+    RETURN;
+  END IF;
+  -------------------------
+END P_TS_WORKORDER;
+
+
+
+ v_sql1 := 'select level_val, count(level_val) count 
+from ' || username || '.' || m_kpi_table || '@kpidb kpi 
+where kpi.log_id in 
+(select sub.log_id 
+from work_sub_items sub, 
+ctuni_pub.floors_info floors 
+where sub.work_id = ' || p_workid || ' 
+and sub.sub_group_id = ' || m_max_sub_group_id || ' 
+and sub.floors_id = floors.auid 
+and floors.IS_NO_TEST = 0 
+and floors.is_no_verify = 0) 
+group by level_val';
+  open c_cursor1 for v_sql1;
+  loop
+    fetch c_cursor1
+      into m_log_level, m_log_level_count;
+    EXIT WHEN c_cursor1%NOTFOUND;
+    if (m_log_level = 1) then
+      m_one_counts := m_log_level_count;
+    end if;
+    if (m_log_level = 2) then
+      m_two_counts := m_log_level_count;
+    end if;
+    if (m_log_level = 3) then
+      m_three_counts := m_log_level_count;
+    end if;
+    if (m_log_level = 4) then
+      m_four_counts := m_log_level_count;
+    end if;
+  end loop;
+  close c_cursor1;
+
+create or replace procedure gather_floor_g is
+
+v_sql varchar2(2000);
+begin
+  for c in (select name, rebake
+                from cfg_user_info
+               where user_area > 0
+                 and user_area < 99
+               order by user_area)
+			    loop
+				这里可以用 c.name c.rebake
+ end loop
+
+ 位图索引
+ 因为一个位图索引上得键值，可能指向多行记录，所以更新一行的时候，同时会吧位图索引指向的所有行都给锁定了，大大的降低了并发性。
+  for i in 1..8 loop
+   loop
+   end loop
+
+
+
+   create table t(helper1 varchar2(50) , helper2 varchar2(50) , dataElement varchar2(50) );
+
+
+insert into t(helper1, helper2, dataelement)
+with
+     de as(select level lvl from dual connect by level <10)
+     ,h1 as (select lvl, lvl/1.5 hp from de)
+     ,h2 as (select lvl,  lvl/2 hp2 from de)
+select h1.hp , h2.hp2, de.lvl
+  from de 
+        inner join
+       h1 on de.lvl = h1.lvl
+        inner join
+       h2 on de.lvl = h2.lvl
+/
+
+
+merge into data_complaint_day_test2 s   
+  using (select seq_id,   
+               handle_date,   
+               V_COMPLAINT_TYPE,    
+               STATISTICS_LEVEL,    
+               feedback_date,   
+               node,   
+               done_date,   
+               finished_date,   
+               handle_workgroup,   
+               v_dept_name,   
+               v_area,   
+               n_sh_complaint   
+          from data_complaint_day_test t   
+          where t.rowid  in (select max(b.rowid) from data_complaint_day_test b group by (b.seq_id)))  t   
+  on (s.seq_id = t.seq_id )   
+  when matched then    
+    update set    
+      s.handle_date = t.handle_date,   
+      s.service_req_type = t.v_complaint_type,   
+      s.user_level = t.STATISTICS_LEVEL,   
+      s.feedback_date = t.feedback_date,   
+      s.node = t.node,   
+      s.done_date = t.done_date,   
+      s.finished_date = t.finished_date,   
+      s.handle_workgroup = t.handle_workgroup,   
+      s.v_dept_name = t.v_dept_name,   
+      s.v_area = t.v_area   
+  when not matched then    
+    insert ( s.seq_id,   
+             s.handle_date,   
+             s.service_req_type,   
+             s.user_level,   
+             s.feedback_date,   
+             s.node,   
+             s.done_date,   
+             s.finished_date,   
+             s.handle_workgroup,   
+             s.v_dept_name,   
+             s.v_area,   
+             s.n_sh_complaint)    
+    values ( t.seq_id,   
+             t.handle_date,   
+             t.V_COMPLAINT_TYPE,   
+             t.STATISTICS_LEVEL,   
+             t.feedback_date,   
+             t.node,   
+             t.done_date,   
+             t.finished_date,   
+             t.handle_workgroup,   
+             t.v_dept_name,   
+             t.v_area,   
+             t.n_sh_complaint);  
+			 
+			 cusor c_owner is select * from 
+
+			  OPEN c_owner;
+ 
+LOOP
+  FETCH c_owner INTO v_owner;
+  EXIT WHEN c_owner%NOTFOUND;

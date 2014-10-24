@@ -1,0 +1,314 @@
+﻿
+CREATE PROCEDURE dbo.AXzhz
+/*
+  @parameter1 用户名
+  @parameter2 新密码
+*/
+@password nvarchar(20),
+@userName nvarchar(20)
+AS
+declare @err0 int
+update WL_user set password=@password where UserName=@userName
+set @err0=@@error 
+select  @err0 as err0
+
+ALTER PROCEDURE procClientRateOutput 
+         @pstrClientID VARCHAR(6) = 'CABLE',
+         @pstrCategoryID VARCHAR(6) = '<All>',
+         @pstrEmpID VARCHAR(6)='AC',
+         @pdteDate datetime = '1996/1/1',
+         @curRate MONEY OUTPUT
+
+AS
+
+-- Description: Get the $Rate for this client and this employee 
+--         and this category from Table ClientRate
+
+SET @curRate = (
+                SELECT TOP 1 Rate 
+                FROM ClientRate 
+                WHERE ClientID=@pstrClientID 
+                AND EmpID=@pstrEmpID 
+                AND CategoryID=@pstrCategoryID
+                AND DateEnd > @pdteDate
+                ORDER BY DateEnd
+               )
+
+IF @curRate IS NULL
+
+         SET @curRate =
+(
+                SELECT TOP 1 Rate 
+                FROM ClientRate 
+                WHERE ClientID=@pstrClientID
+                AND EmpID=@pstrEmpID 
+                AND CategoryID='<ALL>' 
+                AND DateEnd > @pdteDate 
+                ORDER BY DateEnd
+               )
+
+RETURN
+
+存储过程是由流控制和SQL语句书写的过程，这个过程经编译和优化后存储在数据库服务器中，应用程序使用时只要调用即可。
+
+CREATE PROC[EDURE] procedure_name [;number] 
+[ 
+{@parameter data_type} ][VARYING] [= default] [OUTPUT] 
+] 
+[,...n] 
+[WITH　
+{ 
+RECOMPILE　
+| ENCRYPTION　
+| RECOMPILE, ENCRYPTION 
+} 
+] 
+[FOR REPLICATION] 
+AS 
+sql_statement [...n]
+
+
+ALTER PROCEDURE [dbo].[Basic_Pagination2005]
+@tblName      nvarchar(200),     --表名
+@fidlelist    nvarchar(1000),   --要查询字段
+@fldName      nvarchar(100),    --排序字段
+@PageSize     int,              --页尺寸
+@PageIndex    int,              --页码
+@IsReCount    bit ,             -- 返回记录总数, 非 0 值则返回
+@OrderType    bit,              -- 设置排序类型, 非 0 值则降序
+@strWhere nvarchar(1000)        --查询条件
+AS
+declare @sqlstr nvarchar(4000),
+@tmpwhere nvarchar(4000),@tmporder nvarchar(100)
+BEGIN
+if @OrderType != 0
+begin
+set @tmporder = @fldName +' desc '
+end
+else
+begin
+        set @tmporder = @fldName +' asc '
+end
+set @tmpwhere='';
+if(@strWhere!='')
+begin
+set @tmpwhere=' where '+@strWhere;
+end
+set @sqlstr=N'select * from
+(select  '+@fidlelist+', ROW_NUMBER() OVER(order
+
+by '+@tmporder+') as row from '+@tblName+@tmpwhere+') 
+tmp where row between '+cast
+
+(((@PageIndex-1)*@PageSize+1) as nvarchar)+' and '+cast
+
+(@PageIndex*@PageSize as nvarchar);  
+exec sp_executesql @sqlstr
+if @IsReCount != 0
+begin
+set @sqlstr=N'select count(*) as Total from '+ @tblName+@tmpwhere
+exec sp_executesql @sqlstr    
+end
+END
+
+N'string' 表示string是个Unicode字符串
+
+SELECT JobCandidateID,
+BusinessEntityID,
+ISNULL(BusinessEntityID, 0) Cleaned_BusinessEntityID
+FROM HumanResources.JobCandidate
+
+DECLARE @Value1 int
+DECLARE @Value2 int
+SET @Value1 = 55
+SET @Value2 = 955
+SELECT NULLIF(@Value1, @Value2
+
+SELECT DATEADD(yy, -1, '4/2/2009')
+SELECT DATEADD(mm, -6, '4/2/2009')
+
+DATEDIFF ( datepart , startdate , enddate )
+SELECT ProductID,
+GETDATE() Today,
+EndDate,
+DATEDIFF(m, EndDate, GETDATE()) MonthsFromNow
+FROM Production.ProductCostHistory
+WHERE EndDate IS NOT NULL
+
+DATENAME ( datepart , date )  DATENAME(dw, EndDate)  返回星期几
+
+SELECT DATEPART(yy, GETDATE()) 
+CAST ( expression AS data_type [ (length ) ])
+CONVERT ( data_type [ ( length ) ] ,expression [ ,style ] )
+SELECT CONVERT(char(4), 2008) + ' Can now be concatenated!' 是将后面的转为前边的
+
+SELECT ISNUMERIC('123')  return 1
+
+SELECT Shelf,
+ProductID,
+ROW_NUMBER() OVER
+(PARTITION BY Shelf ORDER BY ProductID) RowNumber
+FROM Production.ProductInventory  
+partition用于分组 
+
+
+SELECT BusinessEntityID,
+SalesQuota,
+DENSE_RANK() OVER (ORDER BY SalesQuota DESC) as DENSE_RANK
+FROM Sales.SalesPersonQuotaHistory
+WHERE SalesQuota BETWEEN 266000.00 AND 319000.00
+用于7 7 8 这样的排序
+
+NTILE (integer_expression) OVER ( [ < partition_by_clause > ] < order_by_clause > )
+ 可以看作是把有序的数据集合平均分配到expr指定的数量的桶中,将桶号分配给每一行。 
+
+ CREATE TABLE #TempExample
+(ExampleColumn varchar(10) NOT NULL,
+ModifiedByLogin varchar(55) NOT NULL DEFAULT SYSTEM_USER,
+ModifiedByUser varchar(55) NOT NULL DEFAULT USER)
+GO
+创建临时表 
+
+SELECT DepartmentID,
+Name,
+GroupName,
+CASE GroupName
+WHEN 'Research and Development' THEN 'Room A'
+WHEN 'Sales and Marketing' THEN 'Room B'
+WHEN 'Manufacturing' THEN 'Room C'
+ELSE 'Room D'
+END ConferenceRoom
+FROM HumanResources.Department
+
+
+DECLARE @QuerySelector int
+SET @QuerySelector = 3
+IF @QuerySelector = 1
+BEGIN
+SELECT TOP 3
+ProductID, Name, Color
+FROM Production.Product
+WHERE Color = 'Silver'
+ORDER BY Name
+END
+ELSE
+BEGIN
+SELECT TOP 3
+ProductID, Name, Color
+FROM Production.Product
+WHERE Color = 'Black'
+ORDER BY Name
+END
+
+
+IF NOT EXISTS
+(SELECT ProductID FROM Production.Product WHERE Color = 'Pink')
+BEGIN
+RETURN
+END
+
+User-defined functions are useful for both the per for mance enhancements they provide because of
+their cached execution plans and their ability to encapsulate reusable code. 
+
+
+CREATE FUNCTION dbo.udf_SEL_SalesQuota
+( @BusinessEntityID int,
+@ShowHistory bit )
+RETURNS @SalesQuota TABLE
+(BusinessEntityID int,
+QuotaDate datetime,
+SalesQuota money)
+AS
+BEGIN
+INSERT @SalesQuota
+(BusinessEntityID, QuotaDate, SalesQuota)
+SELECT BusinessEntityID, ModifiedDate, SalesQuota
+FROM Sales.SalesPerson
+WHERE BusinessEntityID = @BusinessEntityID
+IF @ShowHistory = 1
+BEGIN
+INSERT @SalesQuota
+(BusinessEntityID, QuotaDate, SalesQuota)
+SELECT BusinessEntityID, QuotaDate, SalesQuota
+FROM Sales.SalesPersonQuotaHistory
+WHERE BusinessEntityID = @BusinessEntityID
+END
+RETURN
+END
+GO
+
+创建触发器 
+CREATE TRIGGER Production.trg_uid_ProductInventoryAudit
+ON Production.ProductInventory
+AFTER INSERT, DELETE
+AS
+SET NOCOUNT ON
+-- Inserted rows
+INSERT Production.ProductInventoryAudit
+(ProductID, LocationID, Shelf, Bin, Quantity,
+rowguid, ModifiedDate, InsOrUPD)
+SELECT DISTINCT i.ProductID, i.LocationID, i.Shelf, i.Bin, i.Quantity,
+i.rowguid, GETDATE(), 'I'
+FROM inserted i
+-- Deleted rows
+INSERT Production.ProductInventoryAudit
+(ProductID, LocationID, Shelf, Bin, Quantity,
+rowguid, ModifiedDate, InsOrUPD)
+SELECT d.ProductID, d.LocationID, d.Shelf, d.Bin, d.Quantity,
+d.rowguid, GETDATE(), 'D'
+FROM deleted d
+
+
+临时表存活于本次连接中
+
+CREATE TABLE Person.EmployeeEducationType(
+EmployeeEducationTypeID int NOT NULL PRIMARY KEY,
+EmployeeID int NOT NULL,
+EducationTypeID int NULL,
+GPA numeric(4,3) NOT NULL CHECK (GPA > 2.5 AND GPA <=4.0))
+
+
+SELECT BusinessEntityID,
+SalesQuota,
+DENSE_RANK() OVER (ORDER BY SalesQuota DESC) as DENSE_RANK
+FROM Sales.SalesPersonQuotaHistory
+WHERE SalesQuota BETWEEN 266000.00 AND 319000.00
+
+
+SELECT BusinessEntityID,
+SalesQuota,
+NTILE(4) OVER (ORDER BY SalesQuota DESC) as NTILE
+FROM Sales.SalesPersonQuotaHistory
+WHERE SalesQuota BETWEEN 266000.00 AND 319000.00
+
+
+对存储的需求：表变量和临时表都消耗Tempdb中的存储空间，但是进行数据更新的时候，表变量不会写日志，而临时表则会写日志。(对优化的支持：表变量不支持索引和统计数据，临时表则可以支持索引和统计数据。
+表变量处理小量数据更好，但是任务多、数据量大的操作对内存是个考验
+　当然，除了索引和统计数据这个明显的限制外，表变量同时也不支持并行执行计划，因此对于大型的临时结果集，表变量也不是一个好的选择。
+临时表与永久表相似，只是它的创建是在Tempdb中，它只有在一个数据库连接结束后或者由SQL命令DROP掉，才会消失，否则就会一直存在。临时表在创建的时候都会产生SQL Server的系统日志，虽它们在Tempdb中体现，是分配在内存中的，它们也支持物理的磁盘，但用户在指定的磁盘里看不到文件。 
+ 1)表变量是存储在内存中的，当用户在访问表变量的时候，SQL Server是不产生日志的，而在临时表中是产生日志的; 
+
+　　2)在表变量中，是不允许有非聚集索引的; 
+
+　　3)表变量是不允许有DEFAULT默认值，也不允许有约束; 
+
+　　4)临时表上的统计信息是健全而可靠的，但是表变量上的统计信息是不可靠的; 
+
+　　5)临时表中是有锁的机制，而表变量中就没有锁的机制。 
+
+ 3)如果要在自定义函数中返回一个表，要用表变量如： 
+ 表变量在一次执行之后就自动删除。
+
+
+ 、不要对索引字段进行运算，而要想办法做变换，比如
+不要对索引字段进行格式转换、不要对索引字段进行多字段连接、 连接条件尽量使用聚集索引
+ 可以用DBCC DBREINDEX语句或者SQL SERVER维护计划设定定时进行索引重建，索引重建的目的是提高索引的效能。
+
+ 28.如果要插入大的二进制值到Image列，使用存储过程
+
+ 29.Between在某些时候比IN速度更快，Between能够更快地根据索引找到范围。
+ 35.在IN后面值的列表中，将出现最频繁的值放在最前面，出现得最少的放在最后面，减少判断的次数。
+
+
+ 该索引中键值的逻辑顺序决定了表中相应行的物理顺序
+ 索引的叶节点就是数据节点。而非聚簇索引的叶节点仍然是索引节点，只不过有一个指针指向对应的数据块。

@@ -1,0 +1,16 @@
+﻿减轻用户记忆量、放松心态不要怕犯错、及时有效的反馈、使用用户的预言
+设计原则：一致性原则（审美一致）、层次呈现原则、组块原则（分类）、图片优势
+产品体验=sum(产品策略：设计：技术开发：推广运营：售后服务)
+
+对于内存中的垃圾分为两种，一种是需要调用对象的析构函数，另一种是不需要调用的。GC对于前者的回收需要通过两步完成，第一步是调用对象的析构函数，第二步是回收内存，但是要注意这两步不是在GC一次轮循完成，即需要两次轮循；相对于后者，则只是回收内存而已。
+常见SqlConnection这个类，当调用完Close方法后，可以通过Open重新打开数据库连接，当彻底不用这个对象了就可以调用Dispose方法来标记此对象无用，等待GC回收。
+
+GC为了提高回收的效 率使用了Generation的概念，原理是这样的，第一次回收之前创建的对象属于Generation 0，之后，每次回收时这个Generation的号码就会向后挪一，也就是说，第二次回收时原来的Generation 0变成了Generation 1，而在第一次回收后和第二次回收前创建的对象将属于Generation 0。GC会先试着在属于Generation 0的对象中回收，因为这些是最新的，所以最有可能会被回收，比如一些函数中的局部变量在退出函数时就没有引用了（可被回收）。如果在Generation 0中回收了足够的内存，那么GC就不会再接着回收了，如果回收的还不够，那么GC就试着在Genera
+Ldfld不是替换，Ldfld是pop对象引用，push字段的值，所以感觉像替换，其实是2步
+
+numberGetIL.Emit(OpCodes.Ldarg_0);//push 1(this)
+ numberGetIL.Emit(OpCodes.Ldfld, fb);//pop 1(this), push 1(myField)
+ numberGetIL.Emit(OpCodes.Ret);//return
+
+代码没有问题，用c#表达就是：
+return this.myField;

@@ -1,0 +1,1104 @@
+﻿页面加载时有事件，分辨OrientationChanged 
+aplicationbar   Windows Phone Application Life Cycle
+
+Windows Phone enables a seamless navigation experience for the user by limiting the phone to running one application in the foreground at any given time. To do this, Windows Phone activates and deactivates applications dynamically, exposing events for developers to respond to when the application state changes.
+The procedure in which the operating system terminates an application’s process when the user navigates away from the application is called tombstone or tombstoning.
+ If the user navigates back to the application, the operating system restarts the application process and passes the state data back to the application. The enhancement to this model under Windows Phone Mango is known as fast application switching,state DAta在内存不足时可能被抛弃。
+
+ Application state is not associated with a specific page. Application state is managed in the events exposed by the PhoneApplicationService class. 
+Page state is a visual state of an application page. This includes such things as the scroll position of a ScrollViewer control and the contents of TextBox controls. Page state management should be handled in the OnNavigatedTo and OnNavigatedFrom event handlers. 
+
+
+Below is the list of native experiences that, when invoked, do not trigger an automatic tombstone in the calling application:
+
+PhotoChooserTask 
+CameraCaptureTask 
+MediaPlayerLauncher 
+EmailAddressChooserTask 
+PhoneNumberChooserTask 
+Multiplayer Game Invite [games] 
+Gamer You Card [games] 
+
+
+ All of the life cycle-related events mentioned in this section (Launching, Running, Closing, Deactivating, and Activating) are members of the PhoneApplicationService class in the Microsoft.Phone.Shell namespace
+
+ closing发生的情况之一就是点击了回退建，并回退到了第一页之外。
+ deactive 发生在点击了start建，或者是timeout导致锁屏。
+
+   
+  Because there is no guarantee that a deactivated application will ever be reactivated, an application should always save any persistent data to isolated storage during this event. 
+
+All of the actions taken in the deactivated event handler must be completed within ten seconds, or the operating system will terminate the application without tombstoning it. For this reason, applications with large quantities of persistent data may want to save incrementally as the application is running.10秒不短呀
+
+NavigatingCancelEventArgs   e.IsNavigationInitiator
+
+CameraCaptureTask 用来启动照相
+
+Microsoft.Phone.Info.DeviceStatus
+
+集合类型的同步线程包装 Synchronized，然后lock其同步对象 SyncRoot
+
+VibrateController vc = VibrateController.Default;  
+vc.Start(TimeSpan.FromMilliseconds(100));  
+
+GeoCoordinateWatcher gcw;  
+   
+        public MainPage()  
+        {  
+             InitializeComponent();  
+             gcw.PositionChanged += new EventHandler>(gcw_PositionChanged);  
+             gcw.Start();  
+        }  
+
+
+		大多数用户都不会意识到在他们离开程序后，程序仍然在后台消耗着系统资源和电池电量（如果你正在阅读本文，就你不属于大多数用户了）。 
+大多数应用程序都没有在后台运行的必要。这是节省系统资源的好方法。 
+
+原生通知（Raw Notification）- 原生通知用于设备中真正在运行的程序。它允许你在用户使用时实时更新用户界面。
+
+吐司通知（Toast Notification） – 无论程序是否在运行都会收到这个消息，但在程序运行时弹出吐司消息可能会有点儿讨人厌。我会在下面的例子中演示。吐司通知不能更新你程序的数据。想做到这一点还是需要传递一个原生通知。
+
+瓷砖通知（Tile Notification） – 如果你的程序被钉在了开始界面中，你可以用瓷砖通知来更新瓷砖。你可以改变背景图片以及一个0-99的整数。
+
+发送一个吐司通知 
+
+有两种方式在本地存储你的数据。第一是通过库中的键/值对，叫做IsolatedStorageSettings。第二是通过创建真实的文件和目录，叫做IsolatedStorageFile
+
+ IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;  
+  IsolatedStorageFile fileStorage = IsolatedStorageFile.GetUserStoreForApplication();  
+            //Create new subdirectory   
+            fileStorage.CreateDirectory("textFiles");  
+            //Create a new StreamWriter, to write the file to the specified location.   
+            StreamWriter fileWriter = new StreamWriter(new IsolatedStorageFileStream("textFiles//newText.txt", FileMode.OpenOrCreate, fileStorage));  
+            //Write the contents of our TextBox to the file.   
+            fileWriter.WriteLine(writeText.Text);  
+            //Close the StreamWriter.   
+            fileWriter.Close();  
+
+			<controls:Panorama Title="waiter">  
+    <controls:Panorama.Background>  
+        <ImageBrush ImageSource="PanoramaBackground.jpg" Opacity=".5" />  
+    </controls:Panorama.Background>  
+    <controls:PanoramaItem Header="learn">  
+    </controls:PanoramaItem>  
+    <controls:PanoramaItem Header="play">  
+    </controls:PanoramaItem>  
+    <controls:PanoramaItem Header="all">  
+    </controls:PanoramaItem>  
+</controls:Panorama>  
+
+
+当你想向用户以不同的方式展示相同的数据时使用枢轴控件。 
+
+
+在C#中，添加一个图钉就是创建一个Pushpin对象，设置它的位置，然后将它添加到地图中。
+
+Pushpin pushpin = new Pushpin();  
+Location location = new Location();  
+location.Latitude = 40.1449;  
+location.Longitude = -82.9754;  
+pushpin.Location = location;  
+pushpin.Background = new SolidColorBrush(Colors.Orange);  
+pushpin.Content = "1";  
+pushpin.FontSize = 30;  
+MapControl.Children.Add(pushpin);  
+
+
+<map:MapPolygon Fill="Purple" Stroke="White" Opacity=".7" Locations="40.1449,-82.9754 40.1449,-12.9754 10.1449,-82.9754" />  
+
+<Rectangle Width="100" Height="100" Fill="Red">  
+    <toolkit:ContextMenuService.ContextMenu>  
+        <toolkit:ContextMenu>  
+            <toolkit:MenuItem Header="this is menu item 1" Click="MenuItem_Click" />  
+            <toolkit:MenuItem Header="this is menu item 3" Click="MenuItem_Click" />  
+            <toolkit:MenuItem Header="this is menu item 2" Click="MenuItem_Click" />  
+        </toolkit:ContextMenu>  
+    </toolkit:ContextMenuService.ContextMenu>  
+</Rectangle>  
+
+
+<Rectangle Width="100" Height="100" Fill="Blue">  
+    <toolkit:GestureService.GestureListener>  
+        <toolkit:GestureListener   
+            DoubleTap="DoubleTapped"  
+            Tap="Tapped"  
+            Hold="Held"  
+            DragStarted="DragStart"  
+                DragDelta="DragDelta"  
+                DragCompleted="DragEnd"  
+            Flick="Flicked"  
+            PinchStarted="PinchStart"  
+                PinchDelta="PinchDelta"  
+                PinchCompleted="PinchEnd" />  
+    </toolkit:GestureService.GestureListener>  
+</Rectangle>  
+
+
+通过向我们的页面中添加Microsoft.Phone.Marketplace程序集和相应的名称空间，就可以访问LicenseInformation类了，它直接与程序的“付费”状态相关。
+
+ 
+LicenseInformation li = new LicenseInformation(); 
+
+最后，LicenseInformation有一个非常棒的返回布尔值的方法叫IsTrial()，毫无悬念，它允许我们检测程序是否处于试用状态。你可以很方便地将它用于一个if语句，就像这样
+
+if (NetworkInterface.GetIsNetworkAvailable())  
+
+
+private readonly CameraCaptureTask _cameraTask;
+   _cameraTask = new CameraCaptureTask();
+            _cameraTask.Completed += cameraTask_Completed;
+			 _cameraTask.Show();
+			 if (e.TaskResult == TaskResult.OK)
+            {                
+                var capturedPicture = new CapturedPicture(e.OriginalFileName, e.ChosenPhoto);
+                TransientState.Set("capturedPicture", capturedPicture);
+            }            
+
+数据保存在媒体库中。
+ MediaLibrary mediaLibrary = new MediaLibrary();
+ mediaLibrary.SavePicture(picture.FileName, picture.ImageBytes);
+
+获取依赖属性的值。当依赖属性值发生变化的时候进行绑定。
+
+展示 Windows Phone 位置服务的提供程序类。GeoCoordinateWatcher   Watcher = new GeoCoordinateWatcher();
+Watcher.Start();
+
+    Microsoft.Phone.Controls.Maps.CredentialsProvider 提供用于验证地图请求的凭据。
+
+	     <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <maps:Map x:Name="MapControl"                      
+                    CredentialsProvider="{Binding CredentialsProvider}"
+                    CopyrightVisibility="Collapsed" LogoVisibility="Collapsed"
+                    ZoomLevel="{Binding Zoom, Mode=TwoWay}"
+                    Center="{Binding Center, Mode=TwoWay}"
+                    assets:MapHelpers.Mode="{Binding Mode, Mode=OneWay}">
+
+                <maps:MapItemsControl x:Name="picturesLayer"
+                                  ItemsSource="{Binding Pictures}"
+                                  MouseLeftButtonUp="picturesLayer_MouseLeftButtonUp">
+                    <maps:MapItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <maps:Pushpin Location="{Binding Position}">
+                                <Image Width="64" Source="{Binding Source}" />
+                            </maps:Pushpin>
+                        </DataTemplate>
+                    </maps:MapItemsControl.ItemTemplate>
+                </maps:MapItemsControl>
+
+                <maps:MapLayer>
+                    <maps:Pushpin Style="{StaticResource MyLocationPushpinStyle}" Location="{Binding MyLocation}" />
+                </maps:MapLayer>
+
+                <Button x:Name="ButtonZoomIn"
+                        Style="{StaticResource ButtonZoomInStyle}"
+                        HorizontalAlignment="Left" VerticalAlignment="Top"
+                        Height="56" Width="56" Margin="8,180,0,0"
+                        Click="ButtonZoomIn_Click" />
+
+                <Button x:Name="ButtonZoomOut"
+                        Style="{StaticResource ButtonZoomOutStyle}"
+                        HorizontalAlignment="Left" VerticalAlignment="Top"
+                        Height="56" Width="56" Margin="8,260,0,0"
+                        Click="ButtonZoomOut_Click" />
+
+            </maps:Map>
+
+
+			PowerSource = 
+            Microsoft.Phone.Info.DeviceStatus.PowerSource.ToString();
+        FirmwareVersion = 
+            Microsoft.Phone.Info.DeviceStatus.DeviceFirmwareVersion;
+        HardwareVersion = 
+            Microsoft.Phone.Info.DeviceStatus.DeviceHardwareVersion;
+        Manufacturer = 
+            Microsoft.Phone.Info.DeviceStatus.DeviceManufacturer;
+        Name = Microsoft.Phone.Info.DeviceStatus.DeviceName;
+        TotalMemory = 
+             (Microsoft.Phone.Info.DeviceStatus.DeviceTotalMemory / 
+            1048576).ToString() + "MB";
+        HasKeyboard = Microsoft.Phone.Info.DeviceStatus.IsKeyboardPresent;
+ IsConnected = Microsoft.Phone.Net.NetworkInformation.DeviceNetworkInformation.IsNetworkAvailable;
+  ConnectionType = GetInterfaceTypeString(Microsoft.Phone.Net.NetworkInformation.NetworkInterface.NetworkInterfaceType);
+
+			获取蜂窝移动运营商的名称
+            MobileOperator = Microsoft.Phone.Net.NetworkInformation.DeviceNetworkInformation.CellularMobileOperator;
+
+            if (String.IsNullOrEmpty(MobileOperator))
+            {
+                MobileOperator = "N/A";
+            }
+			如果网络启用了蜂窝数据，则为 true；否则为 false。
+            IsCellularDataEnabled = Microsoft.Phone.Net.NetworkInformation.DeviceNetworkInformation.IsCellularDataEnabled;
+			获取一个值，该值指示网络是否允许数据漫游。
+
+            IsCellularDataRoamingEnabled = Microsoft.Phone.Net.NetworkInformation.DeviceNetworkInformation.IsCellularDataRoamingEnabled;
+
+            IsWifiEnabled = Microsoft.Phone.Net.NetworkInformation.DeviceNetworkInformation.IsWiFiEnabled;
+
+			获取或设置其上运行应用程序的设备是否支持陀螺仪传感器。
+			  IsGyroSupported = Microsoft.Devices.Sensors.Gyroscope.IsSupported;
+			  获取或设置其上运行应用程序的设备是否支持加速计传感器。
+        IsAccelerometerSupported = 
+                       Microsoft.Devices.Sensors.Accelerometer.IsSupported;
+		获取或设置其上运行应用程序的设备是否支持罗盘传感器。
+        IsCompassSupported = Microsoft.Devices.Sensors.Compass.IsSupported;
+
+		获取或设置其上运行应用程序的设备是否支持 Microsoft.Devices.Sensors.Motion 类所需的传感器。
+        IsMotionSupported = Microsoft.Devices.Sensors.Motion.IsSupported;
+
+		指示设备当前是以电池电源运行还是插入了外部电源。枚举有battery和external
+		 PowerSource = Microsoft.Phone.Info.DeviceStatus.PowerSource.ToString();
+		 返回设备上运行的固件版本。
+            FirmwareVersion = Microsoft.Phone.Info.DeviceStatus.DeviceFirmwareVersion;
+			返回设备上运行的硬件版本。
+            HardwareVersion = Microsoft.Phone.Info.DeviceStatus.DeviceHardwareVersion;
+
+            Manufacturer = Microsoft.Phone.Info.DeviceStatus.DeviceManufacturer;
+
+            Name = Microsoft.Phone.Info.DeviceStatus.DeviceName;
+            TotalMemory = (Microsoft.Phone.Info.DeviceStatus.DeviceTotalMemory / 1048576).ToString() + "MB";
+            HasKeyboard = Microsoft.Phone.Info.DeviceStatus.IsKeyboardPresent;
+
+
+			public sealed class PhotoCamera : Microsoft.Devices.Camera
+			  Camera = new PhotoCamera();
+
+                Camera.Initialized += camera_Initialized;
+
+                videoBrush = new VideoBrush();
+                videoBrush.Stretch = Stretch.Uniform;
+
+                videoBrush.SetSource(Camera); 
+				提供 Windows Phone 相机应用程序的基本相机功能。该类包括用于启用和配置诸如图像拍摄、对焦以及闪光灯模式之类的功能的成员。
+
+       The launcher and chooser APIs invoke distinct built-in applications that replace the currently running application. The launchers and choosers framework provides the end user with a seamless experience while masking the application switching that occurs in the background.
+
+				 camera = new PhotoCamera();
+
+                camera.Initialized += camera_Initialized;
+
+                //Event is fired when the button is half pressed
+                CameraButtons.ShutterKeyHalfPressed += camera_ButtonHalfPress;
+
+                //Event is fired when the button is fully pressed
+                CameraButtons.ShutterKeyPressed += camera_ButtonFullPress;
+                //Event is fired when the capture sequence is complete and an image is available.
+                camera.CaptureImageAvailable += camera_CaptureImageAvailable;
+
+                camera.CaptureCompleted += camera_CaptureCompleted;
+
+                //Set the VideoBrush source to the camera
+                viewfinderBrush.SetSource(camera);
+
+				 camera.Focus();
+				    camera.CaptureImage();
+
+	To access the Media Library in the SaveCapturedImage method, your application must declare the ID_CAP_MEDIALIB capability. Modify the Properties\WMAppManifest.xml file again to add the media library capability declaration.
+
+	 int[] pixelData = new int[(int)(camera.PreviewResolution.Width * camera.PreviewResolution.Height)];
+    camera.GetPreviewBufferArgb32(pixelData);
+
+	Launcher - A “fire and forget” action,
+	ConnectionSettingsTask - Enables to launch system settings application to control various connection settings
+EmailComposeTask - Enables an application to launch the email application with a new message already displayed, so users can send email messages from within an application
+MarketplaceDetailTask - Enables an application to launch the Windows Phone Marketplace client application and display the details page for the specified product
+MarketplaceHubTask - Enables an application to launch the Windows Phone Marketplace client application
+MarketplaceReviewTask - Enables an application to launch the Windows Phone Marketplace client application and display the review page for the specified product
+MarketplaceSearchTask - Enables an application to launch the Windows Phone Marketplace client application and display the search results from the specified search parameters
+MediaPlayerLauncher - Enables an application to launch the media player
+PhoneCallTask - Enables an application to launch the Phone application, so users can make a phone call from within an application
+SaveContactTask - Enables an application to launch the contacts application and provide initial data for new contact, so users can save the data from within an application to a new contact
+SaveEmailAddressTask - Enables an application to launch the contacts application, so users can save an email address from within an application to a new or existing contact
+SavePhoneNumberTask - Enables an application to launch the contacts application so users can save a phone number from within an application to a new or existing contact
+SearchTask - Enables an application to launch the Web Search application
+ShareLinkTask - Enables an application to post a link with title and message via user’s social network account
+ShareStatusTask - Enables an application to post status update via user’s social network account
+SmsComposeTask – Enables an application to launch the SMS application
+WebBrowserTask - Enables an application to launch the Web Browser application
+
+  WebBrowserTask webBrowserTask = new WebBrowserTask();
+    const string url = "http://m.bing.com/search?q={0}&a=results";
+    webBrowserTask.URL = string.Format(url, txtInput.Text);
+    webBrowserTask.Show();
+
+	BingMapsDirectionsTask enables an application to launch the built in maps application, using data supplied by the user to show directions between two locations. 
+	BingMapsDirectionsTask directionsTask = 
+        new BingMapsDirectionsTask();
+  directionsTask.Start = new LabeledMapLocation(txtOrigin.Text, null);
+    directionsTask.End = new LabeledMapLocation(txtDestination.Text, 
+        null);
+
+    directionsTask.Show();
+
+	Chooser - An “open file dialog” action, where information is selected from a specific phone application’s storage area, for example, selecting an email address, contact, or picture
+
+
+	EmailAddressChooserTask - Enables an application to launch the Contacts application, so users can extract selected contact email addresses
+CameraCaptureTask - Enables an application to launch the Camera application, so users can take a photo from within an application
+PhoneNumberChooserTask - Enables an application to launch the Contacts application, so users can extract selected contact phone numbers
+PhotoChooserTask - Enables an application to launch the Photo Chooser application, so users can select a photo
+Contacts – Allows an application to search for contacts according to their name, e-mail address or phone number.
+Appointments – Allows an application to search for appointments which occur in a specified time span.
+
+
+public void SearchAsync(System.DateTime startTimeInclusive, System.DateTime endTimeInclusive, object state)
+ appointments = new Appointments();
+    appointments.SearchCompleted += new 
+EventHandler<AppointmentsSearchEventArgs>(appointments_SearchCompleted);
+
+Contacts c=new Contacts();
+public void SearchAsync(string filter, Microsoft.Phone.UserData.FilterKind filterKind, object state)
+
+  
+  private RawPushNotificationMessage rawPushNotificationMessage = new RawPushNotificationMessage(MessageSendPriority.High);
+  ///第二个参数为发送后的回调
+  public void SendAsync(System.Uri uri, [System.Action<MessageSendResult> messageSent = null], [System.Action<MessageSendResult> messageError = null])
+
+  public HttpNotificationChannel(string channelName, string serviceName)
+  创建通知通道。将此构造函数与经过身份验证的 Web 服务一起使用。应用程序将使用 channelName 值标识通知通道。serviceName 值标识经过身份验证的 Web 服务证书的主体名称。
+ httpChannel = new HttpNotificationChannel(channelName, "HOLWeatherService"); 
+ httpChannel.Open();
+    
+	当通道打开时候发生，用来向服务端注册
+    httpChannel.ChannelUriUpdated += new EventHandler<NotificationChannelUriEventArgs>(httpChannel_ChannelUriUpdated);
+
+            //Subscribed to Raw Notification
+            httpChannel.HttpNotificationReceived += new EventHandler<HttpNotificationEventArgs>(httpChannel_HttpNotificationReceived);
+
+            //general error handling for push channel
+            httpChannel.ErrorOccurred += new EventHandler<NotificationChannelErrorEventArgs>(httpChannel_ExceptionOccurred);
+
+			A cloud service can control a tile's background image, counter (or 'badge'), and title properties. 
+
+			A cloud service can generate a special kind of push notification known as a toast notification, which displays as an overlay onto the user’s current screen.出现一个弹出层。
+
+	BindToShellToast()		应用程序用于将 Toast 通知订阅绑定到 Microsoft.Phone.Notification.HttpNotificationChannel 类实例的方法。
+ 
+public void BindToShellTile(System.Collections.ObjectModel.Collection<Uri> baseUri)
+ 将作为输入参数传递的图块与通知订阅绑定在一起。图块可以包含本地资源引用或远程资源引用。
+
+  ShellTileSchedule shellTileSchedule;
+            shellTileSchedule = new ShellTileSchedule();
+            shellTileSchedule.Recurrence = UpdateRecurrence.Interval;
+            shellTileSchedule.Interval = UpdateInterval.EveryHour;
+            shellTileSchedule.StartTime = DateTime.Now;
+            shellTileSchedule.RemoteImageUri = new Uri(@"http://cdn3.afterdawn.fi/news/small/windows-phone-7-series.png");
+            shellTileSchedule.Start();
+
+
+		ShellTile	用于管理应用程序的应用程序图块和次要图块的类。
+
+		  ShellTile mainTile = ShellTile.ActiveTiles.FirstOrDefault(t => t.NavigationUri.ToString() == "/");            
+
+            StandardTileData newData = new StandardTileData()
+            {
+                BackgroundImage = new Uri(String.Format("Images/MainTile/{0}.png", (listMainTileImage.SelectedItem as ListPickerItem).Content), UriKind.Relative),
+                Title = txtMainTileTitle.Text
+            };
+
+            mainTile.Update(newData);
+
+
+			创建一个新的次要图块。
+			  ShellTile.Create(tileUri, initialData);
+
+			  The XNA Framework is not a game engine. It does not include physics, collision detection, or other things often found in game engines. It is a game development framework, but how the game works is programmed entirely by you.
+			  . The game includes three possible states:
+Main menu (MainMenuScreen class)
+Playing the game (GameplayScreen class)
+Paused (PauseScreen class)
+
+ Point currentPosition = Mouse.GetPosition(this);
+   表示后台文件传输请求。
+     BackgroundTransferRequest btr = new BackgroundTransferRequest(new Uri(serviceUploadLocationURL + localDBName, UriKind.Absolute));
+   Microsoft.Phone.BackgroundTransfer.TransferPreferences    TransferPreferences.AllowBattery;
+	 当存在 Wi-Fi 连接并且设备使用电池或外部电源时允许传输。
+
+启用对后台传输请求的管理。	 public static class BackgroundTransferService
+    Microsoft.Phone.BackgroundTransfer 的成员
+	BackgroundTransferRequest btr = new BackgroundTransferRequest（uri uri）；
+	 Microsoft.Phone.BackgroundTransfer.BackgroundTransferService.Add(btr);
+
+	 上传完毕后要记得从后台服务中移除  Microsoft.Phone.BackgroundTransfer.BackgroundTransferService.Remove
+	 
+	 public sealed class ScheduledActionService
+    Microsoft.Phone.Scheduler 的成员(e.Request);   启用对计划操作的管理。
+
+
+	public abstract class ScheduledTaskAgent : Microsoft.Phone.BackgroundAgent   重写此类以实现某个计划任务，也称为后台代理。此类包含一个方法，即 Microsoft.Phone.Scheduler.ScheduledTaskAgent.OnInvoke(Microsoft.Phone.Scheduler.ScheduledTask)，当执行计划任务时调用此方法
+
+	Knowing whether the application was preserved in-memory is as simple as examining this new property, which is set to true if the application was preserved and false if tombstoning has occurred.
+    Fast Application Switching (FAS)
+
+	可以将上下文信息传递到父应用程序的通知。   Microsoft.Phone.Scheduler.Reminder 
+
+	StandardTileData updatedData = new StandardTileData(); 
+	 updatedData.BackBackgroundImage = new Uri(）更新数字之类。
+
+	ScheduledTaskAgent This method is called when a periodic or resource intensive task is invoked
+
+	protected void Abort()
+    Microsoft.Phone.BackgroundAgent 通知操作系统，代理无法执行其预定的任务并且在前台应用程序解决阻止问题并重新启用代理之前，不应该再次启动该代理。
+
+	public sealed class BackgroundAudioPlayer  提供对音频播放功能（如播放、暂停、快进和后退）的后台访问。
+
+	Microsoft.Phone.BackgroundAgent 的实现，专门设计为在后台播放收音机。
+
+	phone.scheduler.ScheduledActionService 添加和删除任务
+
+	 ProgressIndicator pi = new ProgressIndicator();
+            pi.Text = "Searching IMDb for " + NavigationContext.QueryString["MovieName"];
+            pi.IsIndeterminate = true;
+            pi.IsVisible = true;
+            SystemTray.ProgressIndicator = pi;
+
+	System.Windows.Input.Touch.FrameReported   
+	foreach (TouchPoint p in e.GetTouchPoints(DrawCanvas)) 
+  { 
+    if ((InDrawingMode) && (p.Action == TouchAction.Move)) 
+    { 
+      Ellipse ellipse = new Ellipse(); 
+      ellipse.SetValue(Canvas.LeftProperty, p.Position.X); 
+      ellipse.SetValue(Canvas.TopProperty, p.Position.Y); 
+      ellipse.Width = _touchRadius; 
+      ellipse.Height = _touchRadius; 
+      ellipse.IsHitTestVisible = false; 
+      ellipse.Stroke = ((ColorClass)ColorListBox.SelectedItem).ColorBrush; 
+      ellipse.Fill = ((ColorClass)ColorListBox.SelectedItem).ColorBrush; 
+      DrawCanvas.Children.Add(ellipse); 
+    }
+
+	TouchPoint Action:  Identifies whether the touch action is  Down,  Move, or  Up. 
+TouchDevice :  Contains an  ID that represents the “finger” as it moves about the 
+screen. 
+
+Tap: Select an object in a ListBox, touch to click a button, or text to navigate to 
+another screen. 
+
+Flick: Similar to a pan gesture except that the finger moves quickly across the 
+screen, acceleration is detected, and the object moves with inertia relative to the 
+amount of acceleration applied. 
+
+Touch and Hold:  Touch on an area of screen for a period of time, say a second, 
+and a touch and hold gesture is detected. Used to open context menus. 
+
+public static Microsoft.Xna.Framework.Input.Touch.GestureSample ReadGesture()
+    Microsoft.Xna.Framework.Input.Touch.TouchPanel 的成员  读取触摸板上的可用手势。
+
+	e.ManipulationOrigin : The point from which the manipulation originated. 
+Indicates the location of the finger relative to the ManipulationContainer object. 
+For two-finger manipulations, the ManipulationOrigin  represents roughly the 
+center point between the two fingers. 两个手指中间的点
+
+public sealed class Microphone
+    Microsoft.Xna.Framework.Audio 的  提供用于通过麦克风捕获音频数据的属性、方法、字段和事件。
+
+	public bool Play(float volume, float pitch, float pan)
+    Microsoft.Xna.Framework.Audio.SoundEffect 的成员 用指定的音量和音调播放声音
+
+	The most important item  to keep in mind is that Silverlight for Windows Phone only 
+supports basicHttpBinding and webHttpBinding .For security, Windows Phone supports Basic 
+Authentication for credentials (SSL is always recommended if using Basic Authentication). 
+
+PhoneApplicationService.Current.ApplicationIdleDetectionMode = IdleDetectionMode.Disabled; 禁止空闲检测，这样在锁屏的情况下程序不会终止。
+
+The first 
+code change I made is in App.xaml.cs in the Application_Activated event. I add code to check if the 
+application instance is preserved (was dormant) and return if that is the case: 
+if (e.IsApplicationInstancePreserved) 
+{ 
+  Debug.WriteLine("Not Tombstoned - Resume from dormant state"); 
+  return; 
+}
+
+  Microsoft.Phone.Marketplace.LicenseInformation licenseInformation = new LicenseInformation();
+      IsTrialTextBlock.Text = licenseInformation.IsTrial().ToString();
+	  Launchers do not return any data back to your application; they are “fire and forget.” Choosers can 
+return data and status to your application.  
+
+BingMapsDirectionsTask   The start and end points contain a string label and geographic coordinates specifying the latitude 
+and longitude of the location. If you omit the geographic coordinates, the label stri ng is used by the Bing 
+Maps application as a search term to find the location. 
+
+BingMapsDirectionsTask task = new BingMapsDirectionsTask(); 
+ //Use the Windows Phone user’s current location as Start by not  
+ //specifying a Start location on the BingMapsDirectionsTask instance 
+ //Use a search term of “Gwinnett Arena” as the End location.  
+ //Leave GeoCoordinate location value as null to have Bing first find the location 
+ LabeledMapLocation DirectionsEndPoint = new LabeledMapLocation(); 
+ DirectionsEndPoint.Label = “Gwinnett Arena”; 
+ //or pass in a geolocation... 
+ // LabeledMapLocation DirectionsEndPoint = new LabeledMapLocation(“Gwinnett Arena”,  
+ // new GeoCoordinate(33, 98764, -84.09148)); 
+ task.End = DirectionsEndPoint; 
+ task.Show(); 
+
+
+ BingMapsTask task = new BingMapsTask(); 
+  //Search for restaurants near the Gwinnett Arena 
+  //Leave the Center property blank to use the user's current location 
+  //Use location simulation in the Emulator to help you test 
+  task.Center = new GeoCoordinate(33.98764, -84.09148); 
+  task.SearchTerm = "restaurants"; 
+  task.Show(); 
+
+  ConnectionSettingsTask New in Windows Phone OS 7.1, the ConnectionsSettingsTask class allows you to show settings related to 
+AirplaneMode, Bluetooth, Cellular, and Wi-Fi connections from within your a pplication.
+
+The  EmailComposeTask class allows the user to send e-mail fr om an application. 
+
+MarketplaceHubTask  
+
+The  PhoneCallTask class has two properties:  DisplayName and PhoneNunber. When the 
+PhoneCallTask.Show() method is called, a dialog box is displayed that says, “Dial DisplayName at 
+PhoneNumber.” 
+
+WebBrowserTask webBrowserTask = new WebBrowserTask(); 
+  webBrowserTask.Uri = "http://create.msdn.com"; 
+  webBrowserTask.Show();
+
+  New in Windows Phone OS 7.1, the SaveRingToneTask  class allows the user to select an available music 
+track or clip downloaded as part of the application as a ringtone. Users cannot select music from their 
+
+<toolkit:TransitionService.NavigationInTransition> 
+  <toolkit:NavigationInTransition> 
+    <toolkit:NavigationInTransition.Backward> 
+      <toolkit:RollTransition /> 
+    </toolkit:NavigationInTransition.Backward> 
+    <toolkit:NavigationInTransition.Forward> 
+      <toolkit:RotateTransition  /> 
+    </toolkit:NavigationInTransition.Forward> 
+  </toolkit:NavigationInTransition> 
+</toolkit:TransitionService.NavigationInTransition> 
+
+
+It is set to 30 frames per second (fps) to be  aligned with the refresh rate of the hardware. You can 
+change the frame rate to 60  fps using the following code: 
+GraphicsDeviceManager.SynchronizeWithVerticalRetrace = false; 
+game.TargetElapsedTime = FromSeconds (1/60f); 
+
+A  Vector2 can represent either a position or a speed. 
+
+ We will perform speed and position calculations in the  Update  method. 
+We also need to check to see if an object has either collided with another object/sprite, or if the object 
+collided with an edge of the screen. 
+
+Panorama1.DefaultItem 
+
+对于listbox  this.State["listBox1"] = ((ScrollViewer)VisualTreeHelper.GetChild(listBox1, 
+0)).VerticalOffset;
+
+MPNS allowed developers to update the 
+Application Tile title, background image, and count.  ShellTileSchedule allows developers to update the 
+Background image only.
+
+Build more responsive applications in certain scenarios
+Each application can have one background  agent. The agent can be registered as a  PeriodicTask, a 
+ResourceIntensiveTask, or as both types of tasks. 
+
+Calling  NotifyComplete  indicates success while calling  Abort indicates failure to 
+perform the task. Calling Abort sets IsScheduled to false. When the application is launched it can check 
+the  IsScheduled property to determine whether  Abort was called.
+
+PeriodicTask:  Periodic agents run for small amounts of time on a regularly 
+recurring interval. Scenarios include location upload and performing small 
+amounts of data synchronization.  轻量级
+ResourceIntensiveTask:  Resource-intensive agents run for a fairly long period of 
+time if the phone meets a certain set of  requirements for processor activity, power 
+source, and network connections. This scenario is focused on synchronizing large 
+amounts of data when the device is not actively being used by the user and the 
+phone is plugged in. 重量级
+
+位置跟踪、数据同步、瓷砖的更新和toast更新都适合后台agent
+Both PeriodicTask and ResourceIntensiveTask agents cannot use any more than 6 MB of memory. 
+Audio Agents are restricted to 15MB. Agents that exceed these memory limits are terminated. 
+
+Each application can have up to five requests queued at any given time. Adding an additional transfer request will result in an exception. 
+
+public sealed class BackgroundAudioPlayer  提供对音频播放功能（如播放、暂停、快进和后退）的后台访问。提供锁屏的情况下的音频播放。
+
+The  Genre attribute on the App 
+element in the WMManifest.xml file determines  where an application appears. The default is 
+Genre="Apps.Normal" so that the application appears in the Application List. Change the genre attribute 
+to Genre="Apps.Games"  to have the game show up in the Games Hub.
+
+
+   <Application.ApplicationLifetimeObjects>
+        <!--Required object that handles lifetime events for the application-->
+        <shell:PhoneApplicationService 
+            Launching="Application_Launching" Closing="Application_Closing" 
+            Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+    </Application.ApplicationLifetimeObjects>
+
+	SearchTask searchTask = new SearchTask();
+searchTask.SearchQuery=txtSearchTerm.Text;
+searchTask.Show();
+
+	// create an instance of DatabaseSchemaUpdater
+					DatabaseSchemaUpdater schemaUpdater = context.CreateDatabaseSchemaUpdater();
+					// get current database schema version
+					// if not changed the version is 0 by default
+					int version = schemaUpdater.DatabaseSchemaVersion;
+
+					// if current version of database schema is old
+					if (version == 0)
+					{
+						// add Address column to the table corresponding to the Person class
+						schemaUpdater.AddColumn<Person>("Address");
+						// add Email column to the table corresponding to the Person class
+						schemaUpdater.AddColumn<Person>("Email");
+						// IMPORTANT: update database schema version before calling Execute
+						schemaUpdater.DatabaseSchemaVersion = 1;
+						// execute changes to database schema
+						schemaUpdater.Execute();
+					}
+
+关于在 Silverlight 中使用套接字的一个限制是：网络应用程序可以连接到的端口范围必须在 4502-4534 范围内。 这些是使用套接字从 Silverlight 应用程序进行连接所唯一允许使用的端口。 如果连接的目标端口不在此端口范围内，则尝试连接时将会失败。
+
+Socket 类支持使用以下方法执行异步数据传输：
+ConnectAsync - 启动一个对连接到远程主机的异步请求。
+SendAsync - 在连接的套接字上写入从一个或多个缓冲区传出的数据。
+ReceiveAsync - 将传入数据从连接的套接字读入到一个或多个缓冲区中。
+Shutdown - 完成所有挂起的发送操作，并用信号通知远程终结点应关闭连接。 如果指定了 Send，在远程计算机关闭其连接端（表现为接收 0 字节）之前，可能仍会收到数据。
+Close - 关闭远程主机连接并释放与套接字关联的所有托管和非托管资源。
+
+Silverlight Socket 数据交换端口必须在4502-4534范围，也就是说，整个Socket将用到两个端口，一个是943用于策略请求，另一个是4502-4534范围的你指定的数据交换端口。
+
+OperationContext.Current.GetCallbackChannel  获取调用当前操作的客户端实例的通道。
+
+声音的通信使用到了UDPClient 类。这个类使用 UDP 与网络服务通讯。UDP 的优点是简单易用，并且能够同时向多个地址广播消息。UdpClient 类提供了一些简单的方法，用于在阻止同步模式下发送和接收无连接 UDP 数据报。因为 UDP 是无连接传输协议，所以不需要在发送和接收数据前建立远程主机连接。
+  与TcpClient和TcpListener类似，UdpClient也是构建于Socket类之上，提供了更高层次的UDP服务抽象，用于在阻止同步模式下发送和接收无连接 UDP 数据报，使用简单直观。
+
+  因为UDP是无连接传输协议，所以不需要在发送和接收数据前建立远程主机连接。但可以选择使用下面两种方法之一来指定默认远程主机：
+
+l  使用远程主机名和端口号作为参数创建UdpClient类的实例。
+
+l  创建UdpClient类的实例，然后调用Connect方法。
+
+       如果在创建UdpClient实例时没有指定远程主机信息，那么可以在发送数据前通过UdpClient的Connect方法先指定远程主机的地址和端口号，即指定连接信息。但是如果只需要接收数据，则不需要进行指定连接的操作。
+
+  int port = 2000;
+            string host = "127.0.0.1";
+
+       ///创建终结点（EndPoint）
+            IPAddress ip  = IPAddress.Parse(host);//把ip地址字符串转换为IPAddress类型的实例
+            IPEndPoint ipe = new IPEndPoint(ip, port);//用指定的端口和ip初始化IPEndPoint类的新实例
+
+         ///创建socket并开始监听
+            Socket s　=　new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);//创建一个socket对像，如果用udp协议，则要用SocketType.Dgram类型的套接字
+            s.Bind(ipe);//绑定EndPoint对像（2000端口和ip地址）
+            s.Listen(0);//开始监听
+            Console.WriteLine("等待客户端连接");
+
+         ///接受到client连接，为此连接建立新的socket，并接受信息
+            Socket temp = s.Accept();//为新建连接创建新的socket
+            Console.WriteLine("建立连接");
+            string recvStr = "";
+            byte[] recvBytes = new byte[1024];
+            int bytes;
+            bytes = temp.Receive(recvBytes, recvBytes.Length, 0);//从客户端接受信息
+            recvStr += Encoding.ASCII.GetString(recvBytes, 0, bytes);
+
+
+
+			
+			 SocketAsyncEventArgs socketEventArg = new SocketAsyncEventArgs();
+
+            DnsEndPoint hostEntry = new DnsEndPoint(_serverName, _port);
+            
+            // Create a socket and connect to the server 
+
+            Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            socketEventArg.Completed += new EventHandler<SocketAsyncEventArgs>(SocketEventArg_Completed);
+            socketEventArg.RemoteEndPoint = hostEntry;
+
+            socketEventArg.UserToken = sock;
+
+            try
+            {
+                sock.ConnectAsync(socketEventArg);
+            }
+
+			1.第一类的范围是0~1023，称为众所周知的端口，这些端口号由特定的网络程序使用，例如，TCP协议使用80端口来完成Http协议的传输。
+2.第二类的范围是1024~49151，称为登记端口，一般情况下不应该在程序中使用。
+3.第三类的范围是49152~65535，称为私有端口， 这些端口可以由普通用户程序使用。
+
+public void JoinMulticastGroup(System.Net.IPAddress multicastAddr)
+    System.Net.Sockets.UdpClient 的成员    
+	UdpClient类提供了JoinMulticastGroup方法，用于将UdpClient加入到使用指定的IPAddress的组播组中，调用该方法后，基础的Socket会自动向路由器发送数据包，用于请求成为组播组的成员，如果成为组播组成员，就可以接收该组播组的数据报。
+	组播组又称为多路广播组，组播地址的范围在224.0.0.0到239.255.255.255的D类IP地址（至于这个概念大家可以百度百科里面就查看）。任何发送到组播地址的消息都会被发送到组内所有成员设备上，组可以使永久的也可以是临时，大多数我们使用的都是临时的，仅在有成员的时候才存在。
+	IPAddress.Broadcast  得到广播地址 
+
+
+	rest REpresentational State Transfer
+
+
+	  [OperationContract]
+    [WebGet(UriTemplate = "/Vendors", 
+      BodyStyle = WebMessageBodyStyle.Bare, 
+      ResponseFormat = WebMessageFormat.Json)]
+    ObservableCollection<Vendor> GetVendors();
+
+	 XElement designerItemsXML = SerializeDesignerItems(selectedDesignerItems);
+            XElement connectionsXML = SerializeConnections(selectedConnections);
+
+            XElement root = new XElement("Root");
+            root.Add(designerItemsXML);
+            root.Add(connectionsXML);
+
+            root.Add(new XAttribute("OffsetX", 10));
+            root.Add(new XAttribute("OffsetY", 10));
+
+	 MediaPlayerLauncher mediaPlayerLauncher = new MediaPlayerLauncher();
+      mediaPlayerLauncher.Controls = MediaPlaybackControls.FastForward |
+        MediaPlaybackControls.Pause | MediaPlaybackControls.Rewind |
+        MediaPlaybackControls.Skip | MediaPlaybackControls.Stop;
+      mediaPlayerLauncher.Location = MediaLocationType.Data;
+      mediaPlayerLauncher.Media = new Uri("http://ecn.channel9.msdn.com/o9/ch9/8/9/6/6/3/5/WP7Xbox_ch9.mp4");
+      mediaPlayerLauncher.Show();
+
+	  linq to sql的局限：
+	  ExecuteCommand 不受支持：Windows Phone 不支持执行“原始” Transact-SQL、数据定义语言 (DDL) 或数据建模语言 (DML) 语句。
+不支持 ADO.NET 对象（如 DataReader）：LINQ to SQL 查询的所有数据在数据上下文指定类型的对象集中返回。
+仅支持 Microsoft SQL Server Compact Edition (SQL CE) 数据类型：SQL CE 是本地数据库的基础数据库技术。有关 SQL CE 数据类型的完整列表，请参见数据类型 (SQL Server Compact)。
+不支持 Table.IListSource.GetList 方法：若要绑定到表中的所有内容，则查询整个表并且绑定到该查询。使用业务逻辑处理插入和删除。
+不支持 BinaryFormatter：若要将自定义类型转换为 SQL Server Binary 或 VarBinary 数据类型，您的数据上下文属性可以实现 LINQ to SQL CustomType，或者可以为 byte[] 或 System.Data.Linq.Binary 类型。若要实现 LINQ to SQL CustomType，请首先创建实现 ToString() 和 Parse() 的自定义类，然后将该类用作您数据上下文中的属性。LINQ to SQL 可从 CustomType 映射到任何 SQL Server 字符串类型，例如，Char、NChar、NVarChar、Text 和 XML。
+Take() 在 LINQ 查询中需要常数值：SQL CE 不支持在 Transact-SQL TOP 语句中使用查询值。如果您要在 Take 方法中使用变量值，请在未使用 Take 方法的其他查询中计算该值。
+Skip() 和 Take() 需要使用排序列表：这些方法依靠排序以一致的方式返回结果。
+ 
+ MarketplaceHubTask marketplaceHubTask = new MarketplaceHubTask();
+      marketplaceHubTask.ContentType = MarketplaceContentType.Music;
+      marketplaceHubTask.Show();
+
+	  Microsoft recommends that the application provides a splash screen image only when it takes longer than 1 second to load the first screen. 
+Wherever possible (if the image has no transparency) use JPEG images since these decode faster than PNG.
+
+
+     Make sure to always change this to "Content" in order to reduce the size of your DLL, speeding up both app load and image load.As content or a resource. Resources are included in your assembly (DLL) while content is included in your deployment package (XAP) alongside the DLL.
+
+
+	 Note: When you use "Build Action" of type "Content" then you access your image in this way:
+
+<Image Source="fl.jpg" />
+Note: When you use "Build Action" of type "Resource" then you access your image in this way:
+
+<Image Source="/WP7EncodeDecodeDemo;component/fl.jpg" />  值得注意
+
+ If you use images that are larger than 2000 x 2000 pixels, they will be significantly slower to appear.
+
+
+ Set the Source URI path for an image using a leading slash, such as "/folder/myImage.jpg". 
+ 注意leading slash 
+
+ Break the Application into Smaller Assemblies
+
+ are highly encouraged to only list the capabilities your application really needs in this file, and delete the rest. There are many reasons, some of them are raw certification requirements 在market上会显示
+
+ 当键盘显示的时候确定按钮不被遮挡。
+ 测试字体在黑白两种主体下的显示。
+ 一个典型的场景是Panorama控件的背景图片，如果设置为Content在首次显示页面时会有闪烁。
+ 微软给出的标准解答是，使用”Content”要比“Resource”性能上好一些。因为Windows Phone 7是为文件和网络流做了优化处理，但是Memory流却没有。
+
+
+ 程序的自定义退出使用异常来实现。
+
+
+ •需要从C#代码中动态访问的资源文件（如XML文件等），需要设置为Resource
+
+ 当安装文件夹中文件BuildAction设置为为Content时，可以借助XNA库中TitleContainer类的OpenStream()方法获得文件流（先要引用Microsoft.Xna.Framework库）。之后可以按照同样的方法进行文件的操作，如读取、复制等。
+
+Stream stream = Microsoft.Xna.Framework.TitleContainer.OpenStream("Data/MyData2.txt");
+
+也就是说，目前可以通过两种方式访问到安装文件夹中的文件：
+
+（1）当文件为Resource类型时，可通过Application.GetResourceStream方法取得文件流。
+
+（2）当文件为Content类型时，可通过XNA库中的TitleContainer.OpenStream方法获得文件流。
+
+当加载大图片的时候使用writebitmap 
+    if (httpChannel.IsShellTileBound == true)
+                {
+                    Trace("Already bounded (register) to Tile Notifications");
+                }
+
+
+StreamResourceInfo sri = null;
+    Uri uri = new Uri("LoadJpegSample;component/Test3k3k.JPG", UriKind.Relative);
+    sri = Application.GetResourceStream(uri);
+
+    WriteableBitmap wb = new WriteableBitmap((int)this.image1.Width, (int)this.image1.Height);
+
+    Extensions.LoadJpeg(wb, sri.Stream);
+    this.image1.Source = wb;
+
+位图缓存允许UI元素在首次渲染后将其视图数据缓存为位图。之后再次显示元素时就可以绕过渲染图形的过程，直接显示缓存的位图。
+
+•如果程序中使用了本地化，不要将本地化资源包含在主程序集中。为每种语言创建一个独立的附加程序集。
+
+一种方案是在LayoutUpdated的事件处理程序中执行这些耗时的操作。LayoutUpdated事件会在应用程序的第一帧显示之后才执行。
+
+在WP7上的SIlverlight中，storyboard驱动的动画运行在构图线程中，并且会被设备的GPU在一个称为自动缓存的进程中自动缓存和处理。
+
+P:System.Windows.UIElement.Opacity和P:System.Windows.UIElement.Clip属性也是由构图线程处理的。然而，如果使用了Opacity mask或非矩形剪辑的话，这些操作将被传递给UI线程处理。
+
+从性能和硬件兼容性方面考虑，如果没有特殊的需求，应当避免在WP7上的Silverlight应用程序中使用Mouse事件。相反，应当用Manipulation 事件来替代。
+
+　构图线程会处理一些简单的与RenderTransform和Projection属性关联的动画。以下列表显示了构图线程经常书里的动画。
+
+　　T:System.Windows.Media.ScaleTransform
+
+　　T:System.Windows.Media.TranslateTransform
+
+　　T:System.Windows.Media.RotateTransform
+
+　　T:System.Windows.Media.PlaneProjection
+
+
+
+PerformanceProgressBar将动画从UI线程移到了构图线程。
+
+使用HttpWebRequest 代替WebClient进行Web服务请求。在异步请求线程中处理返回数据，然后使用BeginInvoke方法将数据传送到UI。
+
+可以通过在Windows Phone 7模拟器中启用重绘区域可视化的观察应用程序中哪些区域重绘了。当程序运行中某个区域完成绘制时，就会有一个颜色阴影来标识。着色的区域标志着是由CPU而不是GPU来处理绘制的。
+
+In order to consume less memory, it is recommended to use, whenever possible, the new map launchers, rather than embedding a Map control in your app. winphone8是如此，不是winp7是否。
+
+
+WindowsPhone.Recipes.Push.Messasges.TilePushNotificationMessage
+public string SecondaryTile { set; get; }   
+
+public string TargetPage { set; get; }
+    WindowsPhone.Recipes.Push.Messasges.ToastPushNotificationMessage 的成员  设置目标路径，比如Uri(Uri.EscapeUriString(String.Format("/CityPage.xaml?location={0}",
+               locationName)), UriKind.Relative);
+
+  记得inputScope 
+
+  You can see the MemoryCounter results only in DEBUG mode!
+
+	input.InputScope = new InputScope { Names = { new InputScopeName() { NameValue = InputScopeNameValue.TelephoneNumber } } };
+
+			You specify a placeholder segment by enclosing the name of the segment with curly braces ( { and } ). The placeholder segment acts as a variable. 
+
+			如果想在当前页结束，那么就
+			 while (NavigationService.CanGoBack)
+    {
+        NavigationService.RemoveBackEntry();
+
+    }
+
+	this.photoCameraCapture = new CameraCaptureTask(); 
+
+this.photoCameraCapture.Completed += new EventHandler<PhotoResult>(photoCameraCapture_Completed); 
+
+private void takePhoto_Click(object sender, RoutedEventArgs e) 
+        { 
+            photoCameraCapture.Show(); 
+        } 
+
+        private void photoCameraCapture_Completed(object sender, PhotoResult e) 
+        { 
+            if (e.TaskResult == TaskResult.OK) 
+            { 
+                BitmapImage image = new BitmapImage(); 
+                image.SetSource(e.ChosenPhoto); 
+                this.img.Source = image; 
+            } 
+        } 
+
+		SearchTask searchTask = new SearchTask(); 
+        searchTask. SearchQuery = "WindowsPhoneGeek"; 
+        searchTask.Show(); 
+
+		WebBrowserTask webBrowserTask = new WebBrowserTask(); 
+        webBrowserTask.URL = "http://www.windowsphonegeek.com"; 
+        webBrowserTask.Show(); 
+
+		The WebClient class provides a number of ways to call an http resource. If you scan the methods you will find the following:
+
+DownloadStringAsync: Provides the simplest way of downloading a string resource from the network, like an HTML page, a RSS or ATOM feed, a plain XML file and so on. 
+UploadStringAsync: It can be used to send strings to a server and it can also specify the method to be used to make the call. Probably it is the simplest way of making calls to a REST resource 
+OpenWriteAsync & OpenReadAsync : These two method allow to send and receive binary resources to/from the server. The use is slightly more complex that the other methods but once the call completes you can access a binary stream you can read or write directly. 
+
+
+		  private void Application_Launching(object sender, LaunchingEventArgs e)
+        {
+            IsolatedStorageExplorer.Explorer.Start("127.0.0.1"); 
+        }
+
+        // 激活应用程序(置于前台)时执行的代码
+        // 此代码在首次启动应用程序时不执行
+        private void Application_Activated(object sender, ActivatedEventArgs e)
+        {
+            IsolatedStorageExplorer.Explorer.RestoreFromTombstone(); 
+        }
+
+    <Tasks>
+      <DefaultTask Name="_default" NavigationPage="Views/MainView.xaml" />
+      <ExtendedTask Name="BackgroundTask">
+        <!--<BackgroundServiceAgent Specifier="ScheduledTaskAgent" Name="TaskProgressAgent" Source="TaskProgressAgent" Type="TaskProgressAgent.TaskScheduler" />-->
+        <BackgroundServiceAgent Specifier="ScheduledTaskAgent" Name="TaskLocationAgent" Source="TaskLocationAgent" Type="TaskLocationAgent.TaskScheduler" />
+      </ExtendedTask>
+    </Tasks>
+
+	<nav:UriMapper x:Key="nav">
+     <nav:UriMapping Uri="Home" MappedUri="/Pages/Views/Default.xaml"/>
+     <nav:UriMapping Uri="About-Us" MappedUri="/Pages/Views/Misc/About.xaml"/>
+     <nav:UriMapping Uri="Page/{number}" MappedUri="/Pages/Views/Books/Page{number}.xaml"/>
+     <nav:UriMapping Uri="Customers/{id}" MappedUri="/Pages/Views/Data/Page.xaml?action=getCustomer&amp;id={id}"/>
+     <nav:UriMapping Uri="Products/{id}" MappedUri="/Pages/Views/Data/Page.xaml?action=getProduct&amp;id={id}"/>
+     <nav:UriMapping Uri="Orders/{type}&amp;{id}&amp;{date}" MappedUri="/Pages/Views/Data/Page.xaml?action={type}&amp;orderId={id}&amp;orderDate={number}"/>
+</nav:UriMapper>
+
+
+在Windows Phone中，由于用户离开当前应用程序，操作系统暂停该应用程序，但保存瞬间状态，以便随时恢复。为了保证快速而且一致的用户体验，Windows Phone仅允许唯一的应用程序占用系统资源在前台运行。区别于桌面操作系统，Window Phone不支持应用程序在后台运行。这是为了避免了多个应用程序竞争有限的手机资源，由此避免了的处理速度和电池电量的急速下降。
+
+一个包含了应用程序特定数据的元数据文件，包括标题，图标位置，功能等等。
+PhotoChooserTask 可以返回指定像素的图片，即如果你只想获取图片中的部分作为返回，你只需要设置task的PixelHeight与PixelWidth即可。 
+
+(Application.Current as App).RootFrame.Obscured += OnObscured;
+
+(Application.Current as App).RootFrame.Unobscured += OnUnobscured;
+在锁屏或者电话打进来的时候被触发
+
+protected override void OnNavigatedFrom(NavigationEventArgs e)
+
+{
+
+this.State["Pos"] = Player.Position;
+
+}
+
+
+protected override void OnNavigatedTo(NavigationEventArgs e)
+
+{
+
+if (this.State.ContainsKey("Pos"))
+
+{
+
+Player.MediaOpened += (s, x) =>
+
+Player.Position = (TimeSpan)this.State["Pos"];
+
+Player.Play();
+
+}
+
+}
+在媒体打开的时候调整位置
+
+PictureDecoder.DecodeJpeg(jpgStream, 192, 256);
+The good news is that you can delete the cache when you decided that you no longer need it:
+
+  BitmapImage bitmapImage = image.Source as BitmapImage;
+
+  bitmapImage.UriSource = null;
+
+  image.Source = null;
+
+在删除图片时候删除缓存
+
+设置其UriSource是异步加载：BitmapImage.UriSource = uriSource;
+设置其文件流是同步加载： BitmapImage.SetSource(stream);  
+分享一个取得屏幕截图的代码，但是由于程序不能在后台运行，所以只能通过按钮或者菜单取得截图,然后把图片保存在相册中。
+public void CaptureScreen(object sender, EventArgs e)
+{
+WriteableBitmap bmp = new WriteableBitmap(480, 800);
+bmp.Render(App.Current.RootVisual, null);
+bmp.Invalidate();
+
+MemoryStream stream = new MemoryStream();
+bmp.SaveJpeg(stream, bmp.PixelWidth, bmp.PixelHeight, 0, 80);
+stream.Seek(0, SeekOrigin.Begin);
+
+MediaLibrary library = new MediaLibrary();
+string filename = "ScreenShot_" + DateTime.Now.ToString("yyyy-MM-dd_hh:mm:ss");
+library.SavePicture(filename, stream);
+stream.Close();
+}
+
+SIP（Soft Input Panel），
+
+,HttpWebRequest是个抽象类，所以无法new的，需要调用HttpWebRequest.Create();
+2,其Method指定了请求类型，这里用的GET,还有POST；也可以指定ConentType;
+3,其请求的Uri必须是绝对地址;
+4,其请求是异步回调方式的，从BeginGetResponse开始，并通过AsyncCallback指定回调方法；
+5,WebClient 方式使用基于事件的异步编程模型,在HTTP响应返回时引发的WebClient回调是在UI线程中调用的，因此可用于更新UI元素的属性，
+
+
+Windows Phone 7 页面的启动顺序: 当应用程序被加载时，一个PhoneApplicationFrame会被创建。然后这个Frame会告知导航到MainPage。当页面加载和导航的时候，启动画面会被显示。当导航任务完毕后，Navigated事件被加载，这时候会把PhoneApplicationFrame设为应用程序的 RootVisual。
+
+在使用WebClient 下载网络资源的时候，OpenReadAsync适合下载图片等资源，DownloadStringAsync 适合下载文本类信息，如XML，Text等
+
+client.OpenReadAsync(new Uri("http://images.cnblogs.com/cnblogs_com/alexis/wp7.png"));  
+
+在Bing Map中我们可以设置ZoomBarVisibility来显示或隐藏缩放条. 
+
+
+	Please take immediately note of the "using" blocks that are intentionally used every time it is found a class that implements IDisposable like WebResponse and StreamReader. 在遇到stream或者webresponse
+
+	您不能只是随意地多次调用SpriteBatch.Draw，您首先需要通过调用SpriteBatch.Begin来通知显卡精灵数据正在发送。 
+
+	Window.ClientBounds 的Width 和Height 值总是等于窗口的宽度和高度，在窗口或全屏模式下都是如此
+    如果使用精灵位图的话，您需要能够将整张图片加载到Texture2D 对象中，然后在动画
+循环中取出单独的精灵帧来绘制动画。
+
+Update 和Draw方法都有的GameTime 对象参数，有一个叫做IsRunningSlow 的布尔类型的属性。您可以在任何时候在这两个方法中检查IsRunningSlow 的值；如果值为true，XNA 将不能跟上您指定的帧率。
+
+要在屏幕上绘制一个精灵，您需要一个Texture2D 对象来在内存中保存精灵。内容管道
+在编译期将精灵编译成内部格式以便于绘制。然后您使用一个SpriteBatch 对象将精灵绘
+制到屏幕上。 
+
+您也许注意到了默认情况下当鼠标划过XNA 游戏窗口时鼠标指针是隐藏的。如果您想在窗
+口中显示鼠标，只要设置Game 类的IsMouseVisible 属性为true 就可以了。 MouseState mouseState = Mouse.GetState( ); 
+if(mouseState.X != prevMouseState.X ||  
+mouseState.Y != prevMouseState.Y) 
+
+由于您需要使用精灵管理类来调用它管理的所有精灵的Draw 方法，所以您需要让这个游戏组件和游戏的Draw 方法一起工作。修改游戏组件的基类为DrawableGameComponent ，以启用绘制功能： public class  SpriteManager :  Microsoft.Xna.Framework.DrawableGameComponent 
+
+在XNA中3D Model 一般都是autodesk公司的fbx 格式。载入的方法和2D基本上是一样的，但是在绘制时是有很大不同的。
+
+	this.Context.Response.TransmitFile(filePath);
+	将指定的文件直接写入 HTTP 响应输出流，而不在内存中缓冲该文件。
+	MIME类型就是设定某种扩展名的文件用一种应用程序来打开的方式类型，当该扩展名文件被访问的时候，浏览器会自动使用指定应用程序来打开。
+
+	多功能Internet 邮件扩充服务,　浏览器接收到文件后，会进入插件系统进行查找，查找出哪种插件可以识别读取接收到的文件。如果浏览器不清楚调用哪种插件系统，它可能会告诉用户缺少某插件，或者直接选择某现有插件来试图读取接收到的文件，后者可能会导致系统的崩溃。
+
+	在创建序列时 用IEnumrable代替Ilist，一次性的创建列表无法让客户程序根据特定的情况终止该过程。不要tolist,而是将Ienumroble传递到List的构造函数中。
+
+	win8:1 new location service 2 new mapcontrol consume less memory 3 new lanchers and choosers 4 new longlistSelector Control 5 wallet in purchasing 6 This little gem in the new SDK allows an app to launch 
+and pass arguments to other apps  7 Windows Phone 8 comes with new Bluetooth APIs that allow devel-opers to do peer discovery and implement app-to-app and app-to-device communication. 9  Windows Phone 8 supports short-distance (3-4 centimeters) com-munication with NFC. 10  增强了speech的功能 11 锁屏状态下提供了通知 12 新的choosers，比如SaveAppointmentTask\MapsTask\MapsDirectionsTask\MapDownloaderTask 
+
+
+FlipTileData – this is the regular live tile that we are used to 
+seeing in Windows Phone 7 
+  IconicTileData – similar to the FlipTile but follows more close-ly the Windows Phone design principles and displays an icon 
+instead of an image 
+  CycleTileData – can cycle up to 9 images, similar to the Pic-tures live tile .最多有九张图。
+
+Live tiles now also come in three sizes: small, medium and large. 
+
+
+推送：1 首先在客户端创建httpchannel,在ChannelUriUpdated事件中将通道uri注册到服务中，（这样服务端就维护了一个通道列表） 2 绑定toast通知及shelltile到通道中 3 注册通道事件HttpNotificationReceived以及ShellToastNotificationReceived接收信息。
+在toast中string msg = e.Collection["wp:Text2"];接收的是SubTitle
+
+    { 
+    Launcher.LaunchUriAsync(new 
+Uri(uriCommand.Uri)); 
+    } 
+
+
+	 App.Geolocator.DesiredAccuracy = 
+PositionAccuracy.High; 
+        App.Geolocator.MovementThreshold = 
+100; // 100 meters  位置服务中设置
+
+
+visual仍然在gdi++层次之上
+The geometry defines a shape. A path allows you to drawthe shape. Thus, the Geometry
+object defines details such as the coordinates and size of your shape, while the Path object
+supplies the Stroke and Fill brushes you’ll use to paint it. The Path class also includes the fea-tures it inherits from the UIElement infrastructure, such as mouse and keyboard handling
+
+In general, a window that uses a smaller number of elements with more complex
+geometries will perform faster than a window that has a large number of elements with simpler geometries. 
