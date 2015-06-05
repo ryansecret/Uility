@@ -16,9 +16,19 @@ namespace Uility
     /// </summary>
     public static class ComparableExtensions
     {
+
+        /// <summary>
+        /// Betweens the specified actual.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="actual">The actual.</param>
+        /// <param name="lower">The lower.</param>
+        /// <param name="upper">The upper.</param>
+        /// <returns></returns>
         public static bool Between<T>(this T actual, T lower, T upper) where T : IComparable<T>
         {
- 
+    
+
             return actual.CompareTo(lower) >= 0 && actual.CompareTo(upper) < 0;
         }
 

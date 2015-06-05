@@ -17,10 +17,10 @@ namespace Uility
 
         public static bool HasValue<T>(T value)
         {
- 
+    
             return Operator<T>.NullOp.HasValue(value);
  
-           
+              
  
         }
  
