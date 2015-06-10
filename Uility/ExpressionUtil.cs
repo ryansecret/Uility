@@ -23,7 +23,7 @@ namespace Uility
 //            ParameterExpression penum_1 = Expression.Parameter(typeof(double), "num_1");
 //            ParameterExpression penum_2 = Expression.Parameter(typeof(double),
 //"num_2");
-             
+
 //            BinaryExpression _be = Expression.Add(penum_1, penum_2);
 //            BinaryExpression _be2 = Expression.Power(_be, penum_2);
 //            Expression<Func<double, double, double>> ef = Expression.Lambda<Func
@@ -46,8 +46,8 @@ namespace Uility
             //ExpressionType expressionType = ExpressionType.GreaterThan;
             //Expression.MakeBinary(expressionType,)
             //Expression.Constant(1, typeof (int));
-           
-            ParameterExpression inp = Expression.Parameter(typeof(TArg1), "inp");
+
+            ParameterExpression inp = Expression.Parameter(typeof (TArg1), "inp");
             try
             {
                 return Expression.Lambda<Func<TArg1, TResult>>(body(inp), inp).Compile();
@@ -91,29 +91,30 @@ namespace Uility
             Func<Expression, Expression, BinaryExpression> body, bool castArgsToResultOnFailure)
         {
             int i = 102;
-           
-            ParameterExpression lhs = Expression.Parameter(typeof(TArg1), "lhs");
-            ParameterExpression rhs = Expression.Parameter(typeof(TArg2), "rhs");
+
+            ParameterExpression lhs = Expression.Parameter(typeof (TArg1), "lhs");
+            ParameterExpression rhs = Expression.Parameter(typeof (TArg2), "rhs");
             try
             {
-              
                 try
                 {
                     return Expression.Lambda<Func<TArg1, TArg2, TResult>>(body(lhs, rhs), lhs, rhs).Compile();
                 }
                 catch (InvalidOperationException)
                 {
-                    if (castArgsToResultOnFailure && !(         // if we show retry                                                        
-                            typeof(TArg1) == typeof(TResult) &&  // and the args aren't
-                            typeof(TArg2) == typeof(TResult)))
-                    { // already "TValue, TValue, TValue"...
+                    if (castArgsToResultOnFailure &&
+                        !( // if we show retry                                                        
+                            typeof (TArg1) == typeof (TResult) && // and the args aren't
+                            typeof (TArg2) == typeof (TResult)))
+                    {
+                        // already "TValue, TValue, TValue"...
                         // convert both lhs and rhs to TResult (as appropriate)
-                        Expression castLhs = typeof(TArg1) == typeof(TResult) ?
-                                (Expression)lhs :
-                                (Expression)Expression.Convert(lhs, typeof(TResult));
-                        Expression castRhs = typeof(TArg2) == typeof(TResult) ?
-                                (Expression)rhs :
-                                (Expression)Expression.Convert(rhs, typeof(TResult));
+                        Expression castLhs = typeof (TArg1) == typeof (TResult)
+                            ? (Expression) lhs
+                            : (Expression) Expression.Convert(lhs, typeof (TResult));
+                        Expression castRhs = typeof (TArg2) == typeof (TResult)
+                            ? (Expression) rhs
+                            : (Expression) Expression.Convert(rhs, typeof (TResult));
 
                         return Expression.Lambda<Func<TArg1, TArg2, TResult>>(
                             body(castLhs, castRhs), lhs, rhs).Compile();
@@ -130,11 +131,11 @@ namespace Uility
 
         public static List<T> ExpressionTree<T>(List<T> collection, object propertyName, string propertyValue)
         {
-            ParameterExpression parameter = Expression.Parameter(typeof(T), "x");
+            ParameterExpression parameter = Expression.Parameter(typeof (T), "x");
 
-            ParameterExpression value = Expression.Parameter(typeof(string), "propertyValue");
+            ParameterExpression value = Expression.Parameter(typeof (string), "propertyValue");
 
-            MethodInfo setter = typeof(T).GetMethod("set_" + propertyName);
+            MethodInfo setter = typeof (T).GetMethod("set_" + propertyName);
 
             MethodCallExpression call = Expression.Call(parameter, setter, value);
 
@@ -143,7 +144,6 @@ namespace Uility
             for (int i = 0; i < collection.Count; i++)
             {
                 exp.DynamicInvoke(collection[i], propertyValue);
-                 
             }
             return collection;
         }
@@ -167,9 +167,9 @@ namespace Uility
         {
             // parameters to execute
             ParameterExpression instanceParameter =
-                Expression.Parameter(typeof(object), "instance");
+                Expression.Parameter(typeof (object), "instance");
             ParameterExpression parametersParameter =
-                Expression.Parameter(typeof(object[]), "parameters");
+                Expression.Parameter(typeof (object[]), "parameters");
 
             // build parameter list
             List<Expression> parameterExpressions = new List<Expression>();
@@ -186,15 +186,16 @@ namespace Uility
             }
 
             // non-instance for static method, or ((TInstance)instance)
-            Expression instanceCast = methodInfo.IsStatic ? null :
-                Expression.Convert(instanceParameter, methodInfo.ReflectedType);
+            Expression instanceCast = methodInfo.IsStatic
+                ? null
+                : Expression.Convert(instanceParameter, methodInfo.ReflectedType);
 
             // static invoke or ((TInstance)instance).Method
             MethodCallExpression methodCall = Expression.Call(
                 instanceCast, methodInfo, parameterExpressions);
 
             // ((TInstance)instance).Method((T0)parameters[0], (T1)parameters[1], ...)
-            if (methodCall.Type == typeof(void))
+            if (methodCall.Type == typeof (void))
             {
                 Expression<Action<object, object[]>> lambda =
                     Expression.Lambda<Action<object, object[]>>(
@@ -210,7 +211,7 @@ namespace Uility
             else
             {
                 UnaryExpression castMethodCall = Expression.Convert(
-                    methodCall, typeof(object));
+                    methodCall, typeof (object));
                 Expression<Func<object, object[], object>> lambda =
                     Expression.Lambda<Func<object, object[], object>>(
                         castMethodCall, instanceParameter, parametersParameter);
@@ -219,5 +220,4 @@ namespace Uility
             }
         }
     }
-
 }
