@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uility", "Uility\Uility.csproj", "{9E55E61B-E1F3-403D-ABA8-309144997030}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnterPriseLibrary", "EnterPriseLibrary\EnterPriseLibrary.csproj", "{DF501D0C-8FC1-4F5C-8944-10A7D4E1350C}"
