@@ -13,6 +13,10 @@ namespace ConsoleApplication1
          
         private int Consequece;
 
+
+
+
+
         public MyAttribure(int order)
         {
              

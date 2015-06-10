@@ -1,0 +1,32 @@
+﻿<navigation:Page 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+           xmlns:Silverlight="clr-namespace:Silverlight" x:Class="Silverlight.控件.Page1"
+           mc:Ignorable="d"
+              d:DesignWidth="640" d:DesignHeight="480"
+           Title="Page1 Page">
+    <Grid x:Name="LayoutRoot">
+    	<VisualStateManager.VisualStateGroups>
+    		<VisualStateGroup x:Name="VisualStateGroup">
+    			<VisualState x:Name="VisualState"/>
+    		</VisualStateGroup>
+    	</VisualStateManager.VisualStateGroups>
+        <Silverlight:CutomLable Width="20">sssssssssssssssssssssss</Silverlight:CutomLable>
+        <!--<TextBox Height="23"   TextWrapping="NoWrap" Text="assssssssssssssssssssssssssssssssssssssssssss"  HorizontalAlignment="Left" Margin="346,257,0,0" x:Name="textBox1" VerticalAlignment="Top" Width="120" />-->
+        <Button >
+           
+        	<i:Interaction.Triggers>
+        		<i:EventTrigger EventName="Click">
+        			<ei:CallMethodAction/>
+        		</i:EventTrigger>
+                <Silverlight:CostumTrigger>
+                    <Silverlight:CustomTriggerAction></Silverlight:CustomTriggerAction>
+                </Silverlight:CostumTrigger>
+        	</i:Interaction.Triggers>
+        </Button>
+    </Grid>
+</navigation:Page>
